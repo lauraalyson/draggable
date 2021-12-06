@@ -3,7 +3,7 @@ body {
     height: 100vh;
     background: #cbdce7;
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
@@ -22,11 +22,12 @@ body {
     display: flex;
     place-items: center;
     place-content: center;
-    cursor: grab;
+    cursor:auto;
     flex-wrap: wrap;
 }
 
 .box-tall {
+    cursor: grab;
     width: 200px;
     height: 400px;
     background-color: #99D0FF;
@@ -36,6 +37,7 @@ body {
 }
 
 .box-wide {
+    cursor: grab;
     width: 400px;
     height: 200px;
     background-color: rgb(255, 255, 255);
@@ -45,6 +47,7 @@ body {
 }
 
 .box-square {
+    cursor: grab;
     width: 200px;
     height: 200px;
     background-color: white;
