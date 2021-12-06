@@ -29,17 +29,19 @@ body {
 .box-tall {
     width: 200px;
     height: 400px;
-    background-color: white;
+    background-color: #99D0FF;
     border-radius: 10px;
     margin: .5em;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.08);
 }
 
 .box-wide {
     width: 400px;
     height: 200px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin: .5em;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.08);
 }
 
 .box-square {
@@ -48,4 +50,21 @@ body {
     background-color: white;
     border-radius: 10px;
     margin: .5em;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.);
+}
+
+.v-1 {
+    background-color: #BDCCFF;
+}
+
+.v-2 {
+    background-color: #61DABF;
+}
+
+.v-3 {
+    background-color: #FFF1AD;
+}
+
+p {
+    padding: 1.2em;
 }

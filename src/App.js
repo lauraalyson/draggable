@@ -21,7 +21,7 @@ function App() {
 						dragControls={dragControls}
 					><DraggableGrid /></motion.div>
 					<motion.div
-						className='box-square'
+						className='box-square v-1'
 						drag
 						dragConstraints={constraintsRef}
 						dragControls={dragControls}
@@ -42,7 +42,7 @@ function App() {
 					/>
 					<div>
 						<motion.div
-							className='box-wide'
+							className='box-wide v-2'
 							drag
 							dragConstraints={constraintsRef}
 							dragControls={dragControls}
@@ -57,7 +57,7 @@ function App() {
 					dragControls={dragControls}
 				/>
 				<motion.div
-					className='box-wide'
+					className='box-wide v-3'
 					drag
 					dragConstraints={constraintsRef}
 					dragControls={dragControls}
