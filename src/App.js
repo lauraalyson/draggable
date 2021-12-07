@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { motion } from "framer-motion";
 import { useDragControls } from "framer-motion";
-import DraggableGrid from "./components/draggable-grid";
+import Map from "./components/map";
 
 function App() {
     const constraintsRef = React.useRef(null);
@@ -19,7 +19,7 @@ function App() {
 						drag
 						dragConstraints={constraintsRef}
 						dragControls={dragControls}
-					><DraggableGrid /></motion.div>
+					><Map /></motion.div>
 					<motion.div
 						className='box-square v-1'
 						drag

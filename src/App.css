@@ -11,6 +11,14 @@ body {
     color: black;
 }
 
+.map-container {
+    width: 202px;
+    border-radius: 10px;
+    height: 202px;
+    overflow: hidden;
+}
+
+
 .area {
     width: calc(100% - 80px);
     height: calc(100vh - 80px);
