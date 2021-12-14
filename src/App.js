@@ -1,14 +1,19 @@
-import React from "react";
-import "./App.css";
-import 'react-grid-layout/css/styles.css';
-import 'react-resizable/css/styles.css';
+import React from 'react'
+import ShowcaseLayout from './components/GridLayout'
 
-function App() {
+class App extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = { layout: [] }
+	}
 
-    return (
+	render() {
+		return (
 			<div>
+				<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
 			</div>
 		)
+	}
 }
 
 export default App
