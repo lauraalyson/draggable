@@ -29,7 +29,11 @@ export default class ShowcaseLayout extends React.Component {
     return _.map(this.state.layouts.lg, function(l, i) {
       return (
         <div key={i}>
-            <span className="text">{i}</span>
+            <div className="text">
+                <div>
+                 This is the text rendered on the div - {i}   
+                </div>
+            </div>
         </div>
       );
     });
@@ -74,6 +78,7 @@ export default class ShowcaseLayout extends React.Component {
           useCSSTransforms={this.state.mounted}
           compactType={this.state.compactType}
           preventCollision={!this.state.compactType}
+        //   style={{ maxWidth: '80%' }}
         >
           {this.generateDOM()}
         </ResponsiveReactGridLayout>
@@ -96,14 +101,48 @@ ShowcaseLayout.defaultProps = {
 
 
 function generateLayout() {
-  return _.map(_.range(0, 6), function(item, i) {
-    var y = Math.ceil(Math.random() * 4) + 1;
-    return {
-      x: (_.random(0, 5) * 2) % 12,
-      y: Math.floor(i / 6) * y,
-      w: 2,
-      h: y * 3,
-      i: i.toString()
-    };
-  });
+    const layout = [
+			{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+			{ i: '1', x: 4, y: 0, w: 2, h: 7 },
+			{ i: '2', x: 0, y: 9, w: 2, h: 7 },
+			{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+			{ i: '4', x: 4, y: 9, w: 2, h: 14 },
+			{ i: '5', x: 0, y: 18, w: 4, h: 7 },
+			{ i: '6', x: 0, y: 27, w: 2, h: 7 },
+			{ i: '7', x: 2, y: 27, w: 4, h: 7 }
+		]
+
+    return layout.map((layout) => {
+        return {
+            i: layout.i,
+            x: layout.x,
+            y: layout.y,
+            w: layout.w,
+            h: layout.h
+        }
+    })
+
+	// return _.map(_.range(0, 10), function (item, i) {
+	// 	var y = Math.ceil(Math.random() * 4) + 1
+	// 	return {
+	// 		x: (_.random(0, 5) * 2) % 12,
+	// 		y: Math.floor(i / 6) * y,
+	// 		w: 1,
+	// 		h: y * 3,
+	// 		i: i.toString(),
+	// 	}
+	// })
 }
+
+// function generateLayout() {
+//   return _.map(_.range(0, 10), function(item, i) {
+//     var y = Math.ceil(Math.random() * 4) + 1;
+//     return {
+//       x: (_.random(0, 5) * 2) % 12,
+//       y: Math.floor(i / 6) * y,
+//       w: 1,
+//       h: y * 3,
+//       i: i.toString()
+//     };
+//   });
+// }
