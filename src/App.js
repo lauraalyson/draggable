@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ShowcaseLayout from './components/GridLayout'
 
 class App extends React.Component {
@@ -9,9 +9,12 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className='showcase-container'>
-				<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
+			<div className='app-container'>
+				<div className='showcase-container'>
+					<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
+				</div>				
 			</div>
+
 		)
 	}
 }

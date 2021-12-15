@@ -1,10 +1,33 @@
 body {
-  background: white;
+  background: #E2E8FC;
   padding: 20px;
   overflow: scroll;
 }
+
+@import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css);
+
+* {
+  box-sizing:border-box
+}
+
+h1,h2,h3,h4,h5,p{
+  margin:0
+}
+
+@keyframes playing { 
+  0%{height:3px}
+  50%{height:12px}
+  to{height:3px}
+}
+
+.app-container {
+  align-items: center;
+  justify-content: center;
+}
+
 .showcase-container {
   margin: 2em;
+  max-width: 900px;
 }
 
 .map-container {
@@ -14,74 +37,104 @@ body {
     overflow: hidden;
 }
 
-#content {
-  width: 100%;
+.react-grid-layout{
+  position:relative;
+  transition: height .2s ease;
 }
-.react-grid-layout {
-  background: #eee;
+
+.react-grid-item{
+  transition:all .2s ease;
+  transition-property: left, top;
+  background: rgb(255, 255, 255);
+  border-radius: 60px;
 }
-.layoutJSON {
-  background: #ddd;
-  border: 1px solid black;
-  margin-top: 10px;
-  padding: 10px;
+
+.react-grid-item img{
+  pointer-events:none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
-.columns {
+
+.react-resizable{
+  position:relative
+}
+
+/* .columns {
   -moz-columns: 120px;
   -webkit-columns: 120px;
   columns: 120px;
+} */
+
+.react-grid-placeholder{
+  background:rgb(182, 199, 219);
+  opacity:.2;
+  transition-duration: 1s;
+  z-index:2;
+  -webkit-user-select:none;
+  -ms-user-select:none;
+  -o-user-select:none;
+  user-select:none;
 }
-.react-grid-item {
-  box-sizing: border-box;
-}
-.react-grid-item:not(.react-grid-placeholder) {
-  background: #ccc;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-.react-grid-item.resizing {
+
+.react-grid-item .resizing {
   opacity: 0.9;
+  will-change: width, height;
 }
-.react-grid-item.static {
+
+.react-grid-item .react-resizable-handle:after{
+  content:"";
+  position:absolute;
+  right:3px;
+  bottom:3px;
+  width:5px;
+  height:5px;
+  border-right:2px solid rgba(0,0,0,.4);
+  border-bottom:2px solid rgba(0,0,0,.4)
+}
+
+.react-resizable-handle{
+  display:none;
+}
+
+.react-grid-item .static {
   background: #cce;
 }
+
 .react-grid-item .text {
-  /* font-size: 24px; */
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  /* position: absolute; */
-  /* top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 24px; */
 }
+
 .react-grid-item .minMax {
   font-size: 12px;
 }
 
 .react-grid-dragHandleExample {
-  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: move;
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-li b {
-  font-size: 19px;
-  line-height: 14px;
-}
-.react-grid-item.react-grid-placeholder {
-  background: rgb(71, 44, 44);
-  opacity: 0.2;
-  border-radius: 10px;
-  transition-duration: 100ms;
+
+.react-grid-item .react-grid-placeholder {
+  background: #F7F5F0;
+  opacity: 0.5;
+  border-radius: 60px;
+  transition-duration: 0.2s;
   z-index: 2;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+.grid-container {
+  padding: 0.5em;
+  height: 60px;
+  background-color: #61dbbf78;
+  border-radius: 60px 60px 0px 0px;
 }
