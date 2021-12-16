@@ -9,7 +9,7 @@ export default function Map() {
 	const map = useRef(null)
 	const [lng, setLng] = useState(-73.99)
 	const [lat, setLat] = useState(40.745)
-	const [zoom, setZoom] = useState(9.7)
+	const [zoom, setZoom] = useState(10.5)
 
 	useEffect(() => {
 		if (map.current) return // initialize map only once
@@ -30,9 +30,5 @@ export default function Map() {
 		})
 	})
 
-	return (
-		<div>
-			<div ref={mapContainer} className='map-container' />
-		</div>
-	)
+	return <div ref={mapContainer} className='map-container' />
 }

@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+/* @import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css); */
 
 body {
-  background: #E2E8FC;
+  /* background: #E2E8FC; */
+  background-color: #F5F4F3;
   padding: 20px;
   overflow: scroll;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
-  font-size: 12px;
+  color: #252525;
 }
 
-@import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css);
 
 * {
   box-sizing:border-box
@@ -26,13 +27,12 @@ h1,h2,h3,h4,h5,p{
 }
 
 .app-container {
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .showcase-container {
   margin: 2em;
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 .map-container {
@@ -53,11 +53,39 @@ h1,h2,h3,h4,h5,p{
   text-align: center;
 }
 
+.widget-bio {
+ /* background-color: rgb(152, 214, 186); */
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  padding: .5em 1.5em;
+}
+
+.widget-bio-memoji {
+  max-width: 115px;
+  height: auto;
+}
+.widget-bio-name {
+ font-size: 27px;
+ text-transform: uppercase;
+}
+.widget-bio-p {
+ padding-top: 10px;
+ flex-wrap: wrap; 
+ width: 100%;
+}
+
 .react-grid-item{
   transition:all .2s ease;
   transition-property: left, top;
   background: rgb(255, 255, 255);
-  border-radius: 60px;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.bg1 {
+  width: 300px;
+  height: 600px;
 }
 
 .react-grid-item img{
@@ -70,12 +98,6 @@ h1,h2,h3,h4,h5,p{
 .react-resizable{
   position:relative
 }
-
-/* .columns {
-  -moz-columns: 120px;
-  -webkit-columns: 120px;
-  columns: 120px;
-} */
 
 .react-grid-placeholder{
   background:rgb(181, 201, 222);
@@ -133,7 +155,7 @@ h1,h2,h3,h4,h5,p{
 .react-grid-item .react-grid-placeholder {
   background: #F7F5F0;
   opacity: 0.5;
-  border-radius: 60px;
+  border-radius: px;
   transition-duration: 0.2s;
   z-index: 2;
   -webkit-user-select: none;
