@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import ShowcaseLayout from './components/GridLayout'
 
 class App extends React.Component {
