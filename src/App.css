@@ -6,6 +6,7 @@ body {
   overflow: scroll;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
+  font-size: 12px;
 }
 
 @import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css);
@@ -144,7 +145,7 @@ h1,h2,h3,h4,h5,p{
 
 .grid-container {
   padding: 0.5em;
-  height: 60px;
-  background-color: #61dbbf78;
+  height: 50px;
+  background-color: #e3e3e378;
   border-radius: 60px 60px 0px 0px;
 }

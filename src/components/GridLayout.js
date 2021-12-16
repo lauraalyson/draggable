@@ -10,7 +10,7 @@ import "./../App.css"
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const layoutConfig = {
 	lg: [
-		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+		{ i: '0', x: 0, y: 0, w: 3, h: 7 },
 		{ i: '1', x: 4, y: 0, w: 2, h: 7 },
 		{ i: '2', x: 0, y: 9, w: 2, h: 7 },
 		{ i: '3', x: 2, y: 9, w: 2, h: 7 },
@@ -81,19 +81,17 @@ export default class ShowcaseLayout extends React.Component {
 		this.setState({ mounted: true })
 	}
 
-	generateDOM() {
-		return _.map(this.state.layouts.lg, function (l, i) {
-			return (
-				<div key={i}>
-					<div className='text grid-container'>
-						<div key='1'>
-							<DivFill />
-						</div>
-					</div>
-				</div>
-			)
-		})
-	}
+	// generateDOM() {
+	// 	return _.map(this.state.layouts.lg, function (l, i) {
+	// 		return (
+	// 			<div key={i}>
+	// 				<div key='1' className='text grid-container'>
+	// 					<DivFill />
+	// 				</div>
+	// 			</div>
+	// 		)
+	// 	})
+	// }
 
 	onBreakpointChange(breakpoint) {
 		this.setState({
@@ -118,7 +116,7 @@ export default class ShowcaseLayout extends React.Component {
 
 	  onNewLayout() {
 	    this.setState({
-	      layouts: { lg: generateLayout() }
+	      layouts: { lg: layoutConfig }
 	    });
 	  }
 
@@ -131,8 +129,8 @@ export default class ShowcaseLayout extends React.Component {
 						lg: layoutConfig.lg,
 						md: layoutConfig.md,
 						sm: layoutConfig.sm,
-                        xs: layoutConfig.xs,
-                        xxs: layoutConfig.xxs
+						xs: layoutConfig.xs,
+						xxs: layoutConfig.xxs,
 					}}
 					onBreakpointChange={this.onBreakpointChange}
 					onLayoutChange={this.onLayoutChange}
@@ -140,9 +138,31 @@ export default class ShowcaseLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-
-					{this.generateDOM()}
-
+					{/* {this.generateDOM()} */}
+					<div key='0'>
+						<DivFill />
+					</div>
+					<div key='1'>
+						<DivFill />
+					</div>
+					<div key='2'>
+						<DivFill />
+					</div>
+					<div key='3'>
+						<DivFill />
+					</div>
+					<div key='4'>
+						<DivFill />
+					</div>
+					<div key='5'>
+						<DivFill />
+					</div>
+					<div key='6'>
+						<DivFill />
+					</div>
+					<div key='7'>
+						<DivFill />
+					</div>
 				</ResponsiveReactGridLayout>
 			</div>
 		)
@@ -162,67 +182,67 @@ ShowcaseLayout.defaultProps = {
 //   initialLayout: generateLayout()
 };
 
-function generateLayout() {
-    return {
-			lg: [
-				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-				{ i: '1', x: 4, y: 0, w: 2, h: 7 },
-				{ i: '2', x: 0, y: 9, w: 2, h: 7 },
-				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-				{ i: '4', x: 4, y: 9, w: 2, h: 14 },
-				{ i: '5', x: 0, y: 18, w: 4, h: 7 },
-				{ i: '6', x: 0, y: 27, w: 2, h: 7 },
-				{ i: '7', x: 2, y: 27, w: 4, h: 7 },
-			],
-			md: [
-				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-				{ i: '1', x: 4, y: 0, w: 2, h: 7 },
-				{ i: '2', x: 0, y: 9, w: 2, h: 7 },
-				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-				{ i: '4', x: 4, y: 9, w: 2, h: 14 },
-				{ i: '5', x: 0, y: 18, w: 4, h: 7 },
-				{ i: '6', x: 0, y: 27, w: 2, h: 7 },
-				{ i: '7', x: 2, y: 27, w: 4, h: 7 },
-			],
-			sm: [
-				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-				{ i: '1', x: 4, y: 0, w: 2, h: 7 },
-				{ i: '2', x: 0, y: 9, w: 2, h: 7 },
-				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-				{ i: '4', x: 4, y: 9, w: 2, h: 14 },
-				{ i: '5', x: 0, y: 18, w: 4, h: 7 },
-				{ i: '6', x: 0, y: 27, w: 2, h: 7 },
-				{ i: '7', x: 2, y: 27, w: 4, h: 7 },
-			],
-			sm: [
-				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-				{ i: '1', x: 0, y: 0, w: 2, h: 7 },
-				{ i: '2', x: 2, y: 0, w: 2, h: 7 },
-				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-				{ i: '4', x: 0, y: 18, w: 2, h: 14 },
-				{ i: '5', x: 0, y: 9, w: 4, h: 7 },
-				{ i: '6', x: 2, y: 18, w: 2, h: 7 },
-				{ i: '7', x: 0, y: 27, w: 4, h: 7 },
-			],
-			xs: [
-				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-				{ i: '1', x: 0, y: 0, w: 2, h: 5 },
-				{ i: '2', x: 2, y: 0, w: 2, h: 5 },
-				{ i: '3', x: 2, y: 9, w: 2, h: 5 },
-				{ i: '4', x: 0, y: 18, w: 2, h: 10 },
-				{ i: '5', x: 0, y: 9, w: 4, h: 7 },
-				{ i: '6', x: 2, y: 18, w: 2, h: 5 },
-				{ i: '7', x: 0, y: 27, w: 4, h: 7 },
-			],
-			xxs: [
-				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-				{ i: '1', x: 0, y: 0, w: 2, h: 5 },
-				{ i: '2', x: 2, y: 0, w: 2, h: 5 },
-				{ i: '3', x: 2, y: 9, w: 2, h: 5 },
-				{ i: '4', x: 0, y: 18, w: 2, h: 10 },
-				{ i: '5', x: 0, y: 9, w: 4, h: 7 },
-				{ i: '6', x: 2, y: 18, w: 2, h: 5 },
-				{ i: '7', x: 0, y: 27, w: 4, h: 7 },
-			],
-		}
-}
+// function generateLayout() {
+//     return {
+// 			lg: [
+// 				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+// 				{ i: '1', x: 4, y: 0, w: 2, h: 7 },
+// 				{ i: '2', x: 0, y: 9, w: 2, h: 7 },
+// 				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+// 				{ i: '4', x: 4, y: 9, w: 2, h: 14 },
+// 				{ i: '5', x: 0, y: 18, w: 4, h: 7 },
+// 				{ i: '6', x: 0, y: 27, w: 2, h: 7 },
+// 				{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+// 			],
+// 			md: [
+// 				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+// 				{ i: '1', x: 4, y: 0, w: 2, h: 7 },
+// 				{ i: '2', x: 0, y: 9, w: 2, h: 7 },
+// 				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+// 				{ i: '4', x: 4, y: 9, w: 2, h: 14 },
+// 				{ i: '5', x: 0, y: 18, w: 4, h: 7 },
+// 				{ i: '6', x: 0, y: 27, w: 2, h: 7 },
+// 				{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+// 			],
+// 			sm: [
+// 				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+// 				{ i: '1', x: 4, y: 0, w: 2, h: 7 },
+// 				{ i: '2', x: 0, y: 9, w: 2, h: 7 },
+// 				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+// 				{ i: '4', x: 4, y: 9, w: 2, h: 14 },
+// 				{ i: '5', x: 0, y: 18, w: 4, h: 7 },
+// 				{ i: '6', x: 0, y: 27, w: 2, h: 7 },
+// 				{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+// 			],
+// 			sm: [
+// 				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+// 				{ i: '1', x: 0, y: 0, w: 2, h: 7 },
+// 				{ i: '2', x: 2, y: 0, w: 2, h: 7 },
+// 				{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+// 				{ i: '4', x: 0, y: 18, w: 2, h: 14 },
+// 				{ i: '5', x: 0, y: 9, w: 4, h: 7 },
+// 				{ i: '6', x: 2, y: 18, w: 2, h: 7 },
+// 				{ i: '7', x: 0, y: 27, w: 4, h: 7 },
+// 			],
+// 			xs: [
+// 				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+// 				{ i: '1', x: 0, y: 0, w: 2, h: 5 },
+// 				{ i: '2', x: 2, y: 0, w: 2, h: 5 },
+// 				{ i: '3', x: 2, y: 9, w: 2, h: 5 },
+// 				{ i: '4', x: 0, y: 18, w: 2, h: 10 },
+// 				{ i: '5', x: 0, y: 9, w: 4, h: 7 },
+// 				{ i: '6', x: 2, y: 18, w: 2, h: 5 },
+// 				{ i: '7', x: 0, y: 27, w: 4, h: 7 },
+// 			],
+// 			xxs: [
+// 				{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+// 				{ i: '1', x: 0, y: 0, w: 2, h: 5 },
+// 				{ i: '2', x: 2, y: 0, w: 2, h: 5 },
+// 				{ i: '3', x: 2, y: 9, w: 2, h: 5 },
+// 				{ i: '4', x: 0, y: 18, w: 2, h: 10 },
+// 				{ i: '5', x: 0, y: 9, w: 4, h: 7 },
+// 				{ i: '6', x: 2, y: 18, w: 2, h: 5 },
+// 				{ i: '7', x: 0, y: 27, w: 4, h: 7 },
+// 			],
+// 		}
+// }
