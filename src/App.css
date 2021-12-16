@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
 body {
   background: #E2E8FC;
   padding: 20px;
   overflow: scroll;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
 }
 
 @import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css);
@@ -27,7 +31,7 @@ h1,h2,h3,h4,h5,p{
 
 .showcase-container {
   margin: 2em;
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .map-container {
@@ -40,6 +44,12 @@ h1,h2,h3,h4,h5,p{
 .react-grid-layout{
   position:relative;
   transition: height .2s ease;
+}
+
+.div-fill {
+  background-color: white;
+  width: 100%;
+  text-align: center;
 }
 
 .react-grid-item{

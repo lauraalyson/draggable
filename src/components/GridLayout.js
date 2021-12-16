@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import _ from "lodash";
+import DivFill from './DivFill'
+import 'react-grid-layout/css/styles.css'
+import 'react-resizable/css/styles.css'
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "./../App.css"
 
@@ -32,7 +35,7 @@ export default class ShowcaseLayout extends React.Component {
         <div key={i}>
             <div className="text grid-container">
                 <div>
-                 This is the text rendered on the div - {i}   
+                 <DivFill />
                 </div>
             </div>
         </div>
@@ -99,17 +102,18 @@ ShowcaseLayout.defaultProps = {
   initialLayout: generateLayout()
 };
 
+
 function generateLayout() {
-const layout = [
-	{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-	{ i: '1', x: 4, y: 0, w: 2, h: 7 },
-	{ i: '2', x: 0, y: 9, w: 2, h: 7 },
-	{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-	{ i: '4', x: 4, y: 9, w: 2, h: 14 },
-	{ i: '5', x: 0, y: 18, w: 4, h: 7 },
-	{ i: '6', x: 0, y: 27, w: 2, h: 7 },
-	{ i: '7', x: 2, y: 27, w: 4, h: 7 },
-]
+    const layout = [
+        { i: '0', x: 0, y: 0, w: 4, h: 7 },
+        { i: '1', x: 4, y: 0, w: 2, h: 7 },
+        { i: '2', x: 0, y: 9, w: 2, h: 7 },
+        { i: '3', x: 2, y: 9, w: 2, h: 7 },
+        { i: '4', x: 4, y: 9, w: 2, h: 14 },
+        { i: '5', x: 0, y: 18, w: 4, h: 7 },
+        { i: '6', x: 0, y: 27, w: 2, h: 7 },
+        { i: '7', x: 2, y: 27, w: 4, h: 7 },
+    ]
 
     return layout.map((layout) => {
         return {
@@ -122,26 +126,56 @@ const layout = [
     })
 }
 
-// return _.map(_.range(0, 10), function (item, i) {
-// 	var y = Math.ceil(Math.random() * 4) + 1
-// 	return {
-// 		x: (_.random(0, 5) * 2) % 12,
-// 		y: Math.floor(i / 6) * y,
-// 		w: 1,
-// 		h: y * 3,
-// 		i: i.toString(),
-// 	}
-// })
 
-// function generateLayout() {
-//   return _.map(_.range(0, 10), function(item, i) {
-//     var y = Math.ceil(Math.random() * 4) + 1;
-//     return {
-//       x: (_.random(0, 5) * 2) % 12,
-//       y: Math.floor(i / 6) * y,
-//       w: 1,
-//       h: y * 3,
-//       i: i.toString()
-//     };
-//   });
-// }
+const layoutConfig = {
+	lg: [
+		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+		{ i: '1', x: 4, y: 0, w: 2, h: 7 },
+		{ i: '2', x: 0, y: 9, w: 2, h: 7 },
+		{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+		{ i: '4', x: 4, y: 9, w: 2, h: 14 },
+		{ i: '5', x: 0, y: 18, w: 4, h: 7 },
+		{ i: '6', x: 0, y: 27, w: 2, h: 7 },
+		{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+	],
+	md: [
+		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+		{ i: '1', x: 4, y: 0, w: 2, h: 7 },
+		{ i: '2', x: 0, y: 9, w: 2, h: 7 },
+		{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+		{ i: '4', x: 4, y: 9, w: 2, h: 14 },
+		{ i: '5', x: 0, y: 18, w: 4, h: 7 },
+		{ i: '6', x: 0, y: 27, w: 2, h: 7 },
+		{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+	],
+	sm: [
+		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 7 },
+		{ i: '2', x: 2, y: 0, w: 2, h: 7 },
+		{ i: '3', x: 2, y: 9, w: 2, h: 7 },
+		{ i: '4', x: 0, y: 18, w: 2, h: 14 },
+		{ i: '5', x: 0, y: 9, w: 4, h: 7 },
+		{ i: '6', x: 2, y: 18, w: 2, h: 7 },
+		{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+	],
+	xs: [
+		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 5 },
+		{ i: '2', x: 2, y: 0, w: 2, h: 5 },
+		{ i: '3', x: 2, y: 9, w: 2, h: 5 },
+		{ i: '4', x: 0, y: 18, w: 2, h: 10 },
+		{ i: '5', x: 0, y: 9, w: 4, h: 7 },
+		{ i: '6', x: 2, y: 18, w: 2, h: 5 },
+		{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+	],
+	xxs: [
+		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 5 },
+		{ i: '2', x: 2, y: 0, w: 2, h: 5 },
+		{ i: '3', x: 2, y: 9, w: 2, h: 5 },
+		{ i: '4', x: 0, y: 18, w: 2, h: 10 },
+		{ i: '5', x: 0, y: 9, w: 4, h: 7 },
+		{ i: '6', x: 2, y: 18, w: 2, h: 5 },
+		{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+	],
+}
