@@ -18,7 +18,7 @@ class Bio extends React.Component {
 				/>
 
 				<div className='widget-bio-p'>
-					Hi I&apos;m Laura<span className='widget-bio-name'></span>, a full-stack developer based in NYC. You can find me working with React and other JS frameworks, binging podcasts, and 
+					Hi I&apos;m Laura<span className='widget-bio-name'></span>, a full-stack developer based in NYC.
 				</div>
 
 			</div>
