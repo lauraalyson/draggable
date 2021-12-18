@@ -31,8 +31,7 @@ h1,h2,h3,h4,h5,p{
 }
 
 .showcase-container {
-  /* margin: 2em; */
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .map-container {

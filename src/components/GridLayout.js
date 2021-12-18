@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { Responsive, WidthProvider } from "react-grid-layout";
 
 // Import Components
-import DivFill from './DivFill'
-import Map from './map'
+import DivFill from './Widgets/DivFill'
+import Map from './Widgets/Map'
 
 // Import Syles
 import 'react-grid-layout/css/styles.css'
@@ -20,54 +20,64 @@ import Contact from "./Widgets/Contact";
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const layoutConfig = {
 	lg: [
-		{ i: '0', x: 0, y: 0, w: 3, h: 7 },
-		{ i: '1', x: 4, y: 0, w: 2, h: 7 },
-		{ i: '2', x: 0, y: 9, w: 2, h: 7 },
-		{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-		{ i: '4', x: 4, y: 9, w: 2, h: 14 },
-		{ i: '5', x: 0, y: 18, w: 4, h: 7 },
-		{ i: '6', x: 0, y: 27, w: 2, h: 7 },
-		{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+		{ i: '0', x: 0, y: 0, w: 2, h: 7 },
+		{ i: '1', x: 2, y: 0, w: 1, h: 7 },
+		{ i: '2', x: 4, y: 0, w: 1, h: 14 },
+		{ i: '3', x: 0, y: 9, w: 1, h: 7 },
+		{ i: '4', x: 1, y: 9, w: 1, h: 7 },
+		{ i: '5', x: 2, y: 9, w: 1, h: 14 },
+		{ i: '6', x: 0, y: 18, w: 2, h: 7 },
+		{ i: '7', x: 4, y: 18, w: 1, h: 7 },
+		{ i: '8', x: 0, y: 27, w: 2, h: 7 },
+		{ i: '9', x: 4, y: 27, w: 2, h: 7 },
 	],
 	md: [
-		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-		{ i: '1', x: 4, y: 0, w: 2, h: 7 },
-		{ i: '2', x: 0, y: 9, w: 2, h: 7 },
-		{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-		{ i: '4', x: 4, y: 9, w: 2, h: 14 },
-		{ i: '5', x: 0, y: 18, w: 4, h: 7 },
-		{ i: '6', x: 0, y: 27, w: 2, h: 7 },
-		{ i: '7', x: 2, y: 27, w: 4, h: 7 },
+		{ i: '0', x: 0, y: 0, w: 2, h: 6 },
+		{ i: '1', x: 2, y: 0, w: 1, h: 6 },
+		{ i: '2', x: 4, y: 0, w: 1, h: 12 },
+		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
+		{ i: '4', x: 1, y: 9, w: 1, h: 6 },
+		{ i: '5', x: 2, y: 9, w: 1, h: 12 },
+		{ i: '6', x: 0, y: 18, w: 2, h: 6 },
+		{ i: '7', x: 4, y: 18, w: 1, h: 6 },
+		{ i: '8', x: 0, y: 27, w: 2, h: 6 },
+		{ i: '9', x: 4, y: 27, w: 2, h: 6 },
 	],
 	sm: [
-		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 7 },
-		{ i: '2', x: 2, y: 0, w: 2, h: 7 },
-		{ i: '3', x: 2, y: 9, w: 2, h: 7 },
-		{ i: '4', x: 0, y: 18, w: 2, h: 14 },
-		{ i: '5', x: 0, y: 9, w: 4, h: 7 },
-		{ i: '6', x: 2, y: 18, w: 2, h: 7 },
-		{ i: '7', x:0, y: 27, w: 4, h: 7 },
+		{ i: '0', x: 0, y: 0, w: 2, h: 12 },
+		{ i: '1', x: 2, y: 0, w: 1, h: 6 },
+		{ i: '2', x: 4, y: 0, w: 1, h: 12 },
+		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
+		{ i: '4', x: 1, y: 9, w: 1, h: 6 },
+		{ i: '5', x: 4, y: 9, w: 1, h: 12 },
+		{ i: '6', x: 0, y: 18, w: 2, h: 6 },
+		{ i: '7', x: 4, y: 18, w: 1, h: 6 },
+		{ i: '8', x: 0, y: 27, w: 2, h: 6 },
+		{ i: '9', x: 0, y: 18, w: 2, h: 6 },
 	],
 	xs: [
-		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 5 },
-		{ i: '2', x: 2, y: 0, w: 2, h: 5 },
-		{ i: '3', x: 2, y: 9, w: 2, h: 5 },
-		{ i: '4', x: 0, y: 18, w: 2, h: 10 },
-		{ i: '5', x: 0, y: 9, w: 4, h: 7 },
-		{ i: '6', x: 2, y: 18, w: 2, h: 5 },
-		{ i: '7', x: 0, y: 27, w: 4, h: 7 },
+		{ i: '0', x: 0, y: 0, w: 2, h: 10 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 6 },
+		{ i: '2', x: 2, y: 0, w: 1, h: 12 },
+		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
+		{ i: '4', x: 2, y: 9, w: 1, h: 6 },
+		{ i: '5', x: 0, y: 9, w: 1, h: 12 },
+		{ i: '6', x: 0, y: 18, w: 2, h: 6 },
+		{ i: '7', x: 2, y: 18, w: 1, h: 6 },
+		{ i: '8', x: 0, y: 27, w: 1, h: 6 },
+		{ i: '9', x: 0, y: 18, w: 2, h: 6 },
 	],
 	xxs: [
-		{ i: '0', x: 0, y: 0, w: 4, h: 7 },
+		{ i: '0', x: 0, y: 0, w: 2, h: 10 },
 		{ i: '1', x: 0, y: 0, w: 2, h: 5 },
-		{ i: '2', x: 2, y: 0, w: 2, h: 5 },
-		{ i: '3', x: 2, y: 9, w: 2, h: 5 },
-		{ i: '4', x: 0, y: 18, w: 2, h: 10 },
-		{ i: '5', x: 0, y: 9, w: 4, h: 7 },
-		{ i: '6', x: 2, y: 18, w: 2, h: 5 },
-		{ i: '7', x: 0, y: 27, w: 4, h: 7 },
+		{ i: '2', x: 2, y: 0, w: 1, h: 10 },
+		{ i: '3', x: 0, y: 9, w: 1, h: 5 },
+		{ i: '4', x: 2, y: 9, w: 1, h: 5 },
+		{ i: '5', x: 0, y: 9, w: 1, h: 10 },
+		{ i: '6', x: 0, y: 18, w: 2, h: 5 },
+		{ i: '7', x: 2, y: 18, w: 1, h: 5 },
+		{ i: '8', x: 0, y: 27, w: 1, h: 5 },
+		{ i: '9', x: 0, y: 18, w: 2, h: 5 },
 	],
 }
 
@@ -124,8 +134,7 @@ export default class ShowcaseLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-
-					<div className="widget-bio" key='0'>
+					<div className='widget-bio' key='0'>
 						<Bio />
 					</div>
 					<div key='1'>
@@ -149,7 +158,12 @@ export default class ShowcaseLayout extends React.Component {
 					<div key='7'>
 						<Project3 />
 					</div>
-
+					<div key='8'>
+						<Contact />
+					</div>
+					<div key='9'>
+						<Project3 />
+					</div>
 				</ResponsiveReactGridLayout>
 			</div>
 		)
@@ -164,6 +178,6 @@ ShowcaseLayout.defaultProps = {
   className: "layout",
   rowHeight: 30,
   onLayoutChange: function() {},
-  cols: { lg: 6, md: 6, sm: 6, xs: 4, xxs: 4 },
-  breakpoints: { lg: 1000, md: 750, sm: 700, xs: 475, xxs: 450 }
+  cols: { lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 },
+  breakpoints: { lg: 1000, md: 750, sm: 600, xs: 450, xxs: 400 }
 };
