@@ -1,5 +1,6 @@
 import React from 'react'
 import ShowcaseLayout from './components/GridLayout'
+const axios = require('axios').default
 
 class App extends React.Component {
 	constructor(props) {
