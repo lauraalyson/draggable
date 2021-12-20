@@ -8,7 +8,7 @@ export default function Map() {
 	const mapContainer = useRef(null)
 	const map = useRef(null)
 	const [lng, setLng] = useState(-73.99)
-	const [lat, setLat] = useState(40.745)
+	const [lat, setLat] = useState(40.735)
 	const [zoom, setZoom] = useState(10.2)
 
 	useEffect(() => {

@@ -1,35 +1,45 @@
-import React from 'react';
-// import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import spotify from './../Assets/spotify-logo.png';
 
-// const currentMusic = (user) => {
-//     return axios({
-//         url: apiUrl + '/movies',
-//         // method: 'GET' - default method is GET
-//         headers: {
-//             Authorization: `Bearer ${user.token}`,
-//         },
-//     })
-// }
+const username = 'lowaterbury'
+const apiKey = 'ac7dd22471e14b250e68490f97ed5c47'
 
-class Spotify extends React.Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-            currentArtist: '',
-            currentSong: ''
-        }
-	}
+const Spotify= () => {
+	const [currSong, setCurrSong] = useState('');
+	const [currArtist, setCurrArtist] = useState('');
+	const [lfmData, setLfmData] = useState({});
 
-	render() {
-        const { currentArtist, currentSong } = this.state
+	useEffect(() => {
+
+		axios
+			.get(
+				`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${username}&api_key=${apiKey}&limit=1&nowplaying=true&format=json`
+			)
+			.then((response) => {
+				console.log(response)
+				setLfmData(response.data.recenttracks)
+				setCurrSong(response.data.recenttracks.track[0].name)
+				setCurrArtist( response.data.recenttracks.track[0].artist['#text'] )
+			})
+			.then(() => console.log(lfmData))
+			.catch((error) =>
+				// handle error
+				console.log(error)
+			)
+	}, [])
+
 		return (
-			<div>
-				Hi this is the spotify widget
-                <p>Current Artist: {currentArtist}</p>
-                <p>Current Song: {currentSong}</p>
+			<div className='spotify-widget'>
+				<img src={spotify} alt='spotify-logo' />
+				<p style={{ color: '#63DBBE' }}>
+					Last played
+				</p>
+				<h4>{currSong}</h4>
+				<p>{currArtist}</p>
+				{/* <p>{lfmData}</p> */}
 			</div>
 		)
-	}
 }
 
 export default Spotify

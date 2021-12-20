@@ -18,10 +18,14 @@ h1,h2,h3,h4,h5,p{
   margin:0
 }
 
-@keyframes playing { 
-  0%{height:3px}
-  50%{height:12px}
-  to{height:3px}
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  max-width: 100%;
+}
+
+input:focus-visible {
+  outline: none;
 }
 
 .nav {
@@ -62,15 +66,25 @@ h1,h2,h3,h4,h5,p{
   text-align: center;
 }
 
+.spotify-widget {
+  height: 100%;
+  padding: 1em;
+}
+
+.spotify-widget img {
+  max-width: 25%;
+  height: auto;
+}
+
 .widget-bio {
   flex-flow: row wrap;
   align-content: center;
   justify-content: center;
-  padding: .5em 1.5em;
+  padding: 1em;
 }
 
 .widget-bio-memoji {
-  max-width: 115px;
+  max-width: 25%;
   height: auto;
 }
 .widget-bio-name {
@@ -91,6 +105,7 @@ h1,h2,h3,h4,h5,p{
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .bg1 {
   width: 300px;
   height: 600px;
@@ -161,10 +176,11 @@ h1,h2,h3,h4,h5,p{
 }
 
 .react-grid-item .react-grid-placeholder {
+  
   background: #F7F5F0;
   opacity: 0.5;
-  border-radius: px;
-  transition-duration: 0.2s;
+  transition: all .2s ease;
+  transition-property: left,top;
   z-index: 2;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -178,4 +194,22 @@ h1,h2,h3,h4,h5,p{
   height: 50px;
   background-color: #e3e3e378;
   border-radius: 60px 60px 0px 0px;
+}
+
+.mapboxgl-ctrl-bottom-left {
+    display: none!important
+}
+
+@keyframes playing {
+    0% {
+        height: 3px
+    }
+
+    50% {
+        height: 12px
+    }
+
+    to {
+        height: 3px
+    }
 }
