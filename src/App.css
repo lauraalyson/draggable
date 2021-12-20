@@ -242,3 +242,22 @@ input:focus-visible {
         height: 3px
     }
 }
+
+@media only screen and (max-width: 650px) {
+.map-widget-overlay {
+  position: absolute; /* or absolute */
+  top: 18%;
+  left: 33%;
+}
+
+.hover-map {
+  width:50%;
+}
+
+.memoji-map {
+  width: 35%;
+  top: 10%;
+  left: 7%;
+  position: absolute;
+}
+}
