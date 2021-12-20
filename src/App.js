@@ -1,7 +1,6 @@
 import React from 'react'
 import ShowcaseLayout from './components/GridLayout'
 import 'bootstrap/dist/css/bootstrap.min.css'
-const axios = require('axios').default
 class App extends React.Component {
 	constructor(props) {
 		super(props)
