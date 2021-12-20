@@ -9,7 +9,6 @@ class DivFill extends React.Component {
 	render() {
 		return (
 			<div className='div-test'>
-                This is DivFill
 			</div>
 		)
 	}

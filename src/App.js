@@ -1,7 +1,6 @@
 import React from 'react'
 import ShowcaseLayout from './components/GridLayout'
-const axios = require('axios').default
-
+// const axios = require('axios').default
 class App extends React.Component {
 	constructor(props) {
 		super(props)
@@ -11,8 +10,8 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className='app-container'>
-					<h3>Navigation bar</h3>	
+				<div className='nav'>
+					<h3>Laura Waterbury</h3>	
 				</div>
 
 				<div className='showcase-container'>

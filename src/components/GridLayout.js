@@ -16,6 +16,7 @@ import Project1 from "./Widgets/Project1";
 import Project2 from "./Widgets/Project2";
 import Project3 from './Widgets/Project3';
 import Contact from "./Widgets/Contact";
+import Spotify from "./Widgets/Spotify";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const layoutConfig = {
@@ -144,7 +145,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Map />
 					</div>
 					<div key='3'>
-						<DivFill />
+						<Spotify />
 					</div>
 					<div key='4'>
 						<Project1 />
@@ -153,7 +154,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Project2 />
 					</div>
 					<div key='6'>
-						<Contact />
+						<DivFill />
 					</div>
 					<div key='7'>
 						<Project3 />
