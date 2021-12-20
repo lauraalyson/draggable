@@ -2,21 +2,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Responsive, WidthProvider } from "react-grid-layout";
+import { motion } from 'framer-motion';
 
 // Import Components
 import DivFill from './Widgets/DivFill'
 import Map from './Widgets/Map'
-
-// Import Syles
-import 'react-grid-layout/css/styles.css'
-import 'react-resizable/css/styles.css'
-import "./../App.css"
 import Bio from "./Widgets/Bio";
 import Project1 from "./Widgets/Project1";
 import Project2 from "./Widgets/Project2";
 import Project3 from './Widgets/Project3';
 import Contact from "./Widgets/Contact";
 import Spotify from "./Widgets/Spotify";
+import Links from "./Widgets/Links";
+
+// Import Syles
+import 'react-grid-layout/css/styles.css'
+import 'react-resizable/css/styles.css'
+import "./../App.css"
+
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const layoutConfig = {
@@ -135,36 +138,37 @@ export default class ShowcaseLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-					<div className='widget-bio' key='0'>
+
+					<motion.div className='widget-bio' key='0'>
 						<Bio />
-					</div>
-					<div key='1'>
-						<DivFill />
-					</div>
-					<div key='2'>
+					</motion.div>
+					<motion.div key='1'>
 						<Map />
-					</div>
-					<div key='3'>
-						<Spotify />
-					</div>
-					<div key='4'>
-						<Project1 />
-					</div>
-					<div key='5'>
+					</motion.div>
+					<motion.div key='2'>
 						<Project2 />
-					</div>
-					<div key='6'>
+					</motion.div>
+					<motion.div key='3'>
+						<Spotify />
+					</motion.div>
+					<motion.div key='4'>
+						<Links />
+					</motion.div>
+					<motion.div key='5'>
+						<Project1 />
+					</motion.div>
+					<motion.div key='6'>
 						<DivFill />
-					</div>
-					<div key='7'>
-						<Project3 />
-					</div>
-					<div key='8'>
+					</motion.div>
+					<motion.div key='7'>
+						<DivFill />
+					</motion.div>
+					<motion.div key='8'>
 						<Contact />
-					</div>
-					<div key='9'>
+					</motion.div>
+					<motion.div key='9'>
 						<Project3 />
-					</div>
+					</motion.div>
 				</ResponsiveReactGridLayout>
 			</div>
 		)

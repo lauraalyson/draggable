@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Quicksand:wght@400;500&family=Source+Sans+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 /* @import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css); */
 
 body {
-  /* background: #E2E8FC; */
   background-color: #F5F4F3;
   padding: 20px;
   overflow: scroll;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #272626;
 }
-
 
 * {
   box-sizing:border-box
@@ -35,6 +32,18 @@ h1,h2,h3,h4,h5,p{
   max-width: 1000px;
 }
 
+.link-widget {
+  background-color: #C9D4F9;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-widget img {
+  max-width: 100%;
+  height: auto;
+}
+
 .map-container {
     width: 100%;
     height: 100%;
@@ -54,7 +63,6 @@ h1,h2,h3,h4,h5,p{
 }
 
 .widget-bio {
- /* background-color: rgb(152, 214, 186); */
   flex-flow: row wrap;
   align-content: center;
   justify-content: center;

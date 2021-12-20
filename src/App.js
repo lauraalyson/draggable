@@ -1,6 +1,7 @@
 import React from 'react'
 import ShowcaseLayout from './components/GridLayout'
-// const axios = require('axios').default
+import 'bootstrap/dist/css/bootstrap.min.css'
+const axios = require('axios').default
 class App extends React.Component {
 	constructor(props) {
 		super(props)
@@ -15,7 +16,8 @@ class App extends React.Component {
 				</div>
 
 				<div className='showcase-container'>
-					<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
+					<ShowcaseLayout 
+					onLayoutChange={this.onLayoutChange} />
 				</div>				
 			</div>
 		)
