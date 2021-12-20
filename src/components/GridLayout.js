@@ -14,6 +14,8 @@ import Project3 from './Widgets/Project3';
 import Contact from "./Widgets/Contact";
 import Spotify from "./Widgets/Spotify";
 import Links from "./Widgets/Links";
+import lauraMemoji from './Assets/laura-memoji.png';
+import mapHover from './Assets/map-hover.png';
 
 // Import Syles
 import 'react-grid-layout/css/styles.css'
@@ -138,11 +140,14 @@ export default class ShowcaseLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-
 					<motion.div className='widget-bio' key='0'>
 						<Bio />
 					</motion.div>
 					<motion.div key='1'>
+						<div className='map-widget-overlay'>
+							<img className='memoji-map' src={lauraMemoji} alt='laura-memoji' />
+							<img className='hover-map' src={mapHover} alt='map-hover'/>
+						</div>
 						<Map />
 					</motion.div>
 					<motion.div key='2'>
