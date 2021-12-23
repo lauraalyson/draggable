@@ -34,7 +34,8 @@ input:focus-visible {
 }
 
 .showcase-container {
-  max-width: 1000px;
+  max-width: 950px;
+  /* min-width: 930px; */
 }
 
 .link-widget {
@@ -241,7 +242,20 @@ input:focus-visible {
     }
 }
 
-@media only screen and (max-width: 650px) {
+/* @media only screen and (max-width: 640px) {
+ .showcase-container {
+  min-width: 730px;
+} 
+} */
+
+
+@media only screen and (max-width: 640px) {
+
+.showcase-container {
+  max-width: 350px;
+  min-width: 300px;
+}
+
 .map-widget-overlay {
   position: absolute; /* or absolute */
   top: 18%;

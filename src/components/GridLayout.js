@@ -134,6 +134,7 @@ export default class ShowcaseLayout extends React.Component {
 						xs: layoutConfig.xs,
 						xxs: layoutConfig.xxs,
 					}}
+					  breakpoints={{ lg: 1000, md: 750, sm: 600, xs: 450, xxs: 400 }}
 					onBreakpointChange={this.onBreakpointChange}
 					onLayoutChange={this.onLayoutChange}
 					measureBeforeMount={false}
@@ -189,5 +190,5 @@ ShowcaseLayout.defaultProps = {
   rowHeight: 30,
   onLayoutChange: function() {},
   cols: { lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 },
-  breakpoints: { lg: 1000, md: 750, sm: 600, xs: 450, xxs: 400 }
+  breakpoints: { lg: 1000, md: 960, sm: 800, xs: 450, xxs: 400 }
 };
