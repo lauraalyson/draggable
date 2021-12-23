@@ -32,8 +32,14 @@ const Spotify= () => {
 		return (
 			<div className='spotify-widget'>
 				<img src={spotify} alt='spotify-logo' />
-				<p style={{ color: '#63DBBE' }}>
-					Last played
+				<span className='shadowloader'>
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+				
+				<p style={{ color: '#63DBBE', paddingTop: '1.2em' }}>
+					 Last played
 				</p>
 				<h4>{currSong}</h4>
 				<p>{currArtist}</p>

@@ -170,8 +170,6 @@ input:focus-visible {
   bottom:3px;
   width:5px;
   height:5px;
-  border-right:2px solid rgba(0,0,0,.4);
-  border-bottom:2px solid rgba(0,0,0,.4)
 }
 
 .react-resizable-handle{
@@ -267,4 +265,26 @@ input:focus-visible {
     border-radius: 10px;
     overflow: hidden;
 }
+
+.react-grid-item{
+  border-radius: 30px;
+}
+p {
+  font-size: 10px;
+  line-height: 0;
+}
+h3 {
+  font-size: 12px;
+  line-height: 0px;
+}
+}
+
+.shadowloader span {
+    display:block;
+    float:right;
+    border-radius:3px;
+    width:0.5em;
+    height:1.2em;
+    margin:0 0.3em 0 0;
+    background:#63DBBE;
 }
