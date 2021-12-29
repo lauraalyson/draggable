@@ -1,5 +1,5 @@
 import React from 'react'
-import bg2 from '../Assets/bg-2.png'
+import bg2 from '../Assets/TicTacToeWidget.png'
 
 class Project3 extends React.Component {
 	constructor(props) {

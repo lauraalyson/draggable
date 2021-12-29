@@ -1,5 +1,5 @@
 import React from 'react'
-import bg2 from '../Assets/bg-2.png'
+import bg2 from '../Assets/DigiseumWidget.png'
 
 class Project2 extends React.Component {
 	constructor(props) {
@@ -10,7 +10,7 @@ class Project2 extends React.Component {
 	render() {
 		return (
 			<div>
-				<img src={bg2} alt='bg2' className='bg2' />
+				<img src={bg2} alt='bg2' className='bg1' />
 			</div>
 		)
 	}
