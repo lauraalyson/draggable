@@ -1,6 +1,8 @@
-import React from 'react'
-import ShowcaseLayout from './components/GridLayout'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React from 'react';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ShowcaseLayout from './components/GridLayout';
+
 class App extends React.Component {
 	constructor(props) {
 		super(props)
@@ -9,16 +11,10 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<div className='nav'>
-					<h3>Laura Waterbury</h3>	
-				</div>
-
-				<div className='showcase-container'>
+			<div className='body-container'>
 					<ShowcaseLayout 
 					onLayoutChange={this.onLayoutChange} />
-				</div>				
-			</div>
+				</div>
 		)
 	}
 }

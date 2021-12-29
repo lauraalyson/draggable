@@ -8,13 +8,10 @@ class Contact extends React.Component {
 
 	render() {
 		return (
-			<div className='widget-bio'>
-				<div></div>
-				<div className='widget-bio-p'>
-					<h2>Let's Chat:</h2>
-                    <input />
-				</div>
-                
+			<div className='project-widget'>
+				<h2>Let's Chat:</h2>
+				<input />
+				<button>Submit</button>
 			</div>
 		)
 	}

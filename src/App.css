@@ -1,27 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-/* @import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css); */
+/* Imports and Externals */
 
-body {
-  background-color: #F5F4F3;
-  padding: 20px;
-  overflow: scroll;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  color: #272626;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'Product Sans';
+  src: url('./Product\ Sans\ Regular.woff') format('woff2');
 }
 
+/* Global Styles */
 * {
   box-sizing:border-box
 }
 
-h1,h2,h3,h4,h5,p{
-  margin:0
+body {
+  background-color: #F5F4F3;
+  overflow: scroll;
+  font-family: 'Product Sans'!important;
+  color: #272626;
 }
 
 input {
   border: none;
   outline: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(25, 25, 25);
   max-width: 100%;
 }
 
@@ -29,27 +30,47 @@ input:focus-visible {
   outline: none;
 }
 
-.nav {
-  text-align: center;
-}
-
 .showcase-container {
   max-width: 950px;
-  /* min-width: 930px; */
 }
 
-.link-widget {
-  background-color: #C9D4F9;
-  height:100%;
+button {
+  background-color: white;
+  border-radius: 4em!important;
+  border: 1px solid rgb(34, 34, 34);
+  padding: .5em;
+  color: grey;
+}
+
+/* Widget Beginning */
+.project-widget {
+  padding: 1em;
+}
+
+/* Bio Widget */
+.widget-bio {
+  flex-flow: row wrap;
+  align-content: center;
   justify-content: center;
-  align-items: center;
+  padding: 1em;
 }
 
-.link-widget img {
-  max-width: 100%;
+.widget-bio-memoji {
+  max-width: 25%;
   height: auto;
 }
+.widget-bio-name {
+ font-size: 27px;
+ text-transform: uppercase;
+}
+.widget-bio-p {
+ padding-top: 10px;
+ flex-wrap: wrap; 
+ width: 100%;
+}
 
+
+/* Map Widget */
 .map-widget-overlay {
   position: absolute; /* or absolute */
   top: 25%;
@@ -81,17 +102,8 @@ input:focus-visible {
     overflow: hidden;
 }
 
-.react-grid-layout{
-  position:relative;
-  transition: height .2s ease;
-}
 
-.div-fill {
-  background-color: white;
-  width: 100%;
-  text-align: center;
-}
-
+/* Spotify Widget */
 .spotify-widget {
   height: 100%;
   padding: 1em;
@@ -102,43 +114,45 @@ input:focus-visible {
   height: auto;
 }
 
-.widget-bio {
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
-  padding: 1em;
+.shadowloader span {
+    display:block;
+    float:right;
+    border-radius:3px;
+    width:0.5em;
+    height:1.2em;
+    margin:0 0.3em 0 0;
+    background:#63DBBE;
 }
 
-.widget-bio-memoji {
-  max-width: 25%;
+
+
+/* Link Widget */
+.link-widget {
+  background-color: #C9D4F9;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-widget img {
+  max-width: 100%;
   height: auto;
 }
-.widget-bio-name {
- font-size: 27px;
- text-transform: uppercase;
-}
-.widget-bio-p {
- padding-top: 10px;
- flex-wrap: wrap; 
- width: 100%;
+
+
+/* Grid Layout */
+.react-grid-layout{
+  position:relative;
+  transition: height .2s ease;
 }
 
 .react-grid-item{
   transition:all .2s ease;
   transition-property: left, top;
   background: rgb(255, 255, 255);
-  border-radius: 50px;
+  border-radius: 2.5em;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.bg1 {
-  width: 100%;
-}
-
-.bg2 {
- width: 100%;
- height: 100%;
 }
 
 .react-grid-item img{
@@ -168,14 +182,14 @@ input:focus-visible {
   will-change: width, height;
 }
 
-.react-grid-item .react-resizable-handle:after{
+/* .react-grid-item .react-resizable-handle:after{
   content:"";
   position:absolute;
   right:3px;
   bottom:3px;
   width:5px;
   height:5px;
-}
+} */
 
 .react-resizable-handle{
   display:none;
@@ -192,9 +206,9 @@ input:focus-visible {
   align-items: center;
 }
 
-.react-grid-item .minMax {
+/* .react-grid-item .minMax {
   font-size: 12px;
-}
+} */
 
 .react-grid-dragHandleExample {
   cursor: move;
@@ -203,9 +217,7 @@ input:focus-visible {
   cursor: -webkit-grab;
 }
 
-.react-grid-item .react-grid-placeholder {
-  
-  background: #F7F5F0;
+.react-grid-item .react-grid-placeholder  {
   opacity: 0.5;
   transition: all .2s ease;
   transition-property: left,top;
@@ -217,12 +229,12 @@ input:focus-visible {
   user-select: none;
 }
 
-.grid-container {
+/* .grid-container {
   padding: 0.5em;
   height: 50px;
   background-color: #e3e3e378;
   border-radius: 60px 60px 0px 0px;
-}
+} */
 
 .mapboxgl-ctrl-bottom-left {
     display: none!important
@@ -247,11 +259,11 @@ input:focus-visible {
 }
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 650px) {
 
 .showcase-container {
-  max-width: 350px;
-  min-width: 325px;
+  max-width: 380px;
+  min-width: 350px;
 }
 
 .map-widget-overlay {
@@ -277,7 +289,6 @@ input:focus-visible {
     border-radius: 10px;
     overflow: hidden;
 }
-
 .react-grid-item{
   border-radius: 30px;
 }
@@ -289,14 +300,4 @@ h3 {
   font-size: 12px;
   line-height: 0px;
 }
-}
-
-.shadowloader span {
-    display:block;
-    float:right;
-    border-radius:3px;
-    width:0.5em;
-    height:1.2em;
-    margin:0 0.3em 0 0;
-    background:#63DBBE;
 }

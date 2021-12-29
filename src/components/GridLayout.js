@@ -8,16 +8,16 @@ import { motion } from 'framer-motion';
 import DivFill from './Widgets/DivFill'
 import Map from './Widgets/Map'
 import Bio from "./Widgets/Bio";
-import Project1 from "./Widgets/Project1";
-import Project2 from "./Widgets/Project2";
-import Project3 from './Widgets/Project3';
+import Playground from "./Widgets/Playground";
+import Digiseum from "./Widgets/Digiseum";
+import TicTacToe from './Widgets/TicTacToe';
 import Contact from "./Widgets/Contact";
 import Spotify from "./Widgets/Spotify";
 import Links from "./Widgets/Links";
 import lauraMemoji from './Assets/laura-memoji.png';
 import mapHover from './Assets/map-hover.png';
 
-// Import Syles
+// Import Styles
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
@@ -62,7 +62,7 @@ const layoutConfig = {
 	],
 	xs: [
 		{ i: '0', x: 0, y: 0, w: 2, h: 10 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 6 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 8 },
 		{ i: '2', x: 2, y: 0, w: 1, h: 12 },
 		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
 		{ i: '4', x: 2, y: 9, w: 1, h: 6 },
@@ -74,15 +74,15 @@ const layoutConfig = {
 	],
 	xxs: [
 		{ i: '0', x: 0, y: 0, w: 2, h: 8 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 4 },
-		{ i: '2', x: 2, y: 0, w: 1, h: 8 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 4 },
-		{ i: '4', x: 2, y: 9, w: 1, h: 4 },
-		{ i: '5', x: 0, y: 9, w: 1, h: 8 },
-		{ i: '6', x: 0, y: 18, w: 2, h: 4 },
-		{ i: '7', x: 2, y: 18, w: 1, h: 4 },
-		{ i: '8', x: 0, y: 27, w: 1, h: 4 },
-		{ i: '9', x: 0, y: 18, w: 2, h: 4 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 4.5 },
+		{ i: '2', x: 2, y: 0, w: 1, h: 9 },
+		{ i: '3', x: 0, y: 9, w: 1, h: 4.5 },
+		{ i: '4', x: 2, y: 9, w: 1, h: 4.5 },
+		{ i: '5', x: 0, y: 9, w: 1, h: 9 },
+		{ i: '6', x: 0, y: 18, w: 2, h: 4.5 },
+		{ i: '7', x: 2, y: 18, w: 1, h: 4.5 },
+		{ i: '8', x: 0, y: 27, w: 1, h: 4.5 },
+		{ i: '9', x: 0, y: 18, w: 2, h: 4.5 },
 	],
 }
 
@@ -126,6 +126,7 @@ export default class ShowcaseLayout extends React.Component {
 			<div>
 				<ResponsiveReactGridLayout
 					{...this.props}
+					className="showcase-container"
 					layouts={{
 						lg: layoutConfig.lg,
 						md: layoutConfig.md,
@@ -133,7 +134,7 @@ export default class ShowcaseLayout extends React.Component {
 						xs: layoutConfig.xs,
 						xxs: layoutConfig.xxs,
 					}}
-					  breakpoints={{ lg: 1000, md: 750, sm: 600, xs: 450, xxs: 400 }}
+					  breakpoints={{ lg: 1000, md: 750, sm: 660, xs: 450, xxs: 400 }}
 					onBreakpointChange={this.onBreakpointChange}
 					onLayoutChange={this.onLayoutChange}
 					measureBeforeMount={false}
@@ -151,7 +152,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Map />
 					</motion.div>
 					<motion.div key='2'>
-						<Project2 />
+						<Digiseum />
 					</motion.div>
 					<motion.div key='3'>
 						<Spotify />
@@ -160,7 +161,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Links />
 					</motion.div>
 					<motion.div key='5'>
-						<Project1 />
+						<Playground />
 					</motion.div>
 					<motion.div key='6'>
 						<DivFill />
@@ -172,7 +173,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Contact />
 					</motion.div>
 					<motion.div key='9'>
-						<Project3 />
+						<TicTacToe />
 					</motion.div>
 				</ResponsiveReactGridLayout>
 			</div>
@@ -189,5 +190,5 @@ ShowcaseLayout.defaultProps = {
   rowHeight: 30,
   onLayoutChange: function() {},
   cols: { lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 },
-  breakpoints: { lg: 1000, md: 960, sm: 800, xs: 450, xxs: 400 }
+  breakpoints: { lg: 900, md: 800, sm: 800, xs: 450, xxs: 400 }
 };

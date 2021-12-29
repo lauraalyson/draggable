@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import spotify from './../Assets/spotify-logo.png';
+import spotify from './../Assets/Logos/spotify-logo.png'
 
 const username = 'lowaterbury'
 const apiKey = 'ac7dd22471e14b250e68490f97ed5c47'
@@ -38,12 +38,14 @@ const Spotify= () => {
 					<span></span>
 				</span>
 				
-				<p style={{ color: '#63DBBE', paddingTop: '1.2em' }}>
-					 Last played
-				</p>
-				<h4>{currSong}</h4>
-				<p>{currArtist}</p>
-				{/* <p>{lfmData}</p> */}
+				<div>
+					<p style={{ color: '#63DBBE', paddingTop: '1.2em' }}>
+						Last played
+					</p>
+					<h4>{currSong}</h4>
+					<p>{currArtist}</p>					
+				</div>
+
 			</div>
 		)
 }

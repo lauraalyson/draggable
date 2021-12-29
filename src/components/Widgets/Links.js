@@ -1,10 +1,10 @@
 import React from 'react'
 
-// Import Link Imgs
-import codepen from './../Assets/codepen-logo.png';
-import linkedin from './../Assets/linkedin-logo.png';
-import email from './../Assets/email-logo.png';
-import github from './../Assets/github-logo.png'
+// Link Icons
+import codepen from './../Assets/Logos/codepen-logo.png';
+import linkedin from './../Assets/Logos/linkedin-logo.png'
+import email from './../Assets/Logos/email-logo.png'
+import github from './../Assets/Logos/github-logo.png'
 
 class Links extends React.Component {
 	constructor(props) {
