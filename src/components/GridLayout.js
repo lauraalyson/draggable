@@ -11,6 +11,7 @@ import Playground from "./Widgets/Playground";
 import Digiseum from "./Widgets/Digiseum";
 import TicTacToe from './Widgets/TicTacToe';
 import Contact from "./Widgets/Contact";
+import Skills from "./Widgets/Skills";
 import Spotify from "./Widgets/Spotify";
 import Links from "./Widgets/Links";
 import lauraMemoji from './Assets/laura-memoji.png';
@@ -20,6 +21,7 @@ import mapHover from './Assets/map-hover.png';
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
+import Interactive from "./Widgets/Interactive";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const layoutConfig = {
@@ -163,8 +165,10 @@ export default class ShowcaseLayout extends React.Component {
 						<Playground />
 					</motion.div>
 					<motion.div key='6'>
+						<Interactive />	
 					</motion.div>
 					<motion.div key='7'>
+						<Skills />
 					</motion.div>
 					<motion.div key='8'>
 						<Contact />

@@ -9,9 +9,9 @@ class Contact extends React.Component {
 	render() {
 		return (
 			<div className='project-widget'>
-				<h2>Let's Chat:</h2>
+				<h2>Let's Chat 📫 </h2>
 				<input />
-				<button>📫 </button>
+				<button>Submit</button>
 			</div>
 		)
 	}
