@@ -11,7 +11,7 @@ class Contact extends React.Component {
 			<div className='project-widget'>
 				<h2>Let's Chat:</h2>
 				<input />
-				<button>Submit</button>
+				<button>📫 </button>
 			</div>
 		)
 	}

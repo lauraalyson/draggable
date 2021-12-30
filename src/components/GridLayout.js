@@ -5,7 +5,6 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import { motion } from 'framer-motion';
 
 // Import Components
-import DivFill from './Widgets/DivFill'
 import Map from './Widgets/Map'
 import Bio from "./Widgets/Bio";
 import Playground from "./Widgets/Playground";
@@ -164,10 +163,8 @@ export default class ShowcaseLayout extends React.Component {
 						<Playground />
 					</motion.div>
 					<motion.div key='6'>
-						<DivFill />
 					</motion.div>
 					<motion.div key='7'>
-						<DivFill />
 					</motion.div>
 					<motion.div key='8'>
 						<Contact />

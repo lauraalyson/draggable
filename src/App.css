@@ -18,28 +18,34 @@ body {
   font-family: 'Product Sans'!important;
   color: #272626;
 }
-
+h1 { font-size: 2em!important; }
+h2 { font-size: 1.8em!important; }
+h3 { font-size: 1.6em!important; }
+h4 { font-size: 1.4em!important; }
+p { font-size: .9em!important; }
 input {
   border: none;
   outline: none;
-  border-bottom: 1px solid rgb(25, 25, 25);
+  border-bottom: 1px solid rgb(176, 176, 176);
   max-width: 100%;
+  font-size: .7em!important;
 }
 
 input:focus-visible {
   outline: none;
 }
 
-.showcase-container {
-  max-width: 950px;
-}
-
 button {
+  font-size: .7em!important;
   background-color: white;
   border-radius: 4em!important;
-  border: 1px solid rgb(34, 34, 34);
+  border: 1px solid rgb(176, 176, 176);
   padding: .5em;
   color: grey;
+}
+
+.showcase-container {
+  max-width: 950px;
 }
 
 /* Widget Beginning */
@@ -56,13 +62,10 @@ button {
 }
 
 .widget-bio-memoji {
-  max-width: 25%;
+  max-width: 90%;
   height: auto;
 }
-.widget-bio-name {
- font-size: 27px;
- text-transform: uppercase;
-}
+
 .widget-bio-p {
  padding-top: 10px;
  flex-wrap: wrap; 
@@ -292,11 +295,11 @@ button {
 .react-grid-item{
   border-radius: 30px;
 }
-p {
+.spotify-widget p {
   font-size: 10px;
   line-height: 0;
 }
-h3 {
+.spotify-widget h3 {
   font-size: 12px;
   line-height: 0px;
 }

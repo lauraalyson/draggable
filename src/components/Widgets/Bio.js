@@ -9,17 +9,21 @@ class Bio extends React.Component {
 
 	render() {
 		return (
-			<div className='widget-bio'>
-
-                <img
-                    src={LauraMemoji}
-                    alt='LauraMemoji'
-                    className='widget-bio-memoji'
-				/>
-
-				<div className='widget-bio-p'>
-					Hi, I&apos;m Laura.<span className='widget-bio-name'></span>
+			<div
+			className='widget-bio row'
+			style={{ justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+				<div className='col-4'>
+					<img
+					src={LauraMemoji}
+					alt='LauraMemoji'
+					className='widget-bio-memoji'
+					/>
 				</div>
+                
+
+				<p className='col-8'>
+					Hi, I&apos;m Laura, a full-stack developer based in NYC. When I&apos;m not coding I am binging podcasts 🎙 and experimenting with recipes far beyond my culinary skills 🥬 .
+				</p>
 
 			</div>
 		)}
