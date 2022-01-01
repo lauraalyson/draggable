@@ -1,6 +1,6 @@
 import React from 'react'
 import digiseum from '../Assets/Projects/digiseum-widget.png'
-
+import Arrow from './../Assets/Logos/arrow.svg'
 class Digiseum extends React.Component {
 	constructor(props) {
 		super(props)
@@ -21,7 +21,14 @@ class Digiseum extends React.Component {
 						left: '1.5em',
 						padding: '.8em',
 					}}>
-					Playground &#8599;
+						
+					Digiseum
+
+					<img
+					alt='arrow'
+					src={Arrow}
+					style={{ maxWidth: '2em' }}
+					/>
 				</button>
 			</div>
 		)

@@ -1,6 +1,6 @@
 import React from 'react'
 import playground from '../Assets/Projects/playground-widget.png'
-
+import Arrow from './../Assets/Logos/arrow.svg'
 class Playground extends React.Component {
 	constructor(props) {
 		super(props)
@@ -22,7 +22,14 @@ class Playground extends React.Component {
 						left: '1.5em',
 						padding: '.8em',
 					}}>
-					Playground &#8599;
+						
+					Playground
+
+					<img
+					alt='arrow'
+					src={Arrow}
+					style={{ maxWidth: '2em' }}
+					/>
 				</button>
 			</div>
 		)

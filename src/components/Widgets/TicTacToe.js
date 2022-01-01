@@ -1,5 +1,6 @@
-import React from 'react'
-import ticTacToe from '../Assets/Projects/ttt_widget.png'
+import React from 'react';
+import ticTacToe from '../Assets/Projects/ttt_widget.png';
+import Arrow from './../Assets/Logos/arrow.svg';
 
 class TicTacToe extends React.Component {
 	constructor(props) {
@@ -19,7 +20,8 @@ class TicTacToe extends React.Component {
 						left: '1.5em',
 						padding: '.8em',
 					}}>
-					Tic-Tac-Toe &#8599;
+					Tic-Tac-Toe
+					<img alt='arrow' src={Arrow} style={{ maxWidth: '2em' }} />
 				</button>
 			</div>
 		)
