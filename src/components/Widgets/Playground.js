@@ -23,7 +23,7 @@ class Playground extends React.Component {
 						padding: '.8em',
 					}}>
 						
-					Playground
+					{/* Playground */}
 
 					<img
 					alt='arrow'

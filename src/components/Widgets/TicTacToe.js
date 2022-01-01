@@ -20,7 +20,7 @@ class TicTacToe extends React.Component {
 						left: '1.5em',
 						padding: '.8em',
 					}}>
-					Tic-Tac-Toe
+					{/* Tic-Tac-Toe */}
 					<img alt='arrow' src={Arrow} style={{ maxWidth: '2em' }} />
 				</button>
 			</div>

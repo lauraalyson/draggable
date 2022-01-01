@@ -22,7 +22,7 @@ class Digiseum extends React.Component {
 						padding: '.8em',
 					}}>
 						
-					Digiseum
+					{/* Digiseum */}
 
 					<img
 					alt='arrow'
