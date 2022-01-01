@@ -10,18 +10,20 @@ import Bio from "./Widgets/Bio";
 import Playground from "./Widgets/Playground";
 import Digiseum from "./Widgets/Digiseum";
 import TicTacToe from './Widgets/TicTacToe';
-import Contact from "./Widgets/Contact";
-import Skills from "./Widgets/Skills";
+// import Contact from "./Widgets/Contact";
+// import Skills from "./Widgets/Skills";
 import Spotify from "./Widgets/Spotify";
-import Links from "./Widgets/Links";
+// import Links from "./Widgets/Links";
 import lauraMemoji from './Assets/laura-memoji.png';
 import mapHover from './Assets/map-hover.png';
+import LinkedIn from "./Widgets/LinkedIn";
+import Github from './Widgets/Github';
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
-import Interactive from "./Widgets/Interactive";
+
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const layoutConfig = {
@@ -159,19 +161,19 @@ export default class ShowcaseLayout extends React.Component {
 						<Spotify />
 					</motion.div>
 					<motion.div key='4'>
-						<Links />
+						<Github />
 					</motion.div>
 					<motion.div key='5'>
 						<Playground />
 					</motion.div>
 					<motion.div key='6'>
-						<Interactive />	
+						{/* <Skills /> */}
 					</motion.div>
 					<motion.div key='7'>
-						<Skills />
+						<LinkedIn />
 					</motion.div>
 					<motion.div key='8'>
-						<Contact />
+						{/* <Contact /> */}
 					</motion.div>
 					<motion.div key='9'>
 						<TicTacToe />

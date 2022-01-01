@@ -1,5 +1,5 @@
 import React from 'react'
-// import ticTacToe from '../Assets/Projects/TicTacToeWidget.png'
+import ticTacToe from '../Assets/Projects/ttt_widget.png'
 
 class TicTacToe extends React.Component {
 	constructor(props) {
@@ -9,10 +9,18 @@ class TicTacToe extends React.Component {
 
 	render() {
 		return (
-			<div className='project-widget'>
-				{/* <img src={ticTacToe} alt='bg2' className='bg2' /> */}
-				<h2>Tic-Tac-Toe Widget</h2>
-				<button>View Project</button>
+			<div className='ttt-widget'>
+				<img src={ticTacToe} alt='tic-tac-toe' />
+				{/* <h2>Tic-Tac-Toe Widget</h2> */}
+				<button
+					style={{
+						position: 'absolute',
+						bottom: '1.5em',
+						left: '1.5em',
+						padding: '.8em',
+					}}>
+					Tic-Tac-Toe &#8599;
+				</button>
 			</div>
 		)
 	}

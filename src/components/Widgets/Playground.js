@@ -1,5 +1,5 @@
 import React from 'react'
-// import playground from '../Assets/Projects/PlaygroundWidget.png'
+import playground from '../Assets/Projects/playground-widget.png'
 
 class Playground extends React.Component {
 	constructor(props) {
@@ -9,14 +9,21 @@ class Playground extends React.Component {
 
 	render() {
 		return (
-			<div className='project-widget'>
-				{/* <img
+			<div className='playground-widget'>
+				<img
 					src={playground}
-					alt='bg1'
-					className='bg1'
-				/> */}
-				<h2>Playground Widget</h2>
-				<button>View Project</button>
+					alt='playground-project'
+					className=''
+				/>
+				<button
+					style={{
+						position: 'absolute',
+						bottom: '1.5em',
+						left: '1.5em',
+						padding: '.8em',
+					}}>
+					Playground &#8599;
+				</button>
 			</div>
 		)
 	}

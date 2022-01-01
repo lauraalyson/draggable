@@ -22,7 +22,7 @@ class Bio extends React.Component {
                 
 
 				<p className='col-8'>
-					Hi, I&apos;m Laura, a full-stack developer based in NYC. When I&apos;m not coding I am binging podcasts 🎙 and experimenting with recipes far beyond my culinary skills 🥬 .
+					Hi, I&apos;m Laura, a full-stack developer based in NYC. When I&apos;m not coding I am binging podcasts and experimenting with recipes far beyond my culinary skills. 🎙  🥬 
 				</p>
 
 			</div>

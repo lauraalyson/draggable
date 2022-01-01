@@ -16,7 +16,7 @@ body {
   background-color: #F5F4F3;
   overflow: scroll;
   font-family: 'Product Sans'!important;
-  color: #272626;
+  color: #2c2c2c!important;
 }
 h1 { font-size: 2em!important; }
 h2 { font-size: 1.8em!important; }
@@ -39,9 +39,9 @@ button {
   font-size: .7em!important;
   background-color: white;
   border-radius: 4em!important;
-  border: 1px solid rgb(176, 176, 176);
+  border: 1px solid rgb(244, 244, 244);
   padding: .5em;
-  color: grey;
+  color: #2c2c2c!important;
 }
 
 .showcase-container {
@@ -49,9 +49,9 @@ button {
 }
 
 /* Widget Beginning */
-.project-widget {
+/* .project-widget {
   padding: 1em;
-}
+} */
 
 /* Bio Widget */
 .widget-bio {
@@ -127,21 +127,40 @@ button {
     background:#63DBBE;
 }
 
-
-
 /* Link Widget */
 .link-widget {
-  background-color: #C9D4F9;
-  height:100%;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .link-widget img {
-  max-width: 100%;
+  max-width: 45%;
   height: auto;
+  position: absolute;
+  top: 67px;
+  left: 57px;  
 }
 
+.ttt-widget {
+  width: 100%;
+  height: 100%;
+  background-color: #61DBBF;
+}
+
+.ttt-widget img {
+  height: 100%;
+}
+
+.playground-widget {
+  height: 100%;
+  width: 100%;
+  background-color: #FFF1AD;
+}
+
+.playground-widget img{
+  height: 100%;
+  width: 100%;
+}
 
 /* Grid Layout */
 .react-grid-layout{
@@ -185,14 +204,14 @@ button {
   will-change: width, height;
 }
 
-/* .react-grid-item .react-resizable-handle:after{
+.react-grid-item .react-resizable-handle:after{
   content:"";
   position:absolute;
   right:3px;
   bottom:3px;
   width:5px;
   height:5px;
-} */
+}
 
 .react-resizable-handle{
   display:none;
