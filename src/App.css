@@ -49,9 +49,6 @@ button {
 }
 
 /* Widget Beginning */
-/* .project-widget {
-  padding: 1em;
-} */
 
 /* Bio Widget */
 .widget-bio {
@@ -144,7 +141,7 @@ button {
 .ttt-widget {
   width: 100%;
   height: 100%;
-  background-color: #61DBBF;
+  background-color: #98D0FF;
 }
 
 .ttt-widget img {
@@ -154,12 +151,23 @@ button {
 .playground-widget {
   height: 100%;
   width: 100%;
-  background-color: #FFF1AD;
+  background-color: #6ED1B7;
 }
 
 .playground-widget img{
   height: 100%;
   width: 100%;
+}
+
+.digiseum-widget {
+  height: 100%;
+  width: 100%;
+  background-color: #FFF1AD;
+}
+
+.digiseum-widget img{
+  height: 100%;
+  width: 110%;
 }
 
 /* Grid Layout */
@@ -282,6 +290,11 @@ button {
 
 
 @media only screen and (max-width: 650px) {
+
+.link-widget img {
+  top: 2.7em;
+  left: 3em;  
+}
 
 .showcase-container {
   max-width: 380px;

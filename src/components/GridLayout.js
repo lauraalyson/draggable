@@ -155,7 +155,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Map />
 					</motion.div>
 					<motion.div key='2'>
-						<Digiseum />
+						<TicTacToe />
 					</motion.div>
 					<motion.div key='3'>
 						<Spotify />
@@ -176,7 +176,7 @@ export default class ShowcaseLayout extends React.Component {
 						{/* <Contact /> */}
 					</motion.div>
 					<motion.div key='9'>
-						<TicTacToe />
+						<Digiseum />
 					</motion.div>
 				</ResponsiveReactGridLayout>
 			</div>
