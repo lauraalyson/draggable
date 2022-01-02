@@ -67,15 +67,21 @@ button {
   flex-flow: row wrap;
   align-content: center;
   justify-content: center;
-  padding: 1em;
+  /* background: #FFF1AD; */
+}
+
+.widget-bio h4 {
+    color: #C9D4F9!important;
 }
 
 .widget-bio-memoji {
   max-width: 90%;
+  padding-left: 1em;
   height: auto;
 }
 
 .widget-bio-p {
+ padding-right: 1em;
  padding-top: 10px;
  flex-wrap: wrap; 
  width: 100%;
