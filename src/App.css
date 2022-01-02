@@ -44,6 +44,18 @@ button {
   color: #2c2c2c!important;
 }
 
+.header {
+  padding: 5em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  width: 150px;
+  height: auto;
+}
 .showcase-container {
   max-width: 950px;
 }
@@ -296,6 +308,12 @@ button {
   top: 2.7em;
   left: 3em;  
 }
+
+h1 { font-size: 1.5em!important; }
+h2 { font-size: 1.4em!important; }
+h3 { font-size: 1.3em!important; }
+h4 { font-size: 1.2em!important; }
+p { font-size: .8em!important; }
 
 .showcase-container {
   max-width: 380px;

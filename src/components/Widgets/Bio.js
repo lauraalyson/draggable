@@ -12,7 +12,7 @@ class Bio extends React.Component {
 			<div
 			className='widget-bio row'
 			style={{ justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-				<div className='col-4'>
+				<div className='col-5'>
 					<img
 					src={LauraMemoji}
 					alt='LauraMemoji'
@@ -21,9 +21,10 @@ class Bio extends React.Component {
 				</div>
                 
 
-				{/* <p className='col-8'>
-					Hi, I&apos;m Laura, a full-stack developer based in NYC. When I&apos;m not coding I am binging podcasts and experimenting with recipes far beyond my culinary skills. 🎙  🥬 
-				</p> */}
+				<div className='col-7'>
+					<h1>Laura Waterbury</h1>
+					<h4>FullStack Developer</h4>
+				</div>
 
 			</div>
 		)}
