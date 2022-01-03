@@ -31,25 +31,22 @@ class Skills extends React.Component {
 
 	render() {
 		return (
-			<div className='project-widget'>
+			<div style={{ backgroundColor: '#C9D4F9', height: '100%' }} className='skills-widget'>
 				<div>
 					<button onClick={this.handleFrontEnd}> Front End </button>
 					<button onClick={this.handleBackEnd}> Back End </button>
 					<button onClick={this.handleOther}> Other </button>
-					{/* <h3>FrontEnd</h3>
-					<h3>BackEnd</h3>
-					<h3>Other</h3> */}
 				</div>
 
-					<AnimatePresence exitBeforeEnter>
-						<motion.div
-							animate={{ opacity: 1, y: 0 }}
-							initial={{ opacity: 0, y: 20 }}
-							exit={{ opacity: 0, y: -20 }}
-							transition={{ duration: 0.15 }}>
-                            {this.state.skillCategory}   
-						</motion.div>
-					</AnimatePresence>
+				<AnimatePresence exitBeforeEnter>
+					<motion.div
+						animate={{ opacity: 1, y: 0 }}
+						initial={{ opacity: 0, y: 20 }}
+						exit={{ opacity: 0, y: -20 }}
+						transition={{ duration: 0.15 }}>
+						{this.state.skillCategory}
+					</motion.div>
+				</AnimatePresence>
 			</div>
 		)
 	}

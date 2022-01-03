@@ -19,17 +19,21 @@ class LinkedIn extends React.Component {
 					rel='noreferrer noopener'>
 					<img className='link-widget-img' src={github} alt='github-logo' />
 				</a>
-				<button
-					style={{
-						position: 'absolute',
-						bottom: '1.5em',
-						left: '1.5em',
-						padding: '.8em',
-					}}				
-					>
-					<img
-					alt='arrow' src={Arrow} style={{ width: '2em' }} />
-				</button>
+				<a
+					href='https://www.github.com/lauraalyson'
+					target='_blank'
+					rel='noreferrer noopener'>
+					<button
+						className='github-button'
+						style={{
+							position: 'absolute',
+							bottom: '1.5em',
+							left: '1.5em',
+							padding: '.8em',
+						}}>
+						<img alt='arrow' src={Arrow} style={{ width: '1.8em' }} />
+					</button>
+				</a>
 			</div>
 		)
 	}

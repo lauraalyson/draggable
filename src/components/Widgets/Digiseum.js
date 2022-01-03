@@ -10,25 +10,16 @@ class Digiseum extends React.Component {
 	render() {
 		return (
 			<div className='digiseum-widget'>
-				<img
-				src={digiseum}
-				alt='digi-seum-project'
-				/>
+				<img src={digiseum} alt='digi-seum-project' />
 				<button
+					className='digiseum-widget-button'
 					style={{
 						position: 'absolute',
 						bottom: '1.5em',
 						left: '1.5em',
 						padding: '.8em',
 					}}>
-						
-					{/* Digiseum */}
-
-					<img
-					alt='arrow'
-					src={Arrow}
-					style={{ maxWidth: '2em' }}
-					/>
+					<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
 				</button>
 			</div>
 		)

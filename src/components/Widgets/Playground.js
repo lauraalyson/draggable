@@ -10,26 +10,16 @@ class Playground extends React.Component {
 	render() {
 		return (
 			<div className='playground-widget'>
-				<img
-					src={playground}
-					alt='playground-project'
-					className=''
-				/>
+				<img src={playground} alt='playground-project' className='' />
 				<button
+					className='playground-widget-button'
 					style={{
 						position: 'absolute',
 						bottom: '1.5em',
 						left: '1.5em',
 						padding: '.8em',
 					}}>
-						
-					{/* Playground */}
-
-					<img
-					alt='arrow'
-					src={Arrow}
-					style={{ maxWidth: '2em' }}
-					/>
+					<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
 				</button>
 			</div>
 		)

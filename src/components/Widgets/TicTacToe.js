@@ -12,16 +12,15 @@ class TicTacToe extends React.Component {
 		return (
 			<div className='ttt-widget'>
 				<img src={ticTacToe} alt='tic-tac-toe' />
-				{/* <h2>Tic-Tac-Toe Widget</h2> */}
 				<button
+					className='ttt-widget-button'
 					style={{
 						position: 'absolute',
 						bottom: '1.5em',
 						left: '1.5em',
 						padding: '.8em',
 					}}>
-					{/* Tic-Tac-Toe */}
-					<img alt='arrow' src={Arrow} style={{ maxWidth: '2em' }} />
+					<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
 				</button>
 			</div>
 		)

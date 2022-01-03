@@ -20,6 +20,7 @@ import Github from './Widgets/Github';
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
+import Skills from "./Widgets/Skills";
 
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
@@ -69,8 +70,8 @@ const layoutConfig = {
 		{ i: '5', x: 0, y: 9, w: 1, h: 12 },
 		{ i: '6', x: 0, y: 18, w: 2, h: 6 },
 		{ i: '7', x: 2, y: 18, w: 1, h: 6 },
-		{ i: '8', x: 0, y: 27, w: 1, h: 6 },
-		{ i: '9', x: 0, y: 11, w: 2, h: 6 },
+		{ i: '8', x: 0, y: 11, w: 2, h: 6 },
+		{ i: '9', x: 0, y: 27, w: 2, h: 6 },
 	],
 	xxs: [
 		{ i: '0', x: 0, y: 0, w: 2, h: 8 },
@@ -81,8 +82,8 @@ const layoutConfig = {
 		{ i: '5', x: 0, y: 9, w: 1, h: 9 },
 		{ i: '6', x: 0, y: 18, w: 2, h: 4.5 },
 		{ i: '7', x: 2, y: 18, w: 1, h: 4.5 },
-		{ i: '8', x: 0, y: 27, w: 1, h: 4.5 },
-		{ i: '9', x: 0, y: 11, w: 2, h: 4.5 },
+		{ i: '8', x: 0, y: 11, w: 2, h: 4.5 },
+		{ i: '9', x: 0, y: 27, w: 1, h: 4.5 },
 	],
 }
 
@@ -170,10 +171,9 @@ export default class ShowcaseLayout extends React.Component {
 						<LinkedIn />
 					</motion.div>
 					<motion.div key='8'>
-						{/* <Contact /> */}
+						<Skills />
 					</motion.div>
 					<motion.div key='9'>
-						{/* <Skills /> */}
 					</motion.div>
 				</ResponsiveReactGridLayout>
 			</div>
