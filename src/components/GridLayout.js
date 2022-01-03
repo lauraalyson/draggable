@@ -10,10 +10,7 @@ import Bio from "./Widgets/Bio";
 import Playground from "./Widgets/Playground";
 import Digiseum from "./Widgets/Digiseum";
 import TicTacToe from './Widgets/TicTacToe';
-// import Contact from "./Widgets/Contact";
-// import Skills from "./Widgets/Skills";
 import Spotify from "./Widgets/Spotify";
-// import Links from "./Widgets/Links";
 import lauraMemoji from './Assets/laura-memoji.png';
 import mapHover from './Assets/map-hover.png';
 import LinkedIn from "./Widgets/LinkedIn";
@@ -167,7 +164,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Playground />
 					</motion.div>
 					<motion.div key='6'>
-						{/* <Skills /> */}
+						<Digiseum />
 					</motion.div>
 					<motion.div key='7'>
 						<LinkedIn />
@@ -176,7 +173,7 @@ export default class ShowcaseLayout extends React.Component {
 						{/* <Contact /> */}
 					</motion.div>
 					<motion.div key='9'>
-						<Digiseum />
+						{/* <Skills /> */}
 					</motion.div>
 				</ResponsiveReactGridLayout>
 			</div>

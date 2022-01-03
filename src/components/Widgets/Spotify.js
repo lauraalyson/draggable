@@ -8,7 +8,6 @@ const apiKey = 'ac7dd22471e14b250e68490f97ed5c47'
 const Spotify= () => {
 	const [currSong, setCurrSong] = useState('');
 	const [currArtist, setCurrArtist] = useState('');
-	const [lfmData, setLfmData] = useState({});
 
 	useEffect(() => {
 
@@ -17,12 +16,9 @@ const Spotify= () => {
 				`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${username}&api_key=${apiKey}&limit=1&nowplaying=true&format=json`
 			)
 			.then((response) => {
-				console.log(response)
-				setLfmData(response.data.recenttracks)
 				setCurrSong(response.data.recenttracks.track[0].name)
 				setCurrArtist( response.data.recenttracks.track[0].artist['#text'] )
 			})
-			.then(() => console.log(lfmData))
 			.catch((error) =>
 				console.log(error)
 			)
@@ -40,9 +36,9 @@ const Spotify= () => {
 				
 				<div>
 					<p style={{ color: '#63DBBE', paddingTop: '1.2em' }}>
-						Last played
+						Currently Listening
 					</p>
-					<h4>{currSong}</h4>
+					<h3>{currSong}</h3>
 					<p>{currArtist}</p>					
 				</div>
 
