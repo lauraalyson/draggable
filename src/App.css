@@ -40,7 +40,7 @@ button {
   background-color: white;
   border-radius: 4em!important;
   border: 1px solid rgb(244, 244, 244);
-  padding: .5em;
+  padding: .6em;
   color: #2c2c2c!important;
 }
 
@@ -68,10 +68,6 @@ button {
   align-content: center;
   justify-content: center;
   /* background: #FFF1AD; */
-}
-
-.widget-bio h4 {
-    color: #C9D4F9!important;
 }
 
 .widget-bio-memoji {

@@ -38,7 +38,7 @@ const Spotify= () => {
 					<p style={{ color: '#63DBBE', paddingTop: '1.2em' }}>
 						Currently Listening
 					</p>
-					<h3>{currSong}</h3>
+					<h4>{currSong}</h4>
 					<p>{currArtist}</p>					
 				</div>
 
