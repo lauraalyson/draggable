@@ -34,10 +34,10 @@ class Skills extends React.Component {
 			<div style={{ backgroundColor: '#C9D4F9', height: '100%' }} className='skills-widget'>
 				<div>
 					{/* <button> Front-End </button>
-					<button> Back-End </button>
-					<button onClick={this.handleOther}> Other </button> */}
+					<button> Back-End </button> */}
+					<button onTap={this.handleOther} onClick={this.handleOther}> Other </button>
 					<h3 onClick={this.handleFrontEnd}> FrontEnd</h3>
-					<h3 onClick={this.handleBackEnd}>Backend</h3>
+					<h3 onTap={this.handleBackEnd} onClick={this.handleBackEnd}>Backend</h3>
 				</div>
 
 				<AnimatePresence exitBeforeEnter>
