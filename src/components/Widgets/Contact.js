@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React from 'react';
+import Email from './../Assets/Logos/email-logo.png';
+// import Mail from './../Assets/Logos/mail-graphic.png';
 class Contact extends React.Component {
 	constructor(props) {
 		super(props)
@@ -8,10 +9,14 @@ class Contact extends React.Component {
 
 	render() {
 		return (
-			<div className='project-widget'>
-				<h2>Let's Chat 📫 </h2>
-				<input />
-				<button>Submit</button>
+			<div className='project-widget row'>
+				<div className='col-5'>
+					<img src={Email} alt='Email Emoji'/>
+				</div>
+				<div className='col-5'>
+					<input />
+
+				</div>
 			</div>
 		)
 	}

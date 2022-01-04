@@ -21,6 +21,7 @@ import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
 import Skills from "./Widgets/Skills";
+import Contact from "./Widgets/Contact";
 
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
@@ -174,6 +175,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Skills />
 					</motion.div>
 					<motion.div key='9'>
+						<Contact />
 					</motion.div>
 				</ResponsiveReactGridLayout>
 			</div>

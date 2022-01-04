@@ -2,7 +2,9 @@ import React from 'react'
 
 const SoundAnimation = () => {
 	return (
-        <span className='sound-bars'>
+        <span
+        style={{ padding: '1em'}}
+        >
             <span className='sound-bar'></span>
             <span className='sound-bar'></span>
             <span className='sound-bar'></span>

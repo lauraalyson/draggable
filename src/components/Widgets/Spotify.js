@@ -29,16 +29,11 @@ const Spotify= () => {
 		return (
 			<div className='spotify-widget'>
 				<img src={spotify} alt='spotify-logo' />
+				<SoundAnimation />
 
-
-				<div>
-					<p style={{ color: '#63DBBE', paddingTop: '1.2em' }}>
-						<SoundAnimation /> Currently Listening
-					</p>
-					<h3>{currSong}</h3>
-					<p>{currArtist}</p>
-					
-				</div>
+				<p style={{ color: '#63DBBE', paddingTop: '1em' }}>Currently Listening</p>
+				<h3>{currSong}</h3>
+				<p>{currArtist}</p>
 			</div>
 		)
 }

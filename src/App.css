@@ -120,11 +120,10 @@ button {
     overflow: hidden;
 }
 
-
 /* Spotify Widget */
 .spotify-widget {
   height: 100%;
-  padding: 1em;
+  padding: 1.2em;
 }
 
 .spotify-widget img {
@@ -132,44 +131,40 @@ button {
   height: auto;
 }
 
-.sound-bars span {
-    display:relative;
-    float:left;
-    border-radius:3px;
-    width:0.5em;
-    background:#63DBBE; 
-    /* height:1.2em; */
-    /* margin:0 0.3em 0 0; */
-    /* animation: sound 0ms -800ms linear infinite alternate;    */
+.sound-bar {
+  display:flex;
+  float:right;
+  justify-content: end;
+  align-items: flex-end;
+  border-radius:3px;
+  width:0.5em;
+  background:#63DBBE;
+  animation: sound 0ms -900ms linear infinite alternate;
 }
 
-.sound-bar {
-    background:#63DBBE;
-    display: inline;
-    bottom: 12em;
-    left: 1em;
-    /* left: 1em; */
-    /* height: 3px; */
-    /* position: absolute; */
-    /* width: 3px;       */
-    animation: sound 0ms -800ms linear infinite alternate;
+.sound-bar:nth-child(1)  {     
+  margin-right: .3em;
+  animation-duration: 624ms;
+}
+.sound-bar:nth-child(2)  {
+  margin-right: .1em;
+  animation-duration: 603ms;
+}
+.sound-bar:nth-child(3)  {
+  margin-right: .1em;
+  animation-duration: 577ms;
 }
 
 @keyframes sound {
     0% {
-        height: 1em; 
+      height: 2px; 
     }
     100% {    
-        height: 2em;        
+      height: 5px;      
     }
 }
 
-.sound-bar:nth-child(1)  {     margin-left: 0em;
-animation-duration: 424ms; }
-.sound-bar:nth-child(2)  {     margin-left: .1em;
-animation-duration: 403ms; }
-.sound-bar:nth-child(3)  {     margin-left: .1em;
-animation-duration: 377ms; }
+
 
 
 /* Link Widget */
@@ -267,6 +262,7 @@ animation-duration: 377ms; }
 
 .skills-widget button{
   margin: .2em;
+  cursor: pointer;
 }
 
 
@@ -336,23 +332,23 @@ animation-duration: 377ms; }
   align-items: center;
 }
 
-.react-grid-dragHandleExample {
+/* .react-grid-dragHandleExample {
   cursor: move;
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
-}
+} */
 
 .react-grid-item .react-grid-placeholder  {
   opacity: 0.5;
   transition: all .2s ease;
   transition-property: left,top;
   z-index: 2;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 
 .mapboxgl-ctrl-bottom-left {
@@ -427,10 +423,8 @@ p { font-size: .8em!important; }
 }
 .spotify-widget p {
   font-size: 10px;
-  line-height: 0;
 }
 .spotify-widget h3 {
   font-size: 12px;
-  line-height: 0px;
 }
 }
