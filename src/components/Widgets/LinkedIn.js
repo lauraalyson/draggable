@@ -14,10 +14,16 @@ class LinkedIn extends React.Component {
 	render() {
 		return (
 			<div style={{ backgroundColor: '#C9D4F9' }} className='link-widget'>
-				<a href='https://www.linkedin.com/in/laura-waterbury/'>
+				<a
+					href='https://www.linkedin.com/in/laura-waterbury/'
+					target='_blank'
+					rel='noreferrer noopener'>
 					<img className='link-widget-img' src={linkedin} alt='linkedin-logo' />
 				</a>
-				<a href='https://www.github.com/lauraalyson'>
+				<a
+					href='https://www.github.com/lauraalyson'
+					target='_blank'
+					rel='noreferrer noopener'>
 					<button
 						className='linkedin-button'
 						onHover={this.handleTitle}

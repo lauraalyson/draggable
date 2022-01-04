@@ -209,11 +209,11 @@ button {
   left: 60px;  
 }
 
-.linkedin-button:hover::before {
+.linkedin-button:hover:enabled:before {
   content: 'LinkedIn';
 }
 
-.github-button:hover::before {
+.github-button:hover:enabled:before {
   content: 'Github';
 }
 
