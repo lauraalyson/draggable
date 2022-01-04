@@ -175,7 +175,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Skills />
 					</motion.div>
 					<motion.div key='9'>
-						<Contact />
+						<Contact layout={this.state.currentBreakpoint} />
 					</motion.div>
 				</ResponsiveReactGridLayout>
 			</div>

@@ -31,7 +31,7 @@ class Skills extends React.Component {
 
 	render() {
 		return (
-			<div style={{ backgroundColor: '#C9D4F9', height: '100%' }} className='skills-widget'>
+			<div style={{ height: '100%' }} className='skills-widget'>
 				<div>
 					{/* <button> Front-End </button>
 					<button> Back-End </button> */}

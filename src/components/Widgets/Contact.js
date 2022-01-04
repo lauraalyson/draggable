@@ -1,6 +1,7 @@
 import React from 'react';
-import Email from './../Assets/Logos/email-logo.png';
-// import Mail from './../Assets/Logos/mail-graphic.png';
+import MailCutout from './../Assets/Logos/mail-cutout-top.png';
+import MailCutoutMobile from './../Assets/Logos/mail-cutout-bottom.png';
+import Arrow from './../Assets/Logos/arrow.svg';
 class Contact extends React.Component {
 	constructor(props) {
 		super(props)
@@ -8,15 +9,40 @@ class Contact extends React.Component {
 	}
 
 	render() {
+		const { currentBreakpoint, layout } = this.props
 		return (
-			<div className='project-widget row'>
-				<div className='col-5'>
-					<img src={Email} alt='Email Emoji'/>
+			<div
+				style={{ backgroundColor: '#98D0FF' }}
+				className='contact-widget row'>
+				<div className='col-12 contact-widget-text'>
+					<h3>Let's chat.</h3>
+					<p>Currently interested fulltime opportunities.</p>
 				</div>
-				<div className='col-5'>
-					<input />
 
+				<div className='col-12 contact-widget-img'>
+					{ ( this.props.layout === 'xxs' ) 
+					? <img src={MailCutoutMobile} alt='mail-bottom' />
+					:
+					<img src={MailCutout} alt='Email Emoji' /> 
+					}
 				</div>
+
+				<a
+					href='https://www.github.com/lauraalyson'
+					target='_blank'
+					rel='noreferrer noopener'>
+					<button
+						className='contact-button'
+						onHover={this.handleTitle}
+						style={{
+							position: 'absolute',
+							bottom: '1.5em',
+							left: '1.5em',
+							padding: '.8em',
+						}}>
+							<img alt='arrow' src={Arrow} style={{ width: '1.8em' }} />
+					</button>
+				</a>
 			</div>
 		)
 	}

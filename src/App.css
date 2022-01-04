@@ -69,8 +69,9 @@ button {
 
 /* Bio Widget */
 .widget-bio {
+  height: 100%;
   flex-flow: row wrap;
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -164,8 +165,35 @@ button {
     }
 }
 
+/* Contact Widget */
+.contact-widget {
+  width: 110%;
+  height: 100%;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
 
+.contact-widget-text {
+  margin-left: 1.2em;
+  max-width: 250px!important;
+  z-index: 3;
+}
 
+.contact-widget-img {
+  position: absolute;
+  top: 0px;
+  left: 45%;
+}
+
+.contact-widget img {
+  width: 50%;
+  height: auto;
+}
+
+.contact-button:hover::before {
+  content: 'Contact';
+}
 
 /* Link Widget */
 .link-widget {
@@ -418,6 +446,31 @@ p { font-size: .8em!important; }
     border-radius: 10px;
     overflow: hidden;
 }
+
+.contact-widget {
+  width: 110%;
+  height: 100%;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.contact-widget-img {
+  position: absolute;
+  top: 55%;
+  left: 3em;
+}
+
+.contact-widget-text {
+  max-width: 90%!important;
+  z-index: 3;
+}
+
+.contact-widget img {
+  width: 70%;
+  height: auto;
+}
+
 .react-grid-item{
   border-radius: 30px;
 }
@@ -427,4 +480,6 @@ p { font-size: .8em!important; }
 .spotify-widget h3 {
   font-size: 12px;
 }
+
+/* End of Media Queries */
 }
