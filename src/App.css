@@ -191,7 +191,7 @@ button {
   height: auto;
 }
 
-.contact-button:hover::before {
+.contact-button:hover:enabled::before {
   content: 'Contact';
 }
 
@@ -209,11 +209,11 @@ button {
   left: 60px;  
 }
 
-.linkedin-button:hover:enabled:before {
+/* .linkedin-button:hover:enabled::before {
   content: 'LinkedIn';
-}
+} */
 
-.github-button:hover:enabled:before {
+.github-button:hover:enabled::before {
   content: 'Github';
 }
 

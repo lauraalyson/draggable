@@ -26,7 +26,7 @@ class LinkedIn extends React.Component {
 					rel='noreferrer noopener'>
 					<button
 						className='linkedin-button'
-						onHover={this.handleTitle}
+						// onHover={this.handleTitle}
 						style={{
 							position: 'absolute',
 							bottom: '1.5em',
