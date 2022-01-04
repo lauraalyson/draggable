@@ -209,9 +209,9 @@ button {
   left: 60px;  
 }
 
-/* .linkedin-button:hover:enabled::before {
+.linkedin-button:hover:enabled::before {
   content: 'LinkedIn';
-} */
+}
 
 .github-button:hover:enabled::before {
   content: 'Github';
@@ -285,14 +285,27 @@ button {
 
 /* Skills Widget */
 .skills-widget {
-  padding: 2em;
+  padding: 1.2em;
+  align-items: center;
 }
 
 .skills-widget button{
-  margin: .2em;
+  margin-right: .2em;  
+  margin-bottom: 1em;
   cursor: pointer;
 }
 
+.skills-widget p {
+  margin-left: .2em;
+  max-width: 250px;
+}
+
+.skills-widget-img {
+  position: absolute;
+  bottom: -1em;
+  right: 0;
+  width: 40%;
+}
 
 /* Grid Layout */
 .react-grid-layout{
@@ -360,23 +373,23 @@ button {
   align-items: center;
 }
 
-/* .react-grid-dragHandleExample {
+.react-grid-dragHandleExample {
   cursor: move;
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
-} */
+}
 
 .react-grid-item .react-grid-placeholder  {
   opacity: 0.5;
   transition: all .2s ease;
   transition-property: left,top;
   z-index: 2;
-  /* -webkit-user-select: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  user-select: none; */
+  user-select: none;
 }
 
 .mapboxgl-ctrl-bottom-left {
@@ -469,6 +482,11 @@ p { font-size: .8em!important; }
 .contact-widget img {
   width: 70%;
   height: auto;
+}
+
+.skills-widget p {
+  margin-left: .2em;
+  max-width: 270px;
 }
 
 .react-grid-item{

@@ -1,25 +1,26 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import ToolBelt from './../Assets/Logos/toolbelt-cutout-bottom.png';
 class Skills extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			skillCategory:
-				'JavaScript, Python, React.js, React Native, jQuery, HTML, CSS, GSAP, Bootstrap',
+				'JavaScript, Python, ReactJS, React Native, VueJS, jQuery, HTML, CSS, GSAP, Bootstrap',
 		}
 	}
 
 	handleFrontEnd = () => {
 		this.setState({
 			skillCategory:
-				'JavaScript, Python, React.js, React Native, jQuery, HTML, CSS, GSAP, Bootstrap'
+				'JavaScript, Python, ReactJS, React Native, VueJS, jQuery, HTML, CSS, GSAP, Bootstrap'
 		})
 	}
 
 	handleBackEnd = () => {
 		this.setState({
 			skillCategory:
-				'Node.js, Express, MySQL, Django, PostgreSQL, MongoDB, Mongoose.js, Heroku, REST API'
+				'Node.js, Express, MySQL, Django, PostgreSQL, MongoDB, Mongoose, Heroku, REST API'
 		})
 	}
 	handleOther = () => {
@@ -30,25 +31,26 @@ class Skills extends React.Component {
 	}
 
 	render() {
+		const { skillCategory } = this.state
 		return (
-			<div style={{ height: '100%' }} className='skills-widget'>
+			<div className='skills-widget'>
+				<h3>Tool Belt</h3>
 				<div>
-					{/* <button> Front-End </button>
-					<button> Back-End </button> */}
-					<button onTap={this.handleOther} onClick={this.handleOther}> Other </button>
-					<h3 onClick={this.handleFrontEnd}> FrontEnd</h3>
-					<h3 onTap={this.handleBackEnd} onClick={this.handleBackEnd}>Backend</h3>
+					<button onTap={this.handleFrontEnd} onClick={this.handleFrontEnd}>
+						Front-End
+					</button>
+					<button onTap={this.handleBackEnd} onClick={this.handleBackEnd}>
+						Back-End
+					</button>
+					<button onTap={this.handleOther} onClick={this.handleOther}>
+						Other
+					</button>
 				</div>
 
-				<AnimatePresence exitBeforeEnter>
-					<motion.div
-						animate={{ opacity: 1, y: 0 }}
-						initial={{ opacity: 0, y: 20 }}
-						exit={{ opacity: 0, y: -20 }}
-						transition={{ duration: 0.15 }}>
-						{this.state.skillCategory}
+					<motion.div>
+						<p>{skillCategory}</p>
 					</motion.div>
-				</AnimatePresence>
+					<img className='skills-widget-img' src={ToolBelt} alt='Toolbelt Emoji'/>
 			</div>
 		)
 	}
