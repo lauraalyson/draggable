@@ -9,7 +9,7 @@ class Contact extends React.Component {
 	}
 
 	render() {
-		const { currentBreakpoint, layout } = this.props
+		// const { layout } = this.props
 		return (
 			<div
 				style={{ backgroundColor: '#98D0FF' }}
@@ -28,7 +28,7 @@ class Contact extends React.Component {
 				</div>
 
 				<a
-					href='https://www.github.com/lauraalyson'
+					href='mailto:lauraalyson3@gmail.com'
 					target='_blank'
 					rel='noreferrer noopener'>
 					<button

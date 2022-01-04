@@ -134,8 +134,8 @@ button {
 
 .sound-bar {
   display:flex;
-  float:right;
-  justify-content: end;
+  float: right;
+  justify-content: flex-end;
   align-items: flex-end;
   border-radius:3px;
   width:0.5em;
