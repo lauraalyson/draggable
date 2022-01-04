@@ -4,7 +4,12 @@
 
 @font-face {
   font-family: 'Product Sans';
-  src: url('./Product\ Sans\ Regular.woff') format('woff2');
+  src: url('./Product\ Sans\ Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Relative';
+  src: url('./Relative.woff') format('woff');
 }
 
 /* Global Styles */
@@ -13,15 +18,15 @@
 }
 
 body {
-  background-color: #F5F4F3;
+  background-color: #EAF0EC;
   overflow: scroll;
-  font-family: 'Product Sans'!important;
+  font-family: 'Relative'!important;
   color: #2c2c2c!important;
 }
-h1 { font-size: 2em!important; }
-h2 { font-size: 1.8em!important; }
-h3 { font-size: 1.6em!important; }
-h4 { font-size: 1.4em!important; }
+h1 { font-size: 1.8em!important; }
+h2 { font-size: 1.6em!important; }
+h3 { font-size: 1.4em!important; }
+h4 { font-size: 1.2em!important; }
 p { font-size: .9em!important; }
 input {
   border: none;
@@ -40,7 +45,7 @@ button {
   background-color: white;
   border-radius: 4em!important;
   border: 1px solid rgb(244, 244, 244);
-  padding: .6em;
+  padding: .8em;
   color: #2c2c2c!important;
 }
 
@@ -127,15 +132,45 @@ button {
   height: auto;
 }
 
-.shadowloader span {
-    display:block;
-    float:right;
+.sound-bars span {
+    display:relative;
+    float:left;
     border-radius:3px;
     width:0.5em;
-    height:1.2em;
-    margin:0 0.3em 0 0;
-    background:#63DBBE;
+    background:#63DBBE; 
+    /* height:1.2em; */
+    /* margin:0 0.3em 0 0; */
+    /* animation: sound 0ms -800ms linear infinite alternate;    */
 }
+
+.sound-bar {
+    background:#63DBBE;
+    display: inline;
+    bottom: 12em;
+    left: 1em;
+    /* left: 1em; */
+    /* height: 3px; */
+    /* position: absolute; */
+    /* width: 3px;       */
+    animation: sound 0ms -800ms linear infinite alternate;
+}
+
+@keyframes sound {
+    0% {
+        height: 1em; 
+    }
+    100% {    
+        height: 2em;        
+    }
+}
+
+.sound-bar:nth-child(1)  {     margin-left: 0em;
+animation-duration: 424ms; }
+.sound-bar:nth-child(2)  {     margin-left: .1em;
+animation-duration: 403ms; }
+.sound-bar:nth-child(3)  {     margin-left: .1em;
+animation-duration: 377ms; }
+
 
 /* Link Widget */
 .link-widget {
@@ -330,17 +365,20 @@ button {
   to { transform: scale(1); }
 }
 
-@keyframes playing {
+@keyframes sound {
     0% {
-        height: 3px
+       opacity: .35;
+        height: 3px; 
     }
-    50% {
-        height: 12px
-    }
-    to {
-        height: 3px
+    100% {
+        opacity: 1;       
+        height: 28px;        
     }
 }
+
+.sound-bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+.sound-bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
+.sound-bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
 
 
 @media only screen and (max-width: 650px) {

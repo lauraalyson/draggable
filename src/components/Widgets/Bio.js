@@ -32,8 +32,8 @@ class Bio extends React.Component {
 				</div>
 
 				<div className='col-7'>
-					<h2>Laura Waterbury</h2>
-					<h5 style={{ color: '#C9D4F9' }}>Full-Stack Developer</h5>
+					<h3>Laura Waterbury</h3>
+					<h6 style={{ color: '#C9D4F9' }}>Full-Stack Developer</h6>
 					<p>Welcome to my corner of the interweb. When I'm not coding, you can find me binging podcasts at a rate only Ira Glass could compete with.</p>
 				</div>
 			</div>
