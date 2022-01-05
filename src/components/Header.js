@@ -1,5 +1,4 @@
 import React from "react";
-import LauraMemoji from './Assets/laura-memoji.png';
 
 class Header extends React.Component {
 	constructor(props) {
@@ -10,7 +9,7 @@ class Header extends React.Component {
 	render() {
 		return (
 			<div className="header">
-                <img src={LauraMemoji} alt='Laura Waterbury Memoji'/>
+                Laura Waterbury
 			</div>
 		)
 	}

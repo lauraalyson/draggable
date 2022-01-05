@@ -144,7 +144,7 @@ export default class ShowcaseLayout extends React.Component {
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
 					<motion.div className='widget-bio' key='0'>
-						<Bio />
+						<Bio layout={this.state.currentBreakpoint}  />
 					</motion.div>
 					<motion.div key='1'>
 						<div className='map-widget-overlay'>

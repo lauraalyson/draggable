@@ -62,7 +62,7 @@ button {
   height: auto;
 }
 .showcase-container {
-  max-width: 950px;
+  margin-bottom: 3em;
 }
 
 /* Widget Beginning */
@@ -87,7 +87,6 @@ button {
  flex-wrap: wrap; 
  width: 100%;
 }
-
 
 /* Map Widget */
 .map-widget-overlay {

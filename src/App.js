@@ -12,10 +12,20 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className='body-container'>
-				<Header />
-				<ShowcaseLayout 
-				onLayoutChange={this.onLayoutChange} />
+			<div
+				className='row'
+				style={{
+					justifyContent: 'center',
+					alignItems: 'center',
+					height: '100%',
+					padding: '1em',
+				}}>
+				<div className='col-12' style={{
+					maxWidth: '950px'
+				}}>
+					<Header />
+					<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
+				</div>
 			</div>
 		)
 	}
