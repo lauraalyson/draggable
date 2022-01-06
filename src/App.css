@@ -50,17 +50,30 @@ button {
 }
 
 .header {
-  padding: 5em;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2em;
 }
 
-.header img {
-  width: 150px;
-  height: auto;
+.header div {
+  display: flex;
+
+  justify-content: space-evenly;
+  border-radius: 4em;
+  border: 2px solid rgb(244, 244, 244); 
+  background-color: #EDE9E9;  
 }
+
+.header li {
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  padding: 1em;
+}
+
+.header li:hover {
+  background-color: white;
+  border-radius: 4em!important;
+}
+
 .showcase-container {
   margin-bottom: 3em;
 }
@@ -77,7 +90,7 @@ button {
 
 .widget-bio-memoji {
   max-width: 90%;
-  padding-left: 1em;
+  padding: 1em;
   height: auto;
 }
 
@@ -334,7 +347,7 @@ button {
 }
 
 .react-grid-placeholder{
-  background:rgb(181, 201, 222);
+  background:rgb(181, 201, 222)!important;
   opacity:.2;
   transition-duration: 1s;
   z-index:2;
@@ -362,9 +375,9 @@ button {
   display:none;
 }
 
-.react-grid-item .static {
-  background: #cce;
-}
+/* .react-grid-item .static {
+  background: #cce!important;
+} */
 
 .react-grid-item .text {
   display: flex;

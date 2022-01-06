@@ -12,21 +12,27 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div
-				className='row'
-				style={{
-					justifyContent: 'center',
-					alignItems: 'center',
-					height: '100%',
-					padding: '1em',
-				}}>
-				<div className='col-12' style={{
-					maxWidth: '950px'
-				}}>
-					<Header />
-					<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
-				</div>
+			<div>
+				
+				<div
+					className='row'
+					style={{
+						justifyContent: 'center',
+						alignItems: 'center',
+						height: '100%',
+						padding: '1em',
+					}}>
+					<div className='col-sm-6  col-md-5 col-lg-5 col-xl-4'>
+						<Header />	
+					</div>
+					<div className='col-12' style={{
+						maxWidth: '950px'
+					}}>
+						<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
+					</div>
+				</div>				
 			</div>
+
 		)
 	}
 }
