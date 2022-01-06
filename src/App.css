@@ -181,8 +181,9 @@ button {
 
 .contact-widget-img {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 45%;
+  bottom: 0;
 }
 
 .contact-widget img {
@@ -417,7 +418,7 @@ button {
 .sound-bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
 
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 730px) {
 
 .link-widget img {
   top: 2.7em;

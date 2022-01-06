@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SoundAnimation from '../Assets/SoundAnimation';
+// import SoundAnimation from '../Assets/SoundAnimation';
 import axios from 'axios';
 import spotify from './../Assets/Logos/spotify-logo.png'
 
@@ -29,7 +29,7 @@ const Spotify= () => {
 		return (
 			<div className='spotify-widget'>
 				<img src={spotify} alt='spotify-logo' />
-				<SoundAnimation />
+				{/* <SoundAnimation /> */}
 
 				<p style={{ color: '#63DBBE', paddingTop: '1em' }}>Currently Listening</p>
 				<h3>{currSong}</h3>

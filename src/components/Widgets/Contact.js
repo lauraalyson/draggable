@@ -9,7 +9,7 @@ class Contact extends React.Component {
 	}
 
 	render() {
-		// const { layout } = this.props
+
 		return (
 			<div
 				style={{ backgroundColor: '#98D0FF' }}
