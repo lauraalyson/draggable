@@ -109,7 +109,7 @@ function SmallLayout() {
 				style={{ width: '24%', padding: '0' }}
 			/>
 			<div
-				style={{ justifyContent: 'center', textAlign: 'center' }}
+				style={{ justifyContent: 'center', textAlign: 'center', paddingTop: '1em' }}
 				className='col-12'>
 				<h3>Laura Waterbury</h3>
 				<h6 style={{ color: '#C9D4F9' }}>Full-Stack Developer</h6>
