@@ -15,6 +15,8 @@ import lauraMemoji from './Assets/laura-memoji.png';
 import mapHover from './Assets/map-hover.png';
 import LinkedIn from "./Widgets/LinkedIn";
 import Github from './Widgets/Github';
+import Header from './Header';
+import layoutConfig from "../Layout";
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
@@ -25,68 +27,6 @@ import Contact from "./Widgets/Contact";
 
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
-const layoutConfig = {
-	lg: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 7 },
-		{ i: '1', x: 2, y: 0, w: 1, h: 7 },
-		{ i: '2', x: 4, y: 0, w: 1, h: 14 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 7 },
-		{ i: '4', x: 1, y: 9, w: 1, h: 7 },
-		{ i: '5', x: 2, y: 9, w: 1, h: 14 },
-		{ i: '6', x: 0, y: 18, w: 2, h: 7 },
-		{ i: '7', x: 4, y: 18, w: 1, h: 7 },
-		{ i: '8', x: 0, y: 27, w: 2, h: 7 },
-		{ i: '9', x: 4, y: 27, w: 2, h: 7 },
-	],
-	md: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 6 },
-		{ i: '1', x: 2, y: 0, w: 1, h: 6 },
-		{ i: '2', x: 4, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
-		{ i: '4', x: 1, y: 9, w: 1, h: 6 },
-		{ i: '5', x: 2, y: 9, w: 1, h: 12 },
-		{ i: '6', x: 0, y: 18, w: 2, h: 6 },
-		{ i: '7', x: 4, y: 18, w: 1, h: 6 },
-		{ i: '8', x: 0, y: 27, w: 2, h: 6 },
-		{ i: '9', x: 4, y: 27, w: 2, h: 6 },
-	],
-	sm: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 6 },
-		{ i: '1', x: 2, y: 0, w: 1, h: 6 },
-		{ i: '2', x: 4, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
-		{ i: '4', x: 1, y: 9, w: 1, h: 6 },
-		{ i: '5', x: 4, y: 9, w: 1, h: 12 },
-		{ i: '6', x: 0, y: 18, w: 2, h: 6 },
-		{ i: '7', x: 4, y: 18, w: 1, h: 6 },
-		{ i: '8', x: 0, y: 27, w: 2, h: 6 },
-		{ i: '9', x: 0, y: 11, w: 2, h: 6 },
-	],
-	xs: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 10 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 8 },
-		{ i: '2', x: 2, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
-		{ i: '4', x: 2, y: 9, w: 1, h: 6 },
-		{ i: '5', x: 0, y: 9, w: 1, h: 12 },
-		{ i: '6', x: 0, y: 18, w: 2, h: 6 },
-		{ i: '7', x: 2, y: 18, w: 1, h: 6 },
-		{ i: '8', x: 0, y: 11, w: 2, h: 6 },
-		{ i: '9', x: 0, y: 27, w: 2, h: 6 },
-	],
-	xxs: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 8 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 4.5 },
-		{ i: '2', x: 2, y: 0, w: 1, h: 9 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 4.5 },
-		{ i: '4', x: 2, y: 9, w: 1, h: 4.5 },
-		{ i: '5', x: 0, y: 9, w: 1, h: 9 },
-		{ i: '6', x: 0, y: 18, w: 2, h: 4.5 },
-		{ i: '7', x: 2, y: 18, w: 1, h: 4.5 },
-		{ i: '8', x: 0, y: 11, w: 2, h: 4.5 },
-		{ i: '9', x: 0, y: 27, w: 1, h: 4.5 },
-	],
-}
 
 	const transition = { duration: 0.5, ease: 'easeInOut' }
 
@@ -138,6 +78,9 @@ export default class ShowcaseLayout extends React.Component {
 				animate='enter'
 				exit='exit'
 				variants={postVariants}>
+
+				<div style={{ maxWidth: '200px' }}><Header /></div>
+
 				<ResponsiveReactGridLayout
 					cancel='.btn'
 					animate
@@ -157,10 +100,9 @@ export default class ShowcaseLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-					<motion.div className='widget-bio' key='0'>
-						<Bio layout={this.state.currentBreakpoint} />
-					</motion.div>
-					<motion.div key='1'>
+
+					<div key='0'><Bio layout={this.state.currentBreakpoint} /></div>
+					<div key='1'>
 						<div className='map-widget-overlay'>
 							<img
 								className='memoji-map'
@@ -170,31 +112,15 @@ export default class ShowcaseLayout extends React.Component {
 							<img className='hover-map' src={mapHover} alt='map-hover' />
 						</div>
 						<Map />
-					</motion.div>
-					<motion.div key='2'>
-						<TicTacToe />
-					</motion.div>
-					<motion.div key='3'>
-						<Spotify />
-					</motion.div>
-					<motion.div key='4'>
-						<Github />
-					</motion.div>
-					<motion.div key='5'>
-						<Playground />
-					</motion.div>
-					<motion.div key='6'>
-						<Digiseum />
-					</motion.div>
-					<motion.div key='7'>
-						<LinkedIn />
-					</motion.div>
-					<motion.div key='8'>
-						<Skills />
-					</motion.div>
-					<motion.div key='9'>
-						<Contact layout={this.state.currentBreakpoint} />
-					</motion.div>
+					</div>
+					<div key='2'><TicTacToe /></div>
+					<div key='3'><Spotify /></div>
+					<div key='4'><Github /></div>
+					<div key='5'><Playground /></div>
+					<div key='6'><Digiseum /></div>
+					<div key='7'><LinkedIn /></div>
+					<div key='8'><Skills /></div>
+					<div key='9'><Contact layout={this.state.currentBreakpoint} /></div>
 				</ResponsiveReactGridLayout>
 			</motion.div>
 		)
