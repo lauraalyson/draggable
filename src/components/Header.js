@@ -24,7 +24,7 @@ export default function Header() {
 	return (
 		<AnimateSharedLayout>
 			<div className='header'>
-				<ol style={{ transform: 'translateZ(0)' }}>
+				<ol style={{ transform: 'translateZ(0)', padding: '2em 0em' }}>
 					{nav.map(({ title }, i) => (
 						<motion.li
 							initial='exit'

@@ -88,6 +88,13 @@ const layoutConfig = {
 	],
 }
 
+	const transition = { duration: 0.5, ease: 'easeInOut' }
+
+	const postVariants = {
+		initial: { y: -5, opacity: 0 },
+		enter: { y: 0, opacity: 1, transition },
+		exit: { y: 5, opacity: 0, transition },
+	}
 	
 export default class ShowcaseLayout extends React.Component {
 	constructor(props) {
@@ -126,9 +133,13 @@ export default class ShowcaseLayout extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<motion.div
+				initial='exit'
+				animate='enter'
+				exit='exit'
+				variants={postVariants}>
 				<ResponsiveReactGridLayout
-				    cancel=".btn"
+					cancel='.btn'
 					animate
 					{...this.props}
 					className='showcase-container'
@@ -185,7 +196,7 @@ export default class ShowcaseLayout extends React.Component {
 						<Contact layout={this.state.currentBreakpoint} />
 					</motion.div>
 				</ResponsiveReactGridLayout>
-			</div>
+			</motion.div>
 		)
 	}
 }
