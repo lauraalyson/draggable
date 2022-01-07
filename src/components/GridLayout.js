@@ -88,6 +88,7 @@ const layoutConfig = {
 	],
 }
 
+	
 export default class ShowcaseLayout extends React.Component {
 	constructor(props) {
 		super(props)
@@ -127,8 +128,10 @@ export default class ShowcaseLayout extends React.Component {
 		return (
 			<div>
 				<ResponsiveReactGridLayout
+				    cancel=".btn"
+					animate
 					{...this.props}
-					className="showcase-container"
+					className='showcase-container'
 					layouts={{
 						lg: layoutConfig.lg,
 						md: layoutConfig.md,
@@ -136,7 +139,7 @@ export default class ShowcaseLayout extends React.Component {
 						xs: layoutConfig.xs,
 						xxs: layoutConfig.xxs,
 					}}
-					  breakpoints={{ lg: 1000, md: 750, sm: 660, xs: 450, xxs: 400 }}
+					breakpoints={{ lg: 1000, md: 750, sm: 660, xs: 450, xxs: 400 }}
 					onBreakpointChange={this.onBreakpointChange}
 					onLayoutChange={this.onLayoutChange}
 					measureBeforeMount={false}
@@ -148,8 +151,12 @@ export default class ShowcaseLayout extends React.Component {
 					</motion.div>
 					<motion.div key='1'>
 						<div className='map-widget-overlay'>
-							<img className='memoji-map' src={lauraMemoji} alt='laura-memoji' />
-							<img className='hover-map' src={mapHover} alt='map-hover'/>
+							<img
+								className='memoji-map'
+								src={lauraMemoji}
+								alt='laura-memoji'
+							/>
+							<img className='hover-map' src={mapHover} alt='map-hover' />
 						</div>
 						<Map />
 					</motion.div>

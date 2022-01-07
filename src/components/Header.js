@@ -8,42 +8,40 @@ export default function Header() {
   const [selected, setSelected] = useState(0);
 
   const nav = [
-	  {
-		  title: 'Home',
-		  color: 'black'
-	  },
-	  {
-		  title: 'About',
-		  color: 'black'
-	  },
-	  {
-		  title: 'Projects',
-		  color: 'black'
-	  }
-  ]
-		return (
-			<AnimateSharedLayout>
-				<div className="header">
-				<ol style={{ transform: 'translateZ(0)' }} >
-					{nav.map(({ title, color }, i) => (
+	  { title: 'Home' },
+	  { title: 'About' },
+	  { title: 'Projects' }
+  	]
+
+	  const transition = { duration: 0.5, ease: 'easeInOut' }
+
+	  const postVariants = {
+			initial: { y: 10, opacity: 0 },
+			enter: { y: 0, opacity: 1, transition },
+			exit: { y: -10, opacity: 0, transition },
+		}
+	  
+	return (
+		<AnimateSharedLayout>
+			<div className='header'>
+				<ol style={{ transform: 'translateZ(0)' }}>
+					{nav.map(({ title }, i) => (
 						<motion.li
-						animate
-						key={i}
-						className={`title ${i === selected && 'selected'}`}
-						style={{ color: i === selected ? color : '#333' }}
-						onClick={() => setSelected(i)}
-						>
+							initial='exit'
+							animate='enter'
+							exit='exit'
+							variants={postVariants}
+							key={i}
+							className={`title ${i === selected && 'selected'}`}
+							onClick={() => setSelected(i)}>
 							{i === selected && (
-								<motion.div 
-								layoutId='underline'
-								className='underline'
-								/>
+								<motion.div layoutId='underline' className='underline' />
 							)}
 							{title}
 						</motion.li>
 					))}
-				</ol>					
-				</div>
-			</AnimateSharedLayout>
-		)
+				</ol>
+			</div>
+		</AnimateSharedLayout>
+	)
 }

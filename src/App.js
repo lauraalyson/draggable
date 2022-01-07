@@ -13,7 +13,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				
 				<div
 					className='row'
 					style={{
@@ -30,9 +29,8 @@ class App extends React.Component {
 					}}>
 						<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
 					</div>
-				</div>				
+				</div>		
 			</div>
-
 		)
 	}
 }

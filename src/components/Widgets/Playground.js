@@ -11,16 +11,20 @@ class Playground extends React.Component {
 		return (
 			<div className='playground-widget'>
 				<img src={playground} alt='playground-project' className='' />
-				<button
-					className='playground-widget-button'
-					style={{
-						position: 'absolute',
-						bottom: '1.5em',
-						left: '1.5em',
-						padding: '.8em',
-					}}>
-					<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
-				</button>
+				<a
+					href='https://github.com/ProjectPlayGroundLHA/PlayGroundClient'
+					alt='Playground'>
+					<button
+						className='playground-widget-button'
+						style={{
+							position: 'absolute',
+							bottom: '1.5em',
+							left: '1.5em',
+							padding: '.8em',
+						}}>
+						<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
+					</button>
+				</a>
 			</div>
 		)
 	}
