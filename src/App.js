@@ -22,7 +22,7 @@ class App extends React.Component {
 						height: '100%',
 						padding: '1em',
 					}}>
-					<div className='col-sm-6  col-md-5 col-lg-5 col-xl-4'>
+					<div className='col-12' style={{ maxWidth: '200px' }}>
 						<Header />	
 					</div>
 					<div className='col-12' style={{

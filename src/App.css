@@ -49,29 +49,41 @@ button {
   color: #2c2c2c!important;
 }
 
-.header {
-  padding: 2em;
-}
-
-.header div {
+ol,
+li {
+  list-style: none;
   display: flex;
-
-  justify-content: space-evenly;
-  border-radius: 4em;
-  border: 2px solid rgb(244, 244, 244); 
-  background-color: #efefef;  
+  user-select: none;
+  justify-content: center;
+  align-items: center;
 }
+
+ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: relative;
+  cursor: pointer;
+}
+
+.underline {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  padding: 1.3em 2.5em;
+  border-radius: 40px;
+  background: rgb(243, 243, 243);
+  position: absolute;
+}
+
 
 .header li {
   text-align: center;
-  list-style: none;
   width: 100%;
   padding: 1em;
-}
-
-.header li:hover {
-  background-color: white;
-  border-radius: 4em!important;
 }
 
 .showcase-container {
