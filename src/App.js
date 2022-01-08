@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ShowcaseLayout from './components/GridLayout';
-// import Header from './components/Header';
+// import ShowcaseLayout from './components/GridLayout';
+import Header from './components/Header';
 
 class App extends React.Component {
 	constructor(props) {
@@ -21,13 +21,13 @@ class App extends React.Component {
 						height: '100%',
 						padding: '1em',
 					}}>
-
-					<div className='col-12' style={{
-						maxWidth: '950px'
-					}}>
-						<ShowcaseLayout onLayoutChange={this.onLayoutChange} />
+					<div
+						className='col-12'
+						style={{ maxWidth: '950px' }}>
+						<Header />	
+						{/* <ShowcaseLayout onLayoutChange={this.onLayoutChange} /> */}
 					</div>
-				</div>		
+				</div>
 			</div>
 		)
 	}

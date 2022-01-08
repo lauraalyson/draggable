@@ -15,8 +15,8 @@ import lauraMemoji from './Assets/laura-memoji.png';
 import mapHover from './Assets/map-hover.png';
 import LinkedIn from "./Widgets/LinkedIn";
 import Github from './Widgets/Github';
-import Header from './Header';
-import layoutConfig from "../Layout";
+import layoutConfig from "./Layouts/Layout";
+import aboutLayout from "./Layouts/AboutLayout";
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
@@ -27,7 +27,6 @@ import Contact from "./Widgets/Contact";
 
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
-
 	const transition = { duration: 0.5, ease: 'easeInOut' }
 
 	const postVariants = {
@@ -43,12 +42,12 @@ export default class ShowcaseLayout extends React.Component {
 			currentBreakpoint: '',
 			compactType: 'vertical',
 			mounted: false,
-			layouts: layoutConfig,
+			layouts: aboutLayout,
 		}
 
 		this.onBreakpointChange = this.onBreakpointChange.bind(this)
 		this.onLayoutChange = this.onLayoutChange.bind(this)
-		this.onNewLayout = this.onNewLayout.bind(this);
+		// this.onNewLayout = this.onNewLayout.bind(this);
 	}
 
 	componentDidMount() {
@@ -63,35 +62,48 @@ export default class ShowcaseLayout extends React.Component {
 
 	onLayoutChange = (layout, layouts) => {
 		this.setState({ layouts })
+
+		if ( this.props.sort === 0 ) {
+			console.log('home')
+			this.setState({ layouts: layoutConfig })
+		} else if ( this.props.sort === 1 ) {
+			console.log('about')
+			this.setState({ layouts: aboutLayout })
+		} else {
+			console.log('projects')
+			this.setState({ layouts: layoutConfig })
+		}		
 	}
 
-	onNewLayout() {
-	this.setState({
-		layouts: { lg: layoutConfig }
-	});
-	}
+	// onNewLayout() {
+	// this.setState({
+	// 	layouts: { lg: layoutConfig }
+	// });
+	// }
 
 	render() {
+		// const { sort } = this.props
+		const { layouts } = this.state
+		
+
+
 		return (
 			<motion.div
 				initial='exit'
 				animate='enter'
 				exit='exit'
 				variants={postVariants}>
-
-				<div style={{ maxWidth: '200px' }}><Header /></div>
-
 				<ResponsiveReactGridLayout
 					cancel='.btn'
 					animate
 					{...this.props}
 					className='showcase-container'
 					layouts={{
-						lg: layoutConfig.lg,
-						md: layoutConfig.md,
-						sm: layoutConfig.sm,
-						xs: layoutConfig.xs,
-						xxs: layoutConfig.xxs,
+						lg: layouts.lg,
+						md: layouts.md,
+						sm: layouts.sm,
+						xs: layouts.xs,
+						xxs: layouts.xxs,
 					}}
 					breakpoints={{ lg: 1000, md: 750, sm: 660, xs: 450, xxs: 400 }}
 					onBreakpointChange={this.onBreakpointChange}
@@ -100,8 +112,9 @@ export default class ShowcaseLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-
-					<div key='0'><Bio layout={this.state.currentBreakpoint} /></div>
+					<div key='0'>
+						<Bio layout={this.state.currentBreakpoint} />
+					</div>
 					<div key='1'>
 						<div className='map-widget-overlay'>
 							<img
@@ -113,14 +126,30 @@ export default class ShowcaseLayout extends React.Component {
 						</div>
 						<Map />
 					</div>
-					<div key='2'><TicTacToe /></div>
-					<div key='3'><Spotify /></div>
-					<div key='4'><Github /></div>
-					<div key='5'><Playground /></div>
-					<div key='6'><Digiseum /></div>
-					<div key='7'><LinkedIn /></div>
-					<div key='8'><Skills /></div>
-					<div key='9'><Contact layout={this.state.currentBreakpoint} /></div>
+					<div key='2'>
+						<TicTacToe />
+					</div>
+					<div key='3'>
+						<Spotify />
+					</div>
+					<div key='4'>
+						<Github />
+					</div>
+					<div key='5'>
+						<Playground />
+					</div>
+					<div key='6'>
+						<Digiseum />
+					</div>
+					<div key='7'>
+						<LinkedIn />
+					</div>
+					<div key='8'>
+						<Skills />
+					</div>
+					<div key='9'>
+						<Contact layout={this.state.currentBreakpoint} />
+					</div>
 				</ResponsiveReactGridLayout>
 			</motion.div>
 		)
