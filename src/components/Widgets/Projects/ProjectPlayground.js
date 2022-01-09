@@ -35,9 +35,9 @@ class ProjectPlayground extends React.Component {
 				className='row project-page'
 				style={{ justifyContent: 'center' }}>
 				<div className='col-12' style={{ padding: '2em 0em' }}>
-					<Link to='/'>
-						<img className='project-page-icons ' src={Exit} alt='exit' />
-					</Link>
+						<Link to='/'>
+							<img className='project-page-icons ' src={Exit} alt='exit' />
+						</Link>	
 				</div>
 
 				<div className='col-5'>

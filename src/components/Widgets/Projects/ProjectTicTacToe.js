@@ -72,7 +72,6 @@ class ProjectTicTacToe extends React.Component {
 					</a>
 				</div>
 
-				<div style={{ paddingTop: '5em' }}>
 					<div style={{ paddingTop: '5em' }}>
 						<ProjectLayout
 							key1={TicTacToe1}
@@ -82,7 +81,6 @@ class ProjectTicTacToe extends React.Component {
 							key0={TicTacToe5}
 						/>
 					</div>
-				</div>
 			</motion.div>
 		)
 	}

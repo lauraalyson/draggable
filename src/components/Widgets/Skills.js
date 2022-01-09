@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ToolBelt from './../Assets/Graphics/toolbelt-cutout-bottom.png'
+import ToolBelt from './../Assets/Graphics/toolbelt-cutout-bottom.png';
+import ToolBeltMobile from './../Assets/Graphics/toolbelt-cutout-top.png';
 class Skills extends React.Component {
 	constructor(props) {
 		super(props)
@@ -32,6 +33,7 @@ class Skills extends React.Component {
 
 	render() {
 		const { skillCategory } = this.state
+
 		return (
 			<div className='skills-widget'>
 				<h3>Tool Belt</h3>
@@ -47,10 +49,23 @@ class Skills extends React.Component {
 					</button>
 				</div>
 
-					<motion.div>
-						<p>{skillCategory}</p>
-					</motion.div>
-					<img className='skills-widget-img' src={ToolBelt} alt='Toolbelt Emoji'/>
+				<motion.div>
+					<p>{skillCategory}</p>
+				</motion.div>
+
+				{this.props.layout === 'xxs' ? (
+					<img
+						className='skills-widget-img-mobile'
+						src={ToolBeltMobile}
+						alt='Hammer Emoji'
+					/>
+				) : (
+					<img
+						className='skills-widget-img'
+						src={ToolBelt}
+						alt='Hammer Emoji'
+					/>
+				)}
 			</div>
 		)
 	}

@@ -132,7 +132,7 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 						<LinkedIn />
 					</div>
 					<div key='8'>
-						<Skills />
+						<Skills layout={this.state.currentBreakpoint} />
 					</div>
 					<div key='9'>
 						<Contact layout={this.state.currentBreakpoint} />

@@ -352,6 +352,13 @@ ol {
   width: 40%;
 }
 
+.skills-widget-img-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+}
+
 /* Grid Layout */
 .react-grid-layout{
   position:relative;

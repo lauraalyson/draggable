@@ -25,7 +25,8 @@ export default function Header() {
 	return (
 		<div>
 			<AnimateSharedLayout>
-				<div className='header'>
+				<div className="row" style={{ justifyContent: 'center' }}>
+				<div className='header col-6'>
 					<ol style={{ transform: 'translateZ(0)', padding: '2em 0em' }}>
 						{nav.map(({ title }, i) => (
 							<motion.li
@@ -49,6 +50,8 @@ export default function Header() {
 						))}
 					</ol>
 				</div>
+				</div>
+
 			</AnimateSharedLayout>
 		    { isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout /> }
 		</div>
