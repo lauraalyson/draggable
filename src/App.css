@@ -276,7 +276,7 @@ ol {
   width: 100%;
 }
 
-.playground-widget-button:hover::before {
+/* .playground-widget-button:hover::before {
   content: 'Playground';
   font-size: 1.6m;
   -webkit-transition: all 1.2s ease;
@@ -284,7 +284,7 @@ ol {
   -ms-transition: all 1.2s ease;
   -o-transition: all 1.2s ease;
   transition:  all 1.2s ease-out;
-}
+} */
 
 /*  Digiseum Widget */
 .digiseum-widget {
@@ -318,7 +318,7 @@ ol {
 .skills-widget button{
   margin-right: .2em;  
   margin-bottom: 1em;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .skills-widget p {
@@ -357,49 +357,49 @@ ol {
   opacity:.2;
   transition-duration: 1s;
   z-index:2;
-  -webkit-user-select:none;
+  /* -webkit-user-select:none;
   -ms-user-select:none;
   -o-user-select:none;
-  user-select:none;
+  user-select:none; */
 }
 
-.react-grid-item .resizing {
+/* .react-grid-item .resizing {
   opacity: 0.9;
   will-change: width, height;
-}
+} */
 
-.react-grid-item .react-resizable-handle:after{
+/* .react-grid-item .react-resizable-handle:after{
   content:"";
   position:absolute;
   right:3px;
   bottom:3px;
   width:5px;
   height:5px;
-}
+} */
 
-.react-resizable-handle{
+/* .react-resizable-handle{
   display:none;
-}
+} */
 
 /* .react-grid-item .static {
   background: #cce!important;
 } */
 
-.react-grid-item .text {
+/* .react-grid-item .text {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.react-grid-dragHandleExample {
+/* .react-grid-dragHandleExample {
   cursor: move;
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
-}
+} */
 
-.react-grid-item .react-grid-placeholder  {
+/* .react-grid-item .react-grid-placeholder  {
   opacity: 0.5;
   transition: all .2s ease;
   transition-property: left,top;
@@ -409,7 +409,7 @@ ol {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-}
+} */
 
 .mapboxgl-ctrl-bottom-left {
     display: none!important
