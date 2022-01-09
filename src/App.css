@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #EAF0EC;
+  background-color: #f8f8f8;
   overflow: scroll;
   font-family: 'Relative'!important;
   color: #2c2c2c!important;
@@ -76,7 +76,7 @@ ol {
   height: 100%;
   padding: 1.3em 2.5em;
   border-radius: 40px;
-  background: rgb(243, 243, 243);
+  background: rgb(234, 234, 234);
   position: absolute;
 }
 
