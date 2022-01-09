@@ -1,5 +1,6 @@
 import React from 'react'
 import playground from '../Assets/Projects/playground-widget.png'
+import { Link } from 'react-router-dom'
 import Arrow from './../Assets/Logos/arrow.svg'
 class Playground extends React.Component {
 	constructor(props) {
@@ -11,8 +12,8 @@ class Playground extends React.Component {
 		return (
 			<div className='playground-widget'>
 				<img src={playground} alt='playground-project' className='' />
-				<a
-					href='https://github.com/ProjectPlayGroundLHA/PlayGroundClient'
+				<Link
+					to='/playground'
 					alt='Playground'>
 					<button
 						className='playground-widget-button'
@@ -24,7 +25,7 @@ class Playground extends React.Component {
 						}}>
 						<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
 					</button>
-				</a>
+				</Link>
 			</div>
 		)
 	}

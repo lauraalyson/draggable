@@ -42,7 +42,7 @@ export default class ShowcaseLayout extends React.Component {
 			currentBreakpoint: '',
 			compactType: 'vertical',
 			mounted: false,
-			layouts: aboutLayout,
+			layouts: layoutConfig,
 		}
 
 		this.onBreakpointChange = this.onBreakpointChange.bind(this)
@@ -61,18 +61,7 @@ export default class ShowcaseLayout extends React.Component {
 	}
 
 	onLayoutChange = (layout, layouts) => {
-		this.setState({ layouts })
-
-		if ( this.props.sort === 0 ) {
-			console.log('home')
-			this.setState({ layouts: layoutConfig })
-		} else if ( this.props.sort === 1 ) {
-			console.log('about')
-			this.setState({ layouts: aboutLayout })
-		} else {
-			console.log('projects')
-			this.setState({ layouts: layoutConfig })
-		}		
+		this.setState({ layouts })	
 	}
 
 	// onNewLayout() {
@@ -84,8 +73,6 @@ export default class ShowcaseLayout extends React.Component {
 	render() {
 		// const { sort } = this.props
 		const { layouts } = this.state
-		
-
 
 		return (
 			<motion.div
