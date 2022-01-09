@@ -83,6 +83,9 @@ export default class ShowcaseLayout extends React.Component {
 				<ResponsiveReactGridLayout
 					cancel='.btn'
 					animate
+					isResizable='false'
+					isBounded='true'
+					
 					{...this.props}
 					className='showcase-container'
 					layouts={{
