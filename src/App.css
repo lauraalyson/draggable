@@ -276,7 +276,11 @@ ol {
   width: 100%;
 }
 
-/* .playground-widget-button:hover::before {
+.project-page img {
+  width: 1.8em;
+}
+
+.playground-widget-button:hover::before {
   content: 'Playground';
   font-size: 1.6m;
   -webkit-transition: all 1.2s ease;
@@ -284,7 +288,7 @@ ol {
   -ms-transition: all 1.2s ease;
   -o-transition: all 1.2s ease;
   transition:  all 1.2s ease-out;
-} */
+}
 
 /*  Digiseum Widget */
 .digiseum-widget {

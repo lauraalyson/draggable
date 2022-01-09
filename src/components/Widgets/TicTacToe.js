@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ticTacToe from '../Assets/Projects/ttt_widget.png';
 import Arrow from './../Assets/Logos/arrow.svg';
 
@@ -10,9 +11,9 @@ class TicTacToe extends React.Component {
 
 	render() {
 		return (
-			<div className='ttt-widget'>
-				<img src={ticTacToe} alt='tic-tac-toe' />
-				<a href='https://lauraalyson.github.io/tic-tac-toe/'>
+			<Link to='/tic-tac-toe'>
+				<div className='ttt-widget'>
+					<img src={ticTacToe} alt='tic-tac-toe' />
 					<button
 						className='ttt-widget-button'
 						style={{
@@ -23,8 +24,9 @@ class TicTacToe extends React.Component {
 						}}>
 						<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
 					</button>
-				</a>
-			</div>
+				</div>
+			</Link>
+			
 		)
 	}
 }

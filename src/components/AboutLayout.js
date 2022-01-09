@@ -11,11 +11,11 @@ import Playground from "./Widgets/Playground";
 import Digiseum from "./Widgets/Digiseum";
 import TicTacToe from './Widgets/TicTacToe';
 import Spotify from "./Widgets/Spotify";
-import lauraMemoji from './Assets/Graphics/laura-memoji.png';
-import mapHover from './Assets/Graphics/map-hover.png';
+import lauraMemoji from './Assets/laura-memoji.png';
+import mapHover from './Assets/map-hover.png';
 import LinkedIn from "./Widgets/LinkedIn";
 import Github from './Widgets/Github';
-import layoutConfig from "./Layouts/Layout";
+import aboutLayout from "./Layouts/AboutLayout";
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
@@ -41,7 +41,7 @@ export default class ShowcaseLayout extends React.Component {
 			currentBreakpoint: '',
 			compactType: 'vertical',
 			mounted: false,
-			layouts: layoutConfig,
+			layouts: aboutLayout,
 		}
 
 		this.onBreakpointChange = this.onBreakpointChange.bind(this)

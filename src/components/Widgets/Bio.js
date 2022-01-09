@@ -1,5 +1,5 @@
 import React from 'react';
-import LauraMemoji from '../Assets/laura-memoji.png';
+import LauraMemoji from '../Assets/Graphics/laura-memoji.png';
 
 class Bio extends React.Component {
 	constructor(props) {
@@ -48,7 +48,7 @@ function LargeLayout() {
 				<h3>Laura Waterbury</h3>
 				<h6 style={{ color: '#C9D4F9' }}>Full-Stack Developer</h6>
 				<p>
-					Welcome to my corner of the interweb. When I'm not coding, you can
+					Welcome to my corner of the internet. When I'm not coding, you can
 					find me binging podcasts at a rate only rivaled by Ira Glass.
 				</p>
 			</div>

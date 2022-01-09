@@ -9,6 +9,7 @@ import './App.css';
 import Header from './components/Header';
 import ProjectPlayground from './components/Widgets/Projects/ProjectPlayground';
 import ProjectDigiseum from './components/Widgets/Projects/ProjectDigiseum';
+import ProjectTicTacToe from './components/Widgets/Projects/ProjectTicTacToe';
 
 
 class App extends React.Component {
@@ -34,7 +35,7 @@ class App extends React.Component {
 					
 					<Route path='/playground' element={<ProjectPlayground />} />
 					<Route path='/digi-seum' element={<ProjectDigiseum />} />
-
+					<Route path='/tic-tac-toe' element={<ProjectTicTacToe />}/>
 				</Routes>
 			</div>
 		</div>

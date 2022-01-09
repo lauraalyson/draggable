@@ -11,12 +11,12 @@ class Playground extends React.Component {
 	render() {
 		return (
 			<div className='playground-widget'>
-				<a href='google.com'>This is a link</a>
 				<Link 
 					to='/playground'
 					alt='Playground'>
 				<img src={playground} alt='playground-project' className='' />
 				
+					
 					<button
 						className='playground-widget-button'
 						style={{
