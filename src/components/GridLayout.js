@@ -24,7 +24,6 @@ import "./../App.css"
 import Skills from "./Widgets/Skills";
 import Contact from "./Widgets/Contact";
 
-
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 	const transition = { duration: 0.5, ease: 'easeInOut' }
 
@@ -34,7 +33,7 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 		exit: { y: 5, opacity: 0, transition },
 	}
 	
-export default class ShowcaseLayout extends React.Component {
+	export default class ShowcaseLayout extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -80,12 +79,13 @@ export default class ShowcaseLayout extends React.Component {
 				exit='exit'
 				variants={postVariants}>
 				<ResponsiveReactGridLayout
+					{...this.props}
 					cancel='.btn'
 					animate
 					isResizable='false'
 					isBounded='true'
-
-					{...this.props}
+					autoSize='true'
+					isDraggable='false'
 					className='showcase-container'
 					layouts={{
 						lg: layouts.lg,
@@ -150,6 +150,7 @@ ShowcaseLayout.propTypes = {
 };
 
 ShowcaseLayout.defaultProps = {
+  isDraggable: false,
   className: "layout",
   rowHeight: 30,
   onLayoutChange: function() {},
