@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Exit from '../../Assets/Logos/exit.svg';
-import Arrow from '../../Assets/Logos/arrow.svg';
+import Exit from '../../Assets/Graphics/exit.svg';
+import Arrow from '../../Assets/Graphics/arrow.svg'
 import ProjectLayout from '../../Layouts/ProjectLayout';
 
 // Import Imgs

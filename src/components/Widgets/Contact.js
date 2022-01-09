@@ -1,7 +1,7 @@
 import React from 'react';
-import MailCutout from './../Assets/Logos/mail-cutout-top.png';
-import MailCutoutMobile from './../Assets/Logos/mail-cutout-bottom.png';
-import Arrow from './../Assets/Logos/arrow.svg';
+import MailCutout from './../Assets/Graphics/mail-cutout-top.png'
+import MailCutoutMobile from './../Assets/Graphics/mail-cutout-bottom.png'
+import Arrow from './../Assets/Graphics/arrow.svg'
 class Contact extends React.Component {
 	constructor(props) {
 		super(props)

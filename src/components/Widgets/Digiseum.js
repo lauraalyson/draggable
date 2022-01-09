@@ -1,6 +1,6 @@
 import React from 'react'
 import digiseum from '../Assets/Projects/digiseum-widget.png'
-import Arrow from './../Assets/Logos/arrow.svg'
+import Arrow from './../Assets/Graphics/arrow.svg'
 import { Link } from 'react-router-dom'
 class Digiseum extends React.Component {
 	constructor(props) {

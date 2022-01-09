@@ -2,7 +2,7 @@ import React from 'react';
 import playground from '../Assets/Projects/playground-widget.png';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Arrow from './../Assets/Logos/arrow.svg';
+import Arrow from './../Assets/Graphics/arrow.svg'
 class Playground extends React.Component {
 	constructor(props) {
 		super(props)

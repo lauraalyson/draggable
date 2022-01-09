@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ToolBelt from './../Assets/Logos/toolbelt-cutout-bottom.png';
+import ToolBelt from './../Assets/Graphics/toolbelt-cutout-bottom.png'
 class Skills extends React.Component {
 	constructor(props) {
 		super(props)

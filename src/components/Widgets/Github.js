@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Link Icons
-import github from '../Assets/Logos/github-logo.png';
-import Arrow from '../Assets/Logos/arrow.svg';
+import github from '../Assets/Graphics/github-logo.png'
+import Arrow from '../Assets/Graphics/arrow.svg'
 
 class LinkedIn extends React.Component {
 	constructor(props) {

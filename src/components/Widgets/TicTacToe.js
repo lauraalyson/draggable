@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ticTacToe from '../Assets/Projects/ttt_widget.png';
-import Arrow from './../Assets/Logos/arrow.svg';
+import Arrow from './../Assets/Graphics/arrow.svg'
 
 class TicTacToe extends React.Component {
 	constructor(props) {

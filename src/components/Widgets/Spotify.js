@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import spotify from './../Assets/Logos/spotify-logo.png'
+import spotify from './../Assets/Graphics/spotify-logo.png'
 
 const username = 'lowaterbury'
 const apiKey = 'ac7dd22471e14b250e68490f97ed5c47'
