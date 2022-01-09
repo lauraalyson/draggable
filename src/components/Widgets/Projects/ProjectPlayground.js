@@ -5,6 +5,13 @@ import Exit from '../../Assets/Logos/exit.svg';
 import Arrow from '../../Assets/Logos/arrow.svg';
 import ProjectLayout from '../../Layouts/ProjectLayout';
 
+// Image Imports
+import Playground1 from './../../Assets/Graphics/Playground/Playground1.png';
+import Playground2 from './../../Assets/Graphics/Playground/Playground2.png';
+import Playground3 from './../../Assets/Graphics/Playground/Playground3.png';
+import Playground4 from './../../Assets/Graphics/Playground/Playground4.png';
+import Playground5 from './../../Assets/Graphics/Playground/Playground5.png';
+
 const transition = { duration: 0.5, ease: 'easeInOut' }
 
 const postVariants = {
@@ -29,7 +36,7 @@ class ProjectPlayground extends React.Component {
 				style={{ justifyContent: 'center' }}>
 				<div className='col-12' style={{ padding: '2em 0em' }}>
 					<Link to='/'>
-						<img src={Exit} alt='exit' />
+						<img className='project-page-icons ' src={Exit} alt='exit' />
 					</Link>
 				</div>
 
@@ -51,7 +58,7 @@ class ProjectPlayground extends React.Component {
 						alt='live-site'>
 						<button>
 							Live Site
-							<img src={Arrow} alt='Arrow' />
+							<img className='project-page-icons ' src={Arrow} alt='Arrow' />
 						</button>
 					</a>
 					<a
@@ -61,17 +68,20 @@ class ProjectPlayground extends React.Component {
 						alt='github-repo'>
 						<button>
 							Github
-							<img src={Arrow} alt='Arrow' />
+							<img className='project-page-icons ' src={Arrow} alt='Arrow' />
 						</button>
 					</a>
 				</div>
 
 				<div style={{ paddingTop: '5em' }}>
-					<ProjectLayout 
-					title={'Playground'}
+					<ProjectLayout
+						key1={Playground1}
+						key2={Playground2}
+						key3={Playground3}
+						key4={Playground4}
+						key0={Playground5}
 					/>
 				</div>
-				
 			</motion.div>
 		)
 	}

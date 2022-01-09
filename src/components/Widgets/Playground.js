@@ -1,7 +1,8 @@
-import React from 'react'
-import playground from '../Assets/Projects/playground-widget.png'
-import { Link } from 'react-router-dom'
-import Arrow from './../Assets/Logos/arrow.svg'
+import React from 'react';
+import playground from '../Assets/Projects/playground-widget.png';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Arrow from './../Assets/Logos/arrow.svg';
 class Playground extends React.Component {
 	constructor(props) {
 		super(props)
@@ -11,13 +12,10 @@ class Playground extends React.Component {
 	render() {
 		return (
 			<div className='playground-widget'>
-				<Link 
-					to='/playground'
-					alt='Playground'>
-				<img src={playground} alt='playground-project' className='' />
-				
-					
-					<button
+				<Link to='/playground' alt='Playground'>
+					<img src={playground} alt='playground-project' className='' />
+
+					<motion.button
 						className='playground-widget-button'
 						style={{
 							position: 'absolute',
@@ -26,7 +24,7 @@ class Playground extends React.Component {
 							padding: '.8em',
 						}}>
 						<img alt='arrow' src={Arrow} style={{ maxWidth: '1.8em' }} />
-					</button>
+					</motion.button>
 				</Link>
 			</div>
 		)

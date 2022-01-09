@@ -5,6 +5,13 @@ import Exit from '../../Assets/Logos/exit.svg';
 import Arrow from '../../Assets/Logos/arrow.svg';
 import ProjectLayout from '../../Layouts/ProjectLayout';
 
+// Import Images
+import TicTacToe1 from './../../Assets/Graphics/Tic-Tac-Toe/Tic-Tac-Toe1.png'
+import TicTacToe2 from './../../Assets/Graphics/Tic-Tac-Toe/Tic-Tac-Toe2.png'
+import TicTacToe3 from './../../Assets/Graphics/Tic-Tac-Toe/Tic-Tac-Toe3.png'
+import TicTacToe4 from './../../Assets/Graphics/Tic-Tac-Toe/Tic-Tac-Toe4.png'
+import TicTacToe5 from './../../Assets/Graphics/Tic-Tac-Toe/Tic-Tac-Toe5.png'
+
 const transition = { duration: 0.5, ease: 'easeInOut' }
 
 const postVariants = {
@@ -29,7 +36,7 @@ class ProjectTicTacToe extends React.Component {
 				style={{ justifyContent: 'center' }}>
 				<div className='col-12' style={{ padding: '2em 0em' }}>
 					<Link to='/'>
-						<img src={Exit} alt='exit' />
+						<img className='project-page-icons ' src={Exit} alt='exit' />
 					</Link>
 				</div>
 
@@ -50,7 +57,7 @@ class ProjectTicTacToe extends React.Component {
 						alt='live-site'>
 						<button>
 							Live Site
-							<img src={Arrow} alt='Arrow' />
+							<img className='project-page-icons ' src={Arrow} alt='Arrow' />
 						</button>
 					</a>
 					<a
@@ -60,15 +67,21 @@ class ProjectTicTacToe extends React.Component {
 						alt='github-repo'>
 						<button>
 							Github
-							<img src={Arrow} alt='Arrow' />
+							<img className='project-page-icons ' src={Arrow} alt='Arrow' />
 						</button>
 					</a>
 				</div>
-				
+
 				<div style={{ paddingTop: '5em' }}>
-					<ProjectLayout
-						title={'Tic-Tac-Toe'}
-					/>
+					<div style={{ paddingTop: '5em' }}>
+						<ProjectLayout
+							key1={TicTacToe1}
+							key2={TicTacToe2}
+							key3={TicTacToe3}
+							key4={TicTacToe4}
+							key0={TicTacToe5}
+						/>
+					</div>
 				</div>
 			</motion.div>
 		)

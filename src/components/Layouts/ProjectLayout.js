@@ -9,7 +9,6 @@ import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import './../../App.css'
 
-
 const layoutConfig = {
 	lg: [
 		{ i: '0', x: 0, y: 0, w: 1, h: 6 },
@@ -26,22 +25,22 @@ const layoutConfig = {
 		{ i: '4', x: 2, y: 9, w: 1, h: 6 },
 	],
 	sm: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 6 },
-		{ i: '1', x: 1, y: 9, w: 1, h: 6 },
-		{ i: '2', x: 4, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 2, y: 0, w: 1, h: 6 },
-		{ i: '4', x: 0, y: 9, w: 1, h: 6 },
+		{ i: '0', x: 2, y: 0, w: 1, h: 6 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 6 },
+		{ i: '2', x: 0, y: 0, w: 1, h: 12 },
+		{ i: '3', x: 2, y: 9, w: 2, h: 6 },
+		{ i: '4', x: 1, y: 9, w: 1, h: 6 },
 	],
 	xs: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 6 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 8 },
+		{ i: '0', x: 0, y: 9, w: 1, h: 6 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 6 },
 		{ i: '2', x: 2, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
-		{ i: '4', x: 0, y: 9, w: 1, h: 6 },
+		{ i: '3', x: 0, y: 9, w: 2, h: 6 },
+		{ i: '4', x: 0, y: 0, w: 1, h: 6 },
 	],
 	xxs: [
 		{ i: '0', x: 0, y: 0, w: 2, h: 6 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 8 },
+		{ i: '1', x: 0, y: 0, w: 2, h: 6 },
 		{ i: '2', x: 2, y: 0, w: 1, h: 12 },
 		{ i: '3', x: 0, y: 9, w: 1, h: 6 },
 		{ i: '4', x: 0, y: 9, w: 1, h: 6 },
@@ -100,7 +99,7 @@ export default class ProjectLayout extends React.Component {
 					isResizable='false'
 					isBounded='true'
 					{...this.props}
-					className='showcase-container'
+					className='project-grid-container'
 					layouts={{
 						lg: layouts.lg,
 						md: layouts.md,
@@ -115,11 +114,21 @@ export default class ProjectLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-					<div key='0'>{this.props.title}</div>
-					<div key='1'>{this.props.title}</div>
-					<div key='2'></div>
-					<div key='3'></div>
-					<div key='4'></div>
+					<div key='0'>
+						<img src={this.props.key0} alt='project-img' />
+					</div>
+					<div key='1'>
+						<img src={this.props.key1} alt='project-img' />
+					</div>
+					<div key='2'>
+						<img src={this.props.key2} alt='project-img' />
+					</div>
+					<div key='3'>
+						<img src={this.props.key3} alt='project-img' />
+					</div>
+					<div key='4'>
+						<img src={this.props.key4} alt='project-img' />
+					</div>
 				</ResponsiveReactGridLayout>
 			</motion.div>
 		)

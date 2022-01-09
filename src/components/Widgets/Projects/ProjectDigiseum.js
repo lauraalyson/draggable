@@ -5,6 +5,13 @@ import Exit from '../../Assets/Logos/exit.svg';
 import Arrow from '../../Assets/Logos/arrow.svg';
 import ProjectLayout from '../../Layouts/ProjectLayout';
 
+// Import Imgs
+import Digiseum1 from '../../Assets/Graphics/Digi-seum/Digi-seum1.png';
+import Digiseum2 from '../../Assets/Graphics/Digi-seum/Digi-seum2.png';
+import Digiseum3 from '../../Assets/Graphics/Digi-seum/Digi-seum3.jpeg';
+import Digiseum4 from '../../Assets/Graphics/Digi-seum/Digi-seum4.png';
+import Digiseum5 from '../../Assets/Graphics/Digi-seum/Digi-seum5.png';
+
 const transition = { duration: 0.5, ease: 'easeInOut' }
 
 const postVariants = {
@@ -29,7 +36,7 @@ class ProjectDigiseum extends React.Component {
 				style={{ justifyContent: 'center' }}>
 				<div className='col-12' style={{ padding: '2em 0em' }}>
 					<Link to='/'>
-						<img src={Exit} alt='exit' />
+						<img className='project-page-icons ' src={Exit} alt='exit' />
 					</Link>
 				</div>
 
@@ -52,7 +59,7 @@ class ProjectDigiseum extends React.Component {
 						rel='noopener noreferrer'>
 						<button>
 							Live Site
-							<img src={Arrow} alt='Arrow' />
+							<img className='project-page-icons ' src={Arrow} alt='Arrow' />
 						</button>
 					</a>
 					<a
@@ -62,14 +69,18 @@ class ProjectDigiseum extends React.Component {
 						rel='noopener noreferrer'>
 						<button>
 							Github
-							<img src={Arrow} alt='Arrow' />
+							<img className='project-page-icons ' src={Arrow} alt='Arrow' />
 						</button>
 					</a>
 				</div>
 
 				<div style={{ paddingTop: '5em' }}>
 					<ProjectLayout
-						title={'Digi-seum'}
+						key2={Digiseum1}
+						key0={Digiseum2}
+						key1={Digiseum3}
+						key3={Digiseum4}
+						key4={Digiseum5}
 					/>
 				</div>
 			</motion.div>

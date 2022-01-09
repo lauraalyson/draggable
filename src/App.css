@@ -146,6 +146,10 @@ ol {
     overflow: hidden;
 }
 
+.project-grid-container img {
+  width: 100%;
+}
+
 /* Spotify Widget */
 .spotify-widget {
   height: 100%;
@@ -276,18 +280,17 @@ ol {
   width: 100%;
 }
 
-.project-page img {
+.project-page-icons {
   width: 1.8em;
 }
 
 .playground-widget-button:hover::before {
   content: 'Playground';
-  font-size: 1.6m;
-  -webkit-transition: all 1.2s ease;
-  -moz-transition: all 1.2s ease;
-  -ms-transition: all 1.2s ease;
-  -o-transition: all 1.2s ease;
-  transition:  all 1.2s ease-out;
+  -webkit-transition:  all 1.2s ease-in-out;
+  -moz-transition:  all 1.2s ease-in-out;
+  -ms-transition:  all 1.2s ease-in-out;
+  -o-transition:  all 1.2s ease-in-out;
+  transition:  all 1.2s ease-in-out;
 }
 
 /*  Digiseum Widget */
