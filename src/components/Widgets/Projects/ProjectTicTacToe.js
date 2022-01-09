@@ -1,8 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import Exit from '../../Assets/Logos/exit.svg'
-import Arrow from '../../Assets/Logos/arrow.svg'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Exit from '../../Assets/Logos/exit.svg';
+import Arrow from '../../Assets/Logos/arrow.svg';
+import ProjectLayout from '../../Layouts/ProjectLayout';
 
 const transition = { duration: 0.5, ease: 'easeInOut' }
 
@@ -62,6 +63,12 @@ class ProjectTicTacToe extends React.Component {
 							<img src={Arrow} alt='Arrow' />
 						</button>
 					</a>
+				</div>
+				
+				<div style={{ paddingTop: '5em' }}>
+					<ProjectLayout
+						title={'Tic-Tac-Toe'}
+					/>
 				</div>
 			</motion.div>
 		)

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Exit from '../../Assets/Logos/exit.svg';
 import Arrow from '../../Assets/Logos/arrow.svg';
+import ProjectLayout from '../../Layouts/ProjectLayout';
 
 const transition = { duration: 0.5, ease: 'easeInOut' }
 
@@ -64,6 +65,13 @@ class ProjectPlayground extends React.Component {
 						</button>
 					</a>
 				</div>
+
+				<div style={{ paddingTop: '5em' }}>
+					<ProjectLayout 
+					title={'Playground'}
+					/>
+				</div>
+				
 			</motion.div>
 		)
 	}
