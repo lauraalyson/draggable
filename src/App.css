@@ -139,6 +139,14 @@ ol {
   animation-timing-function: linear;   
 }
 
+.handle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: blue;
+  z-index: 2;
+}
 .map-container {
     width: 100%;
     height: 100%;

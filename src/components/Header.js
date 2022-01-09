@@ -1,7 +1,8 @@
-import React from "react";
-import { useState } from 'react'
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import React, { useState } from "react";
+import { motion, AnimateSharedLayout } from 'framer-motion';
+import { isMobile } from 'react-device-detect'
 import ShowcaseLayout from "./GridLayout";
+import MobileShowcaseLayout from "./MobileGridLayout";
 
 export default function Header() {
   const [selected, setSelected] = useState(0);
@@ -49,8 +50,7 @@ export default function Header() {
 					</ol>
 				</div>
 			</AnimateSharedLayout>
-
-			<ShowcaseLayout sort={selected}/>
+		    { isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout /> }
 		</div>
 	)
 }

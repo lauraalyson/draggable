@@ -4,48 +4,25 @@ import PropTypes from 'prop-types'
 import { Responsive, WidthProvider } from 'react-grid-layout'
 import { motion } from 'framer-motion'
 
+// Import Components
+import Map from './Widgets/Map'
+import Bio from './Widgets/Bio'
+import Playground from './Widgets/Playground'
+import Digiseum from './Widgets/Digiseum'
+import TicTacToe from './Widgets/TicTacToe'
+import Spotify from './Widgets/Spotify'
+import lauraMemoji from './Assets/Graphics/laura-memoji.png'
+import mapHover from './Assets/Graphics/map-hover.png'
+import LinkedIn from './Widgets/LinkedIn'
+import Github from './Widgets/Github'
+import layoutConfig from './Layouts/Layout'
+
 // Import Styles
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
-import './../../App.css'
-
-const layoutConfig = {
-	lg: [
-		{ i: '0', x: 0, y: 0, w: 1, h: 6 },
-		{ i: '1', x: 1, y: 0, w: 2, h: 6 },
-		{ i: '2', x: 4, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 0, y: 9, w: 2, h: 6 },
-		{ i: '4', x: 2, y: 9, w: 1, h: 6 },
-	],
-	md: [
-		{ i: '0', x: 0, y: 0, w: 1, h: 6 },
-		{ i: '1', x: 1, y: 0, w: 2, h: 6 },
-		{ i: '2', x: 4, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 0, y: 9, w: 2, h: 6 },
-		{ i: '4', x: 2, y: 9, w: 1, h: 6 },
-	],
-	sm: [
-		{ i: '0', x: 2, y: 0, w: 1, h: 6 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 6 },
-		{ i: '2', x: 0, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 2, y: 9, w: 2, h: 6 },
-		{ i: '4', x: 1, y: 9, w: 1, h: 6 },
-	],
-	xs: [
-		{ i: '0', x: 0, y: 9, w: 1, h: 6 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 6 },
-		{ i: '2', x: 2, y: 0, w: 1, h: 12 },
-		{ i: '3', x: 0, y: 9, w: 2, h: 6 },
-		{ i: '4', x: 0, y: 0, w: 1, h: 6 },
-	],
-	xxs: [
-		{ i: '0', x: 0, y: 0, w: 2, h: 4.5 },
-		{ i: '1', x: 0, y: 0, w: 2, h: 4.5 },
-		{ i: '2', x: 2, y: 0, w: 1, h: 9 },
-		{ i: '3', x: 0, y: 9, w: 1, h: 4.5 },
-		{ i: '4', x: 0, y: 9, w: 1, h: 4.5 },
-	],
-}
+import './../App.css'
+import Skills from './Widgets/Skills'
+import Contact from './Widgets/Contact'
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive)
 const transition = { duration: 0.5, ease: 'easeInOut' }
@@ -56,7 +33,7 @@ const postVariants = {
 	exit: { y: 5, opacity: 0, transition },
 }
 
-export default class ProjectLayout extends React.Component {
+export default class MobileShowcaseLayout extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -68,6 +45,7 @@ export default class ProjectLayout extends React.Component {
 
 		this.onBreakpointChange = this.onBreakpointChange.bind(this)
 		this.onLayoutChange = this.onLayoutChange.bind(this)
+		// this.onNewLayout = this.onNewLayout.bind(this);
 	}
 
 	componentDidMount() {
@@ -84,7 +62,14 @@ export default class ProjectLayout extends React.Component {
 		this.setState({ layouts })
 	}
 
+	// onNewLayout() {
+	// this.setState({
+	// 	layouts: { lg: layoutConfig }
+	// });
+	// }
+
 	render() {
+		// const { sort } = this.props
 		const { layouts } = this.state
 
 		return (
@@ -94,12 +79,12 @@ export default class ProjectLayout extends React.Component {
 				exit='exit'
 				variants={postVariants}>
 				<ResponsiveReactGridLayout
+					{...this.props}
 					cancel='.btn'
 					animate
 					isResizable='false'
 					isBounded='true'
-					{...this.props}
-					className='project-grid-container'
+					className='showcase-container'
 					layouts={{
 						lg: layouts.lg,
 						md: layouts.md,
@@ -115,19 +100,42 @@ export default class ProjectLayout extends React.Component {
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
 					<div key='0'>
-						<img src={this.props.key0} alt='project-img' />
+						<Bio layout={this.state.currentBreakpoint} />
 					</div>
 					<div key='1'>
-						<img src={this.props.key1} alt='project-img' />
+						<div className='map-widget-overlay'>
+							<img
+								className='memoji-map'
+								src={lauraMemoji}
+								alt='laura-memoji'
+							/>
+							<img className='hover-map' src={mapHover} alt='map-hover' />
+						</div>
+						<Map />
 					</div>
 					<div key='2'>
-						<img src={this.props.key2} alt='project-img' />
+						<TicTacToe />
 					</div>
 					<div key='3'>
-						<img src={this.props.key3} alt='project-img' />
+						<Spotify />
 					</div>
 					<div key='4'>
-						<img src={this.props.key4} alt='project-img' />
+						<Github />
+					</div>
+					<div key='5'>
+						<Playground />
+					</div>
+					<div key='6'>
+						<Digiseum />
+					</div>
+					<div key='7'>
+						<LinkedIn />
+					</div>
+					<div key='8'>
+						<Skills />
+					</div>
+					<div key='9'>
+						<Contact layout={this.state.currentBreakpoint} />
 					</div>
 				</ResponsiveReactGridLayout>
 			</motion.div>
@@ -135,11 +143,12 @@ export default class ProjectLayout extends React.Component {
 	}
 }
 
-ProjectLayout.propTypes = {
+MobileShowcaseLayout.propTypes = {
 	onLayoutChange: PropTypes.func.isRequired,
 }
 
-ProjectLayout.defaultProps = {
+MobileShowcaseLayout.defaultProps = {
+	isDraggable: false,
 	className: 'layout',
 	rowHeight: 30,
 	onLayoutChange: function () {},

@@ -84,8 +84,6 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 					animate
 					isResizable='false'
 					isBounded='true'
-					autoSize='true'
-					isDraggable='false'
 					className='showcase-container'
 					layouts={{
 						lg: layouts.lg,
@@ -150,7 +148,7 @@ ShowcaseLayout.propTypes = {
 };
 
 ShowcaseLayout.defaultProps = {
-  isDraggable: false,
+  isDraggable: true,
   className: "layout",
   rowHeight: 30,
   onLayoutChange: function() {},

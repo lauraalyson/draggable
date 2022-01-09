@@ -77,9 +77,9 @@ class ProjectPlayground extends React.Component {
 					<ProjectLayout
 						key1={Playground1}
 						key2={Playground2}
-						key3={Playground3}
+						key0={Playground3}
 						key4={Playground4}
-						key0={Playground5}
+						key3={Playground5}
 					/>
 				</div>
 			</motion.div>
