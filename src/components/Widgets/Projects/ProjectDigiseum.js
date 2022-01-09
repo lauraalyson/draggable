@@ -1,6 +1,14 @@
-import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
+const transition = { duration: 0.5, ease: 'easeInOut' }
+
+const postVariants = {
+	initial: { y: -5, opacity: 0 },
+	enter: { y: 0, opacity: 1, transition },
+	exit: { y: 5, opacity: 0, transition },
+}
 class ProjectDigiseum extends React.Component {
 	constructor(props) {
 		super(props)
@@ -9,10 +17,14 @@ class ProjectDigiseum extends React.Component {
 
 	render() {
 		return (
-		<Fragment>
-			<h1>Digi-seum</h1>
-			<Link to='/'>Back</Link>
-		</Fragment>	
+			<motion.div
+				initial='exit'
+				animate='enter'
+				exit='exit'
+				variants={postVariants}>
+				<h1>Digi-seum</h1>
+				<Link to='/'>Back</Link>
+			</motion.div>
 		)
 	}
 }

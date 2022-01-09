@@ -1,11 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Styles
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import ShowcaseLayout from './components/GridLayout';
+
+// Components
+import Header from './components/Header';
 import ProjectPlayground from './components/Widgets/Projects/ProjectPlayground';
 import ProjectDigiseum from './components/Widgets/Projects/ProjectDigiseum';
-import Header from './components/Header';
+
 
 class App extends React.Component {
 	constructor(props) {
@@ -40,5 +44,3 @@ class App extends React.Component {
 }
 
 export default App
-
-{/* <Route path='/' element={<ShowcaseLayout onLayoutChange={this.onLayoutChange} />} /> */}

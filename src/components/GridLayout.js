@@ -16,7 +16,7 @@ import mapHover from './Assets/map-hover.png';
 import LinkedIn from "./Widgets/LinkedIn";
 import Github from './Widgets/Github';
 import layoutConfig from "./Layouts/Layout";
-import aboutLayout from "./Layouts/AboutLayout";
+// import aboutLayout from "./Layouts/AboutLayout";
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
