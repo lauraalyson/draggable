@@ -11,37 +11,28 @@ import ProjectPlayground from './components/Widgets/Projects/ProjectPlayground';
 import ProjectDigiseum from './components/Widgets/Projects/ProjectDigiseum';
 import ProjectTicTacToe from './components/Widgets/Projects/ProjectTicTacToe';
 
-
-class App extends React.Component {
-	constructor(props) {
-		super(props)
-		this.state = { layout: [] }
-	}
-
-	render() {
+const App = () => {
 		return (
-		<Router>
-		<div
-			className='row'
-			style={{
-				justifyContent: 'center',
-				alignItems: 'center',
-				height: '100%',
-				padding: '1em',
-			}}>
-			<div className='col-12' style={{ maxWidth: '950px' }}>
-				<Routes>
-					<Route path='/' element={<Header />} />
-					
-					<Route path='/playground' element={<ProjectPlayground />} />
-					<Route path='/digi-seum' element={<ProjectDigiseum />} />
-					<Route path='/tic-tac-toe' element={<ProjectTicTacToe />}/>
-				</Routes>
-			</div>
-		</div>
-		</Router>
+			<Router>
+				<div
+					className='row'
+					style={{
+						justifyContent: 'center',
+						alignItems: 'center',
+						height: '100%',
+						padding: '1em',
+					}}>
+						<div className='col-12 grid-container'>
+						<Routes>
+							<Route path='/' element={<Header />} />
+							<Route path='/playground' element={<ProjectPlayground />} />
+							<Route path='/digi-seum' element={<ProjectDigiseum />} />
+							<Route path='/tic-tac-toe' element={<ProjectTicTacToe />} />
+						</Routes>
+					</div>
+				</div>
+			</Router>
 		)
 	}
-}
 
 export default App
