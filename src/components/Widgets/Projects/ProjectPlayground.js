@@ -35,9 +35,9 @@ class ProjectPlayground extends React.Component {
 				className='row project-page'
 				style={{ justifyContent: 'center' }}>
 				<div className='col-12' style={{ padding: '2em 0em' }}>
-						<Link to='/'>
-							<img className='project-page-icons ' src={Exit} alt='exit' />
-						</Link>	
+					<Link to='/'>
+						<img className='project-page-icons ' src={Exit} alt='exit' />
+					</Link>
 				</div>
 
 				<div className='col-5'>
@@ -52,7 +52,7 @@ class ProjectPlayground extends React.Component {
 						and see their favorite spots.
 					</p>
 					<a
-						href='https://github.com/ProjectPlayGroundLHA/PlayGroundClient'
+						href='https://projectplaygroundlha.github.io/PlayGroundClient/'
 						target='_blank'
 						rel='noopener noreferrer'
 						alt='live-site'>
@@ -62,7 +62,7 @@ class ProjectPlayground extends React.Component {
 						</button>
 					</a>
 					<a
-						href='https://projectplaygroundlha.github.io/PlayGroundClient/'
+						href='https://github.com/ProjectPlayGroundLHA/PlayGroundClient'
 						target='_blank'
 						rel='noopener noreferrer'
 						alt='github-repo'>

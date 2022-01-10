@@ -21,7 +21,7 @@ class LinkedIn extends React.Component {
 					<img className='link-widget-img' src={linkedin} alt='linkedin-logo' />
 				</a>
 				<a
-					href='https://www.github.com/lauraalyson'
+					href='https://www.linkedin.com/in/laura-waterbury'
 					target='_blank'
 					rel='noreferrer noopener'>
 					<button

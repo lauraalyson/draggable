@@ -51,7 +51,7 @@ class ProjectTicTacToe extends React.Component {
 						such as JavaScript, jQuery, SASS and more.
 					</p>
 					<a
-						href='https://github.com/lauraalyson/tic-tac-toe'
+						href='https://lauraalyson.github.io/tic-tac-toe/'
 						target='_blank'
 						rel='noopener noreferrer'
 						alt='live-site'>
@@ -61,7 +61,7 @@ class ProjectTicTacToe extends React.Component {
 						</button>
 					</a>
 					<a
-						href='https://lauraalyson.github.io/tic-tac-toe/'
+						href='https://github.com/lauraalyson/tic-tac-toe'
 						target='_blank'
 						rel='noopener noreferrer'
 						alt='github-repo'>
