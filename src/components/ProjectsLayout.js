@@ -25,13 +25,6 @@ import Skills from './Widgets/Skills'
 import Contact from './Widgets/Contact'
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive)
-const transition = { duration: 0.5, ease: 'easeInOut' }
-
-const postVariants = {
-	initial: { y: -5, opacity: 0 },
-	enter: { y: 0, opacity: 1, transition },
-	exit: { y: 5, opacity: 0, transition },
-}
 
 export default class ProjectsLayout extends React.Component {
 	constructor(props) {
@@ -66,11 +59,7 @@ export default class ProjectsLayout extends React.Component {
 		const { layouts } = this.state
 
 		return (
-			<motion.div
-				initial='exit'
-				animate='enter'
-				exit='exit'
-				variants={postVariants}>
+			<motion.div>
 				<ResponsiveReactGridLayout
 					{...this.props}
 					cancel='.btn'

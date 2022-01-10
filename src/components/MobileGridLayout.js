@@ -25,13 +25,6 @@ import Skills from './Widgets/Skills'
 import Contact from './Widgets/Contact'
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive)
-const transition = { duration: 0.5, ease: 'easeInOut' }
-
-const postVariants = {
-	initial: { y: -5, opacity: 0 },
-	enter: { y: 0, opacity: 1, transition },
-	exit: { y: 5, opacity: 0, transition },
-}
 
 export default class MobileShowcaseLayout extends React.Component {
 	constructor(props) {
@@ -45,7 +38,6 @@ export default class MobileShowcaseLayout extends React.Component {
 
 		this.onBreakpointChange = this.onBreakpointChange.bind(this)
 		this.onLayoutChange = this.onLayoutChange.bind(this)
-		// this.onNewLayout = this.onNewLayout.bind(this);
 	}
 
 	componentDidMount() {
@@ -62,22 +54,13 @@ export default class MobileShowcaseLayout extends React.Component {
 		this.setState({ layouts })
 	}
 
-	// onNewLayout() {
-	// this.setState({
-	// 	layouts: { lg: layoutConfig }
-	// });
-	// }
 
 	render() {
-		// const { sort } = this.props
+
 		const { layouts } = this.state
 
 		return (
-			<motion.div
-				initial='exit'
-				animate='enter'
-				exit='exit'
-				variants={postVariants}>
+			<motion.div>
 				<ResponsiveReactGridLayout
 					{...this.props}
 					cancel='.btn'

@@ -49,7 +49,6 @@ export default function Header() {
 				</div>
 
 			</AnimateSharedLayout>
-		    {/* { isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout /> } */}
 		</div>
 	)
 }
