@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimateSharedLayout } from 'framer-motion';
 import { isMobile } from 'react-device-detect'
 import ShowcaseLayout from "./GridLayout";
@@ -9,9 +10,9 @@ export default function Header() {
 //   const [sort, setSorted] = '';
 
   const nav = [
-	  { title: 'Home' },
-	  { title: 'About' },
-	  { title: 'Projects' }
+	  { title: 'Home', link: '/' },
+	  { title: 'About', link: '/about' },
+	  { title: 'Projects', link: '/projects' }
   	]
 
 	const transition = { duration: 0.5, ease: 'easeInOut' }
@@ -28,7 +29,7 @@ export default function Header() {
 				<div className="row" style={{ justifyContent: 'center' }}>
 				<div className='header col-6'>
 					<ol style={{ transform: 'translateZ(0)', padding: '2em 0em' }}>
-						{nav.map(({ title }, i) => (
+						{nav.map(({ title, link }, i) => (
 							<motion.li
 								initial='exit'
 								animate='enter'
@@ -42,11 +43,10 @@ export default function Header() {
 								<motion.div
 									layoutId='underline'
 									className='underline'
-									
 									/>
 								)}
-								{title}
-							</motion.li>
+								<Link style={{ textDecoration: 'none', color: 'black' }} to={link}>{title}</Link>
+								</motion.li>
 						))}
 					</ol>
 				</div>
