@@ -31,18 +31,18 @@ const App = () => {
 					<div className='col-12 grid-container'>
 						<Header />
 						<Routes>
-							{/* <Route path='/' element={<Header />} /> */}
 							<Route
 								path='/'
-								element={
-									isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout />
-								}
+								element={isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout />}
 							/>
 							<Route
 								path='/about'
 								element={isMobile ? <MobileAboutLayout /> : <AboutLayout />}
 							/>
-							<Route path='/projects' element={<ProjectsLayout />}/>
+							<Route
+								path='/projects'
+								element={isMobile ? <MobileAboutLayout /> : <ProjectsLayout />}
+							/>
 							<Route path='/playground' element={<ProjectPlayground />} />
 							<Route path='/digi-seum' element={<ProjectDigiseum />} />
 							<Route path='/tic-tac-toe' element={<ProjectTicTacToe />} />
