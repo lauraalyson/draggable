@@ -11,8 +11,8 @@ import Playground from "./Widgets/Playground";
 import Digiseum from "./Widgets/Digiseum";
 import TicTacToe from './Widgets/TicTacToe';
 import Spotify from "./Widgets/Spotify";
-import lauraMemoji from './Assets/laura-memoji.png';
-import mapHover from './Assets/map-hover.png';
+import lauraMemoji from './Assets/Graphics/laura-memoji.png';
+import mapHover from './Assets/Graphics/map-hover.png';
 import LinkedIn from "./Widgets/LinkedIn";
 import Github from './Widgets/Github';
 import aboutLayout from "./Layouts/AboutLayout";
@@ -63,11 +63,6 @@ export default class ShowcaseLayout extends React.Component {
 		this.setState({ layouts })	
 	}
 
-	// onNewLayout() {
-	// this.setState({
-	// 	layouts: { lg: layoutConfig }
-	// });
-	// }
 
 	render() {
 		// const { sort } = this.props

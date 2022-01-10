@@ -10,7 +10,7 @@ import Header from './components/Header';
 import ProjectPlayground from './components/Widgets/Projects/ProjectPlayground';
 import ProjectDigiseum from './components/Widgets/Projects/ProjectDigiseum';
 import ProjectTicTacToe from './components/Widgets/Projects/ProjectTicTacToe';
-
+import AboutLayout from './components/AboutLayout';
 const App = () => {
 		return (
 			<Router>
@@ -25,6 +25,7 @@ const App = () => {
 						<div className='col-12 grid-container'>
 						<Routes>
 							<Route path='/' element={<Header />} />
+							<Route path='/about' element={<AboutLayout />}/>
 							<Route path='/playground' element={<ProjectPlayground />} />
 							<Route path='/digi-seum' element={<ProjectDigiseum />} />
 							<Route path='/tic-tac-toe' element={<ProjectTicTacToe />} />
