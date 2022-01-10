@@ -1,40 +1,39 @@
 //  Import Dependencies
-import React from "react";
-import PropTypes from "prop-types";
-import { Responsive, WidthProvider } from "react-grid-layout";
-import { motion } from 'framer-motion';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Responsive, WidthProvider } from 'react-grid-layout'
+import { motion } from 'framer-motion'
 
 // Import Components
 import Map from './Widgets/Map'
-import Bio from "./Widgets/Bio";
-import Playground from "./Widgets/Playground";
-import Digiseum from "./Widgets/Digiseum";
-import TicTacToe from './Widgets/TicTacToe';
-import Spotify from "./Widgets/Spotify";
-import lauraMemoji from './Assets/Graphics/laura-memoji.png';
-import mapHover from './Assets/Graphics/map-hover.png';
-import LinkedIn from "./Widgets/LinkedIn";
-import Github from './Widgets/Github';
-import aboutLayout from "./Layouts/AboutLayout";
+import Bio from './Widgets/Bio'
+import Playground from './Widgets/Playground'
+import Digiseum from './Widgets/Digiseum'
+import TicTacToe from './Widgets/TicTacToe'
+import Spotify from './Widgets/Spotify'
+import lauraMemoji from './Assets/Graphics/laura-memoji.png'
+import mapHover from './Assets/Graphics/map-hover.png'
+import LinkedIn from './Widgets/LinkedIn'
+import Github from './Widgets/Github'
+import aboutLayout from './Layouts/AboutLayout'
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
-import "./../App.css"
-import Skills from "./Widgets/Skills";
-import Contact from "./Widgets/Contact";
+import './../App.css'
+import Skills from './Widgets/Skills'
+import Contact from './Widgets/Contact'
 
+const ResponsiveReactGridLayout = WidthProvider(Responsive)
+const transition = { duration: 0.5, ease: 'easeInOut' }
 
-const ResponsiveReactGridLayout = WidthProvider(Responsive);
-	const transition = { duration: 0.5, ease: 'easeInOut' }
+const postVariants = {
+	initial: { y: -5, opacity: 0 },
+	enter: { y: 0, opacity: 1, transition },
+	exit: { y: 5, opacity: 0, transition },
+}
 
-	const postVariants = {
-		initial: { y: -5, opacity: 0 },
-		enter: { y: 0, opacity: 1, transition },
-		exit: { y: 5, opacity: 0, transition },
-	}
-	
-export default class AboutLayout extends React.Component {
+export default class MobileAboutLayout extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -60,9 +59,8 @@ export default class AboutLayout extends React.Component {
 	}
 
 	onLayoutChange = (layout, layouts) => {
-		this.setState({ layouts })	
+		this.setState({ layouts })
 	}
-
 
 	render() {
 		const { layouts } = this.state
@@ -138,12 +136,13 @@ export default class AboutLayout extends React.Component {
 	}
 }
 
-AboutLayout.propTypes = {
+MobileAboutLayout.propTypes = {
 	onLayoutChange: PropTypes.func.isRequired,
 }
 
-AboutLayout.defaultProps = {
+MobileAboutLayout.defaultProps = {
 	className: 'layout',
+	isDraggable: false,
 	rowHeight: 30,
 	onLayoutChange: function () {},
 	cols: { lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 },

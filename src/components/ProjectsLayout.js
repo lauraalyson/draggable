@@ -1,47 +1,46 @@
 //  Import Dependencies
-import React from "react";
-import PropTypes from "prop-types";
-import { Responsive, WidthProvider } from "react-grid-layout";
-import { motion } from 'framer-motion';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Responsive, WidthProvider } from 'react-grid-layout'
+import { motion } from 'framer-motion'
 
 // Import Components
 import Map from './Widgets/Map'
-import Bio from "./Widgets/Bio";
-import Playground from "./Widgets/Playground";
-import Digiseum from "./Widgets/Digiseum";
-import TicTacToe from './Widgets/TicTacToe';
-import Spotify from "./Widgets/Spotify";
-import lauraMemoji from './Assets/Graphics/laura-memoji.png';
-import mapHover from './Assets/Graphics/map-hover.png';
-import LinkedIn from "./Widgets/LinkedIn";
-import Github from './Widgets/Github';
-import aboutLayout from "./Layouts/AboutLayout";
+import Bio from './Widgets/Bio'
+import Playground from './Widgets/Playground'
+import Digiseum from './Widgets/Digiseum'
+import TicTacToe from './Widgets/TicTacToe'
+import Spotify from './Widgets/Spotify'
+import lauraMemoji from './Assets/Graphics/laura-memoji.png'
+import mapHover from './Assets/Graphics/map-hover.png'
+import LinkedIn from './Widgets/LinkedIn'
+import Github from './Widgets/Github'
+import projectsLayout from './Layouts/ProjectsLayout'
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
-import "./../App.css"
-import Skills from "./Widgets/Skills";
-import Contact from "./Widgets/Contact";
+import './../App.css'
+import Skills from './Widgets/Skills'
+import Contact from './Widgets/Contact'
 
+const ResponsiveReactGridLayout = WidthProvider(Responsive)
+const transition = { duration: 0.5, ease: 'easeInOut' }
 
-const ResponsiveReactGridLayout = WidthProvider(Responsive);
-	const transition = { duration: 0.5, ease: 'easeInOut' }
+const postVariants = {
+	initial: { y: -5, opacity: 0 },
+	enter: { y: 0, opacity: 1, transition },
+	exit: { y: 5, opacity: 0, transition },
+}
 
-	const postVariants = {
-		initial: { y: -5, opacity: 0 },
-		enter: { y: 0, opacity: 1, transition },
-		exit: { y: 5, opacity: 0, transition },
-	}
-	
-export default class AboutLayout extends React.Component {
+export default class ProjectsLayout extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			currentBreakpoint: '',
 			compactType: 'vertical',
 			mounted: false,
-			layouts: aboutLayout,
+			layouts: projectsLayout,
 		}
 
 		this.onBreakpointChange = this.onBreakpointChange.bind(this)
@@ -60,9 +59,8 @@ export default class AboutLayout extends React.Component {
 	}
 
 	onLayoutChange = (layout, layouts) => {
-		this.setState({ layouts })	
+		this.setState({ layouts })
 	}
-
 
 	render() {
 		const { layouts } = this.state
@@ -74,11 +72,11 @@ export default class AboutLayout extends React.Component {
 				exit='exit'
 				variants={postVariants}>
 				<ResponsiveReactGridLayout
+					{...this.props}
 					cancel='.btn'
 					animate
 					isResizable='false'
 					isBounded='true'
-					{...this.props}
 					className='showcase-container'
 					layouts={{
 						lg: layouts.lg,
@@ -94,10 +92,10 @@ export default class AboutLayout extends React.Component {
 					useCSSTransforms={this.state.mounted}
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
-					<div key='0'>
+					<div style={{ opacity: '40%' }} key='0'>
 						<Bio layout={this.state.currentBreakpoint} />
 					</div>
-					<div key='1'>
+					<div style={{ opacity: '40%' }} key='1'>
 						<div className='map-widget-overlay'>
 							<img
 								className='memoji-map'
@@ -108,28 +106,28 @@ export default class AboutLayout extends React.Component {
 						</div>
 						<Map />
 					</div>
-					<div style={{ opacity: '40%' }} key='2'>
+					<div key='2'>
 						<TicTacToe />
 					</div>
-					<div key='3'>
+					<div style={{ opacity: '40%' }} key='3'>
 						<Spotify />
 					</div>
-					<div key='4'>
+					<div style={{ opacity: '40%' }} key='4'>
 						<Github />
 					</div>
-					<div style={{ opacity: '40%' }} key='5'>
+					<div key='5'>
 						<Playground />
 					</div>
-					<div style={{ opacity: '40%' }} key='6'>
+					<div key='6'>
 						<Digiseum />
 					</div>
-					<div key='7'>
+					<div style={{ opacity: '40%' }} key='7'>
 						<LinkedIn />
 					</div>
 					<div style={{ opacity: '40%' }} key='8'>
-						<Skills />
+						<Skills layout={this.state.currentBreakpoint} />
 					</div>
-					<div key='9'>
+					<div style={{ opacity: '40%' }} key='9'>
 						<Contact layout={this.state.currentBreakpoint} />
 					</div>
 				</ResponsiveReactGridLayout>
@@ -138,11 +136,12 @@ export default class AboutLayout extends React.Component {
 	}
 }
 
-AboutLayout.propTypes = {
+ProjectsLayout.propTypes = {
 	onLayoutChange: PropTypes.func.isRequired,
 }
 
-AboutLayout.defaultProps = {
+ProjectsLayout.defaultProps = {
+	isDraggable: true,
 	className: 'layout',
 	rowHeight: 30,
 	onLayoutChange: function () {},

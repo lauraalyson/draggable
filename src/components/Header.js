@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimateSharedLayout } from 'framer-motion';
-import { isMobile } from 'react-device-detect'
-import ShowcaseLayout from "./GridLayout";
-import MobileShowcaseLayout from "./MobileGridLayout";
 
 export default function Header() {
   const [selected, setSelected] = useState(0);
-//   const [sort, setSorted] = '';
 
   const nav = [
 	  { title: 'Home', link: '/' },
@@ -53,7 +49,7 @@ export default function Header() {
 				</div>
 
 			</AnimateSharedLayout>
-		    { isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout /> }
+		    {/* { isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout /> } */}
 		</div>
 	)
 }
