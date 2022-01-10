@@ -16,6 +16,7 @@ import MobileAboutLayout from './components/MobileAboutLayout';
 import ShowcaseLayout from './components/GridLayout';
 import MobileShowcaseLayout from './components/MobileGridLayout';
 import ProjectsLayout from './components/ProjectsLayout';
+import MobileProjectsLayout from './components/MobileProjectsLayout';
 
 const App = () => {
 		return (
@@ -41,7 +42,7 @@ const App = () => {
 							/>
 							<Route
 								path='/projects'
-								element={isMobile ? <MobileAboutLayout /> : <ProjectsLayout />}
+								element={isMobile ? <MobileProjectsLayout /> : <ProjectsLayout />}
 							/>
 							<Route path='/playground' element={<ProjectPlayground />} />
 							<Route path='/digi-seum' element={<ProjectDigiseum />} />
