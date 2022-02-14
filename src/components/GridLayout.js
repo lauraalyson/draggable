@@ -68,24 +68,37 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
 					<div key='0'>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>Other Side</h6>
+						</div>
 					</div>
 					<div key='1'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='2'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='3'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='4'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='5'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='6'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='7'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='8'>
+						<div className='grid-header'></div>
 					</div>
 					<div key='9'>
+						<div className='grid-header'></div>
 					</div>
 				</ResponsiveReactGridLayout>
 			</motion.div>

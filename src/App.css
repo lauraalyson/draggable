@@ -14,7 +14,8 @@
 }
 
 body {
-  background-color: #f9f9f7;
+  background-color: #ffe988;
+  /* background-color: #f9f9f7; */
   overflow: scroll;
   font-family: 'Satoshi';
   color: #2c2c2c;
@@ -24,6 +25,8 @@ h1 { font-size: 1.8em!important; }
 h2 { font-size: 1.6em!important; }
 h3 { font-size: 1.4em!important; }
 h4 { font-size: 1.2em!important; }
+h5 { font-size: 1em!important; }
+h6, p2 { font-size: .7em!important; }
 p, input, button { font-size: .8em!important; }
 
 input {
@@ -51,8 +54,63 @@ button {
   padding: .8em;
 }
 
+
+/* Notification */
+.notification-bar {
+  z-index: 9999999999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.6em;
+}
+
+.notification {
+  padding: .1em 0em;
+}
+
+.notification-body {
+  background-color: #f9f9f7;
+  border: 1px solid #EFECE6;
+  box-shadow: rgba(149, 157, 165, 0.423) 0px 8px 24px;
+  width: 275px;
+  border-radius: 15px;
+  margin: .2em;
+  padding: .7em .8em;
+}
+
+.notification-button {
+  position: absolute;
+  right: 0;
+  height: 18px;
+  width: 18px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 0px;
+  padding-top: 5px;
+  transform: rotate(45deg);
+  background-color: #f9f9f7;
+  border: 1px solid #EFECE6;
+  cursor: pointer;
+}
+
+
+/* Grid */
+
 .showcase-container {
   margin: 2em;
+}
+
+.grid-header {
+  background-color: #F8F7F9;
+  border-bottom: 1px solid #EFECE6;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-header > h6{
+  padding: .2em 1em;
 }
 
 .react-resizable-handle {
@@ -60,7 +118,7 @@ button {
 }
 
 .grid-container {
-  max-width: 950px;
+  width: 1000px;
 }
 
 .react-grid-layout{
@@ -72,6 +130,7 @@ button {
   transition:all .2s ease;
   transition-property: left, top;
   background: rgb(255, 255, 255);
+  border: 1px solid #EFECE6;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -88,6 +147,23 @@ button {
   z-index:2;
 }
 
+@media only screen and (max-width: 1150px) {
+  .grid-container {
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .grid-container {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    width: 450px;
+  } 
+}
+
 @media only screen and (max-width: 730px) {
 
   h1 { font-size: 1.5em!important; }
@@ -97,7 +173,6 @@ button {
   p { font-size: .8em!important; }
 
   .grid-container {
-    max-width: 380px;
-    min-width: 350px;
+    width: 500px;
   }
 }
