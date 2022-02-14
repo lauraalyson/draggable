@@ -1,14 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { isMobile } from 'react-device-detect'
+// import { isMobile } from 'react-device-detect'
+import { motion } from 'framer-motion'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import ShowcaseLayout from './components/GridLayout';
-import MobileShowcaseLayout from './components/MobileGridLayout';
+// import MobileShowcaseLayout from './components/MobileGridLayout';
 
+const notifications = [
+	{ header: 'Check it out 👀 ', body: 'Jump straight into my inbox, here.' },
+	{ header: 'Straight to the point 👋 ', body: 'Drag the widgets to rearrange the grid.' }
+]
 
 function App() {
 
@@ -26,21 +31,21 @@ function App() {
 
 			{/* Notification */}
 			<div className='notification-bar'>
-				<div className='notification'>
-					<div className='notification-button'>+</div>
-					<div className='notification-body'>
-						<h5>Check it out 👀 </h5>
-						<h6>Jump straight into my inbox, here.</h6>
-					</div>
-				</div>
-
-				<div className='notification'>
-					<div className='notification-button'>+</div>
-					<div className='notification-body'>
-						<h5>Straight to the point 👋 </h5>
-						<h6>Drag the widgets to rearrange the grid.</h6>
-					</div>
-				</div>
+				{notifications.map((notification, i) => (
+					<motion.div
+						key={i}
+						positionTransition
+						initial={{ opacity: 0, y: 100 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: i - 0.4 }}
+						className='notification'>
+						<div className='notification-button'>+</div>
+						<div className='notification-body'>
+							<h5>{notification.header}</h5>
+							<h6>{notification.body}</h6>
+						</div>
+					</motion.div>
+				))}
 			</div>
 
 			<div
@@ -58,10 +63,7 @@ function App() {
 							element={isMobile ? <MobileShowcaseLayout /> : <ShowcaseLayout />}
 						/> */}
 
-						<Route
-							path='/'
-							element={<ShowcaseLayout />}
-						/>
+						<Route path='/' element={<ShowcaseLayout />} />
 					</Routes>
 
 					<div>

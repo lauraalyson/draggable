@@ -38,7 +38,8 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 	}
 
 	onLayoutChange = (layout, layouts) => {
-		this.setState({ layouts })	
+		this.setState({ layouts })
+		this.setState({ currLayout: layout })
 	}
 
 	render() {
@@ -69,36 +70,57 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 					preventCollision={!this.state.compactType}>
 					<div key='0'>
 						<div className='grid-header'>
-							<h6>Header</h6>
-							<h6 className='grid-header-circles'>Other Side</h6>
+							<h6>about_me.txt</h6>
+							<h6 className='grid-header-circles'>x</h6>
 						</div>
 					</div>
+
 					<div key='1'>
-						<div className='grid-header'></div>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>🦜</h6>
+						</div>
 					</div>
-					<div key='2'>
-						<div className='grid-header'></div>
-					</div>
+
+					<div key='2'></div>
+
 					<div key='3'>
-						<div className='grid-header'></div>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>x</h6>
+						</div>
 					</div>
+
 					<div key='4'>
-						<div className='grid-header'></div>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>x</h6>
+						</div>
 					</div>
-					<div key='5'>
-						<div className='grid-header'></div>
-					</div>
-					<div key='6'>
-						<div className='grid-header'></div>
-					</div>
+
+					<div key='5'></div>
+
+					<div key='6'></div>
+
 					<div key='7'>
-						<div className='grid-header'></div>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>x</h6>
+						</div>
 					</div>
+
 					<div key='8'>
-						<div className='grid-header'></div>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>x</h6>
+						</div>
 					</div>
+
 					<div key='9'>
-						<div className='grid-header'></div>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>x</h6>
+						</div>
 					</div>
 				</ResponsiveReactGridLayout>
 			</motion.div>

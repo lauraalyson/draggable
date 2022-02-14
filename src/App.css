@@ -14,8 +14,10 @@
 }
 
 body {
-  background-color: #ffe988;
+  /* background-color: #ffe988; */
   /* background-color: #f9f9f7; */
+  /* background-color: #dddefd; */
+  background-color: #fffbd4;
   overflow: scroll;
   font-family: 'Satoshi';
   color: #2c2c2c;
@@ -69,6 +71,7 @@ button {
 }
 
 .notification-body {
+  cursor:default;
   background-color: #f9f9f7;
   border: 1px solid #EFECE6;
   box-shadow: rgba(149, 157, 165, 0.423) 0px 8px 24px;
@@ -101,6 +104,7 @@ button {
 }
 
 .grid-header {
+  cursor:grab;
   background-color: #F8F7F9;
   border-bottom: 1px solid #EFECE6;
   height: 20px;
@@ -173,6 +177,6 @@ button {
   p { font-size: .8em!important; }
 
   .grid-container {
-    width: 500px;
+    width: 440px;
   }
 }
