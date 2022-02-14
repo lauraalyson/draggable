@@ -11,13 +11,13 @@ export default function Header() {
 	  { title: 'Projects', link: '/projects' }
   	]
 
-	const transition = { duration: 0.5, ease: 'easeInOut' }
+	// const transition = { duration: 0.5, ease: 'easeInOut' }
 
-	const postVariants = {
-		initial: { y: 10, opacity: 0 },
-		enter: { y: 0, opacity: 1, transition },
-		exit: { y: -10, opacity: 0, transition },
-	}
+	// const postVariants = {
+	// 	initial: { y: 10, opacity: 0 },
+	// 	enter: { y: 0, opacity: 1, transition },
+	// 	exit: { y: -10, opacity: 0, transition },
+	// }
 
 	return (
 		<div>
@@ -27,10 +27,10 @@ export default function Header() {
 					<ol style={{ transform: 'translateZ(0)', padding: '2em 0em' }}>
 						{nav.map(({ title, link }, i) => (
 							<motion.li
-								initial='exit'
-								animate='enter'
-								exit='exit'
-								variants={postVariants}
+								// initial='exit'
+								// animate='enter'
+								// exit='exit'
+								// variants={postVariants}
 								key={i}
 								className={`title ${i === selected && 'selected'}`}
 								onClick={() => setSelected(i)}

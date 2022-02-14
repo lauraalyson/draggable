@@ -5,24 +5,12 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import { motion } from 'framer-motion';
 
 // Import Components
-import Map from './Widgets/Map'
-import Bio from "./Widgets/Bio";
-import Playground from "./Widgets/Playground";
-import Digiseum from "./Widgets/Digiseum";
-import TicTacToe from './Widgets/TicTacToe';
-import Spotify from "./Widgets/Spotify";
-import lauraMemoji from './Assets/Graphics/laura-memoji.png';
-import mapHover from './Assets/Graphics/map-hover.png';
-import LinkedIn from "./Widgets/LinkedIn";
-import Github from './Widgets/Github';
 import layoutConfig from "./Layouts/Layout";
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
-import Skills from "./Widgets/Skills";
-import Contact from "./Widgets/Contact";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 	export default class ShowcaseLayout extends React.Component {
@@ -80,42 +68,24 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
 					<div key='0'>
-						<Bio layout={this.state.currentBreakpoint} />
 					</div>
 					<div key='1'>
-						<div className='map-widget-overlay'>
-							<img
-								className='memoji-map'
-								src={lauraMemoji}
-								alt='laura-memoji'
-							/>
-							<img className='hover-map' src={mapHover} alt='map-hover' />
-						</div>
-						<Map />
 					</div>
 					<div key='2'>
-						<TicTacToe />
 					</div>
 					<div key='3'>
-						<Spotify />
 					</div>
 					<div key='4'>
-						<Github />
 					</div>
 					<div key='5'>
-						<Playground />
 					</div>
 					<div key='6'>
-						<Digiseum />
 					</div>
 					<div key='7'>
-						<LinkedIn />
 					</div>
 					<div key='8'>
-						<Skills layout={this.state.currentBreakpoint} />
 					</div>
 					<div key='9'>
-						<Contact layout={this.state.currentBreakpoint} />
 					</div>
 				</ResponsiveReactGridLayout>
 			</motion.div>

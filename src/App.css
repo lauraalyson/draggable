@@ -12,6 +12,16 @@
   src: url('./Relative.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./Satoshi-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Faktum';
+  src: url('./FaktumTest-ConRegular.woff') format('woff');
+}
+
 /* Global Styles */
 * {
   box-sizing:border-box
@@ -21,11 +31,10 @@
   max-width: 950px;
 }
 
-
 body {
   background-color: #f8f8f8;
   overflow: scroll;
-  font-family: 'Relative'!important;
+  font-family: 'Satoshi'!important;
   color: #2c2c2c!important;
 }
 h1 { font-size: 1.8em!important; }
@@ -57,6 +66,25 @@ button {
   padding: .8em;
   color: #2c2c2c!important;
   z-index: 10;
+}
+
+.nav {
+  background-color: #c0c0c0;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 100px;
+}
+
+.NavLink {
+  padding: 1em;
+}
+
+.NavLink:active {
+  background-color: white!important;
+}
+
+.NavLink:visited {
+  background-color: white!important;
 }
 
 ol,
