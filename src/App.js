@@ -11,12 +11,17 @@ import ShowcaseLayout from './components/GridLayout';
 // import MobileShowcaseLayout from './components/MobileGridLayout';
 
 const notifications = [
-	{ header: 'Check it out 👀 ', body: 'Jump straight into my inbox, here.' },
-	{ header: 'Straight to the point 👋 ', body: 'Drag the widgets to rearrange the grid.' }
+	{
+		header: 'Check it out 👀 ',
+		body: 'Drag the widgets to rearrange the grid.',
+	},
+	{
+		header: 'Straight to the point 💬 ',
+		body: 'Jump straight into my inbox, here.',
+	}
 ]
 
 function App() {
-
 	return (
 		<Router>
 			<div
@@ -65,7 +70,7 @@ function App() {
 
 						<Route path='/' element={<ShowcaseLayout />} />
 					</Routes>
-
+{/* 
 					<div>
 						<h1>Header 1</h1>
 						<h2>Header 2</h2>
@@ -78,7 +83,7 @@ function App() {
 						<a href='/'>Link</a> <br />
 						<input placeholder='Input tag' />
 						<button>Button</button> <br />
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</Router>

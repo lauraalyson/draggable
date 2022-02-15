@@ -11,6 +11,7 @@ import layoutConfig from "./Layouts/Layout";
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
+// import Map from "./Widgets/Map";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 	export default class ShowcaseLayout extends React.Component {
@@ -87,15 +88,16 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 					<div key='3'>
 						<div className='grid-header'>
 							<h6>Header</h6>
-							<h6 className='grid-header-circles'>x</h6>
+							<h6 className='grid-header-circles'>🎧</h6>
 						</div>
 					</div>
 
 					<div key='4'>
 						<div className='grid-header'>
 							<h6>Header</h6>
-							<h6 className='grid-header-circles'>x</h6>
+							<h6 className='grid-header-circles'>💡</h6>
 						</div>
+						{/* <Map /> */}
 					</div>
 
 					<div key='5'></div>
@@ -105,21 +107,21 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 					<div key='7'>
 						<div className='grid-header'>
 							<h6>Header</h6>
-							<h6 className='grid-header-circles'>x</h6>
+							<h6 className='grid-header-circles'>📫</h6>
 						</div>
 					</div>
 
 					<div key='8'>
 						<div className='grid-header'>
 							<h6>Header</h6>
-							<h6 className='grid-header-circles'>x</h6>
+							<h6 className='grid-header-circles'>🌩</h6>
 						</div>
 					</div>
 
 					<div key='9'>
 						<div className='grid-header'>
 							<h6>Header</h6>
-							<h6 className='grid-header-circles'>x</h6>
+							<h6 className='grid-header-circles'>🍒</h6>
 						</div>
 					</div>
 				</ResponsiveReactGridLayout>
