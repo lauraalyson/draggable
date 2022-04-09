@@ -8,17 +8,20 @@
   src: url('./FaktumTest-ConRegular.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Product Sans';
+  src: url('./Product\ Sans\ Regular.woff') format('woff');
+}
+
 /* Global Styles */
 * {
   box-sizing:border-box
 }
 
 body {
-  /* background-color: #ffe988; */
-  /* background-color: #f9f9f7; */
+  background-color: #f9f9f7;
   background-color: #dddefd;
-    background-color: #cfd9d6;
-  /* background-color: #fffbd4; */
+  background-color: #cfd9d6;
   overflow: scroll;
   font-family: 'Satoshi';
   color: #2c2c2c;

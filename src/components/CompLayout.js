@@ -5,36 +5,22 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import { motion } from 'framer-motion';
 
 // Import Components
-import Map from './Widgets/Map'
-import Bio from "./Widgets/Bio";
-import Playground from "./Widgets/Playground";
-import Digiseum from "./Widgets/Digiseum";
-import TicTacToe from './Widgets/TicTacToe';
-import Spotify from "./Widgets/Spotify";
-import lauraMemoji from './Assets/Graphics/laura-memoji.png';
-import mapHover from './Assets/Graphics/map-hover.png';
-import LinkedIn from "./Widgets/LinkedIn";
-import Github from './Widgets/Github';
-import aboutLayout from "./Layouts/AboutLayout";
+import layoutConfig from "./Layouts/Layout";
 
 // Import Styles
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 import "./../App.css"
-import Skills from "./Widgets/Skills";
-import Contact from "./Widgets/Contact";
-
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
-	
-export default class AboutLayout extends React.Component {
+	export default class CompLayout extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			currentBreakpoint: '',
 			compactType: 'vertical',
 			mounted: false,
-			layouts: aboutLayout,
+			layouts: layoutConfig,
 		}
 
 		this.onBreakpointChange = this.onBreakpointChange.bind(this)
@@ -52,9 +38,9 @@ export default class AboutLayout extends React.Component {
 	}
 
 	onLayoutChange = (layout, layouts) => {
-		this.setState({ layouts })	
+		this.setState({ layouts })
+		this.setState({ currLayout: layout })
 	}
-
 
 	render() {
 		const { layouts } = this.state
@@ -62,11 +48,11 @@ export default class AboutLayout extends React.Component {
 		return (
 			<motion.div>
 				<ResponsiveReactGridLayout
+					{...this.props}
 					cancel='.btn'
 					animate
 					isResizable='false'
 					isBounded='true'
-					{...this.props}
 					className='showcase-container'
 					layouts={{
 						lg: layouts.lg,
@@ -83,42 +69,58 @@ export default class AboutLayout extends React.Component {
 					compactType={this.state.compactType}
 					preventCollision={!this.state.compactType}>
 					<div key='0'>
-						<Bio layout={this.state.currentBreakpoint} />
-					</div>
-					<div key='1'>
-						<div className='map-widget-overlay'>
-							<img
-								className='memoji-map'
-								src={lauraMemoji}
-								alt='laura-memoji'
-							/>
-							<img className='hover-map' src={mapHover} alt='map-hover' />
+						<div className='grid-header'>
+							<h6>about_me.txt</h6>
+							<h6 className='grid-header-circles'>x</h6>
 						</div>
-						<Map />
 					</div>
-					<div style={{ opacity: '40%' }} key='2'>
-						<TicTacToe />
+
+					<div key='1'>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>🦜</h6>
+						</div>
 					</div>
+
+					<div key='2'></div>
+
 					<div key='3'>
-						<Spotify />
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>🎧</h6>
+						</div>
 					</div>
+
 					<div key='4'>
-						<Github />
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>💡</h6>
+						</div>
 					</div>
-					<div style={{ opacity: '40%' }} key='5'>
-						<Playground />
-					</div>
-					<div style={{ opacity: '40%' }} key='6'>
-						<Digiseum />
-					</div>
+
+					<div key='5'></div>
+
+					<div key='6'></div>
+
 					<div key='7'>
-						<LinkedIn />
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>📫</h6>
+						</div>
 					</div>
-					<div style={{ opacity: '40%' }} key='8'>
-						<Skills />
+
+					<div key='8'>
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>🌩</h6>
+						</div>
 					</div>
+
 					<div key='9'>
-						<Contact layout={this.state.currentBreakpoint} />
+						<div className='grid-header'>
+							<h6>Header</h6>
+							<h6 className='grid-header-circles'>🍒</h6>
+						</div>
 					</div>
 				</ResponsiveReactGridLayout>
 			</motion.div>
@@ -126,14 +128,15 @@ export default class AboutLayout extends React.Component {
 	}
 }
 
-AboutLayout.propTypes = {
-	onLayoutChange: PropTypes.func.isRequired,
-}
+CompLayout.propTypes = {
+  onLayoutChange: PropTypes.func.isRequired
+};
 
-AboutLayout.defaultProps = {
-	className: 'layout',
-	rowHeight: 30,
-	onLayoutChange: function () {},
-	cols: { lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 },
-	breakpoints: { lg: 900, md: 800, sm: 800, xs: 450, xxs: 400 },
-}
+CompLayout.defaultProps = {
+  isDraggable: true,
+  className: "layout",
+  rowHeight: 30,
+  onLayoutChange: function() {},
+  cols: { lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 },
+  breakpoints: { lg: 900, md: 800, sm: 800, xs: 450, xxs: 400 }
+};
